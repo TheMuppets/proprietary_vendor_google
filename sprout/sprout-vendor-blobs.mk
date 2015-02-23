@@ -34,8 +34,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/etc/firmware/WMT_SOC.cfg:system/etc/firmware/WMT_SOC.cfg \
     vendor/google/sprout/proprietary/etc/firmware/catcher_filter_1_wg_n.bin:system/etc/firmware/catcher_filter_1_wg_n.bin \
     vendor/google/sprout/proprietary/etc/firmware/modem_1_wg_n.img:system/etc/firmware/modem_1_wg_n.img \
-    vendor/google/sprout/proprietary/etc/firmware/mt6572_82_patch_e1_0_hdr.bin:system/etc/firmware/mt6572_82_patch_e1_0_hdr.bin \
-    vendor/google/sprout/proprietary/etc/firmware/mt6572_82_patch_e1_1_hdr.bin:system/etc/firmware/mt6572_82_patch_e1_1_hdr.bin \
+    vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_0_hdr.bin:system/etc/firmware/ROMv1_patch_1_0_hdr.bin \
+    vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_1_hdr.bin:system/etc/firmware/ROMv1_patch_1_1_hdr.bin \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v1_coeff.bin:system/etc/firmware/mt6627/mt6627_fm_v1_coeff.bin \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v1_patch.bin:system/etc/firmware/mt6627/mt6627_fm_v1_patch.bin \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v2_coeff.bin:system/etc/firmware/mt6627/mt6627_fm_v2_coeff.bin \
