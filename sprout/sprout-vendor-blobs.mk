@@ -75,8 +75,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libblisrc32.so:system/lib/libblisrc32.so \
     vendor/google/sprout/proprietary/lib/libbluetooth_mtk.so:system/lib/libbluetooth_mtk.so \
     vendor/google/sprout/proprietary/lib/libbluetooth_mtk_pure.so:system/lib/libbluetooth_mtk_pure.so \
-    vendor/google/sprout/proprietary/lib/libbt-vendor.so:system/lib/libbt-vendor.so \
-    vendor/google/sprout/proprietary/lib/libbwc.so:system/lib/libbwc.so \
     vendor/google/sprout/proprietary/lib/libcam.camadapter.so:system/lib/libcam.camadapter.so \
     vendor/google/sprout/proprietary/lib/libcam.campipe.so:system/lib/libcam.campipe.so \
     vendor/google/sprout/proprietary/lib/libcam.camshot.so:system/lib/libcam.camshot.so \
@@ -98,6 +96,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libdpframework.so:system/lib/libdpframework.so \
     vendor/google/sprout/proprietary/lib/libfeatureio.so:system/lib/libfeatureio.so \
     vendor/google/sprout/proprietary/lib/libfile_op.so:system/lib/libfile_op.so \
+    vendor/google/sprout/proprietary/lib/libgralloc_extra.so:system/lib/libgralloc_extra.so \
     vendor/google/sprout/proprietary/lib/libimageio.so:system/lib/libimageio.so \
     vendor/google/sprout/proprietary/lib/libimageio_plat_drv.so:system/lib/libimageio_plat_drv.so \
     vendor/google/sprout/proprietary/lib/libion.so:system/lib/libion.so \
@@ -106,6 +105,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libmnl.so:system/lib/libmnl.so \
     vendor/google/sprout/proprietary/lib/libmsbc_mtk.so:system/lib/libmsbc_mtk.so \
     vendor/google/sprout/proprietary/lib/libmtk_drvb.so:system/lib/libmtk_drvb.so \
+    vendor/google/sprout/proprietary/lib/libmtk_mali_user.so:system/lib/libmtk_mali_user.so \
     vendor/google/sprout/proprietary/lib/libmtkcamera_client.so:system/lib/libmtkcamera_client.so \
     vendor/google/sprout/proprietary/lib/libmtkjpeg.so:system/lib/libmtkjpeg.so \
     vendor/google/sprout/proprietary/lib/libmtkplayer.so:system/lib/libmtkplayer.so \
