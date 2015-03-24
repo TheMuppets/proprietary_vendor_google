@@ -30,12 +30,12 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/bin/nvram_daemon:system/bin/nvram_daemon \
     vendor/google/sprout/proprietary/bin/thermal_manager:system/bin/thermal_manager \
     vendor/google/sprout/proprietary/bin/wmt_loader:system/bin/wmt_loader \
+    vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_0_hdr.bin:system/etc/firmware/ROMv1_patch_1_0_hdr.bin \
+    vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_1_hdr.bin:system/etc/firmware/ROMv1_patch_1_1_hdr.bin \
     vendor/google/sprout/proprietary/etc/firmware/WIFI_RAM_CODE_SOC:system/etc/firmware/WIFI_RAM_CODE_SOC \
     vendor/google/sprout/proprietary/etc/firmware/WMT_SOC.cfg:system/etc/firmware/WMT_SOC.cfg \
     vendor/google/sprout/proprietary/etc/firmware/catcher_filter_1_wg_n.bin:system/etc/firmware/catcher_filter_1_wg_n.bin \
     vendor/google/sprout/proprietary/etc/firmware/modem_1_wg_n.img:system/etc/firmware/modem_1_wg_n.img \
-    vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_0_hdr.bin:system/etc/firmware/ROMv1_patch_1_0_hdr.bin \
-    vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_1_hdr.bin:system/etc/firmware/ROMv1_patch_1_1_hdr.bin \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v1_coeff.bin:system/etc/firmware/mt6627/mt6627_fm_v1_coeff.bin \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v1_patch.bin:system/etc/firmware/mt6627/mt6627_fm_v1_patch.bin \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v2_coeff.bin:system/etc/firmware/mt6627/mt6627_fm_v2_coeff.bin \
@@ -52,12 +52,13 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     vendor/google/sprout/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
     vendor/google/sprout/proprietary/lib/hw/audio.primary.mt6582.so:system/lib/hw/audio.primary.mt6582.so \
-    vendor/google/sprout/proprietary/lib/hw/lights.default.so:system/lib/hw/lights.default.so \
     vendor/google/sprout/proprietary/lib/hw/camera.mt6582.so:system/lib/hw/camera.mt6582.so \
+    vendor/google/sprout/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     vendor/google/sprout/proprietary/lib/hw/gralloc.mt6582.so:system/lib/hw/gralloc.mt6582.so \
     vendor/google/sprout/proprietary/lib/hw/hwcomposer.mt6582.so:system/lib/hw/hwcomposer.mt6582.so \
+    vendor/google/sprout/proprietary/lib/hw/lights.default.so:system/lib/hw/lights.default.so \
+    vendor/google/sprout/proprietary/lib/hw/power.sprout.so:system/lib/hw/power.sprout.so \
     vendor/google/sprout/proprietary/lib/hw/sensors.mt6582.so:system/lib/hw/sensors.mt6582.so \
-    vendor/google/sprout/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     vendor/google/sprout/proprietary/lib/lib3a.so:system/lib/lib3a.so \
     vendor/google/sprout/proprietary/lib/libJpgEncPipe.so:system/lib/libJpgEncPipe.so \
     vendor/google/sprout/proprietary/lib/libMali.so:system/lib/libMali.so \
@@ -75,30 +76,48 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libblisrc32.so:system/lib/libblisrc32.so \
     vendor/google/sprout/proprietary/lib/libbluetooth_mtk.so:system/lib/libbluetooth_mtk.so \
     vendor/google/sprout/proprietary/lib/libbluetooth_mtk_pure.so:system/lib/libbluetooth_mtk_pure.so \
+    vendor/google/sprout/proprietary/lib/libbwc.so:system/lib/libbwc.so \
     vendor/google/sprout/proprietary/lib/libcam.camadapter.so:system/lib/libcam.camadapter.so \
     vendor/google/sprout/proprietary/lib/libcam.campipe.so:system/lib/libcam.campipe.so \
     vendor/google/sprout/proprietary/lib/libcam.camshot.so:system/lib/libcam.camshot.so \
     vendor/google/sprout/proprietary/lib/libcam.client.so:system/lib/libcam.client.so \
     vendor/google/sprout/proprietary/lib/libcam.device1.so:system/lib/libcam.device1.so \
+    vendor/google/sprout/proprietary/lib/libcam.device3.so:system/lib/libcam.device3.so \
     vendor/google/sprout/proprietary/lib/libcam.exif.so:system/lib/libcam.exif.so \
+    vendor/google/sprout/proprietary/lib/libcam.exif.v3.so:system/lib/libcam.exif.v3.so \
+    vendor/google/sprout/proprietary/lib/libcam.hal3a.v3.so:system/lib/libcam.hal3a.v3.so \
+    vendor/google/sprout/proprietary/lib/libcam.halsensor.so:system/lib/libcam.halsensor.so \
+    vendor/google/sprout/proprietary/lib/libcam.iopipe_FrmB.so:system/lib/libcam.iopipe_FrmB.so \
+    vendor/google/sprout/proprietary/lib/libcam.metadata.so:system/lib/libcam.metadata.so \
+    vendor/google/sprout/proprietary/lib/libcam.metadataprovider.so:system/lib/libcam.metadataprovider.so \
     vendor/google/sprout/proprietary/lib/libcam.paramsmgr.so:system/lib/libcam.paramsmgr.so \
     vendor/google/sprout/proprietary/lib/libcam.utils.sensorlistener.so:system/lib/libcam.utils.sensorlistener.so \
     vendor/google/sprout/proprietary/lib/libcam.utils.so:system/lib/libcam.utils.so \
+    vendor/google/sprout/proprietary/lib/libcam3_app.so:system/lib/libcam3_app.so \
+    vendor/google/sprout/proprietary/lib/libcam3_hwnode.so:system/lib/libcam3_hwnode.so \
+    vendor/google/sprout/proprietary/lib/libcam3_hwpipeline.so:system/lib/libcam3_hwpipeline.so \
+    vendor/google/sprout/proprietary/lib/libcam3_pipeline.so:system/lib/libcam3_pipeline.so \
+    vendor/google/sprout/proprietary/lib/libcam3_utils.so:system/lib/libcam3_utils.so \
     vendor/google/sprout/proprietary/lib/libcam_hwutils.so:system/lib/libcam_hwutils.so \
     vendor/google/sprout/proprietary/lib/libcam_mmp.so:system/lib/libcam_mmp.so \
     vendor/google/sprout/proprietary/lib/libcam_platform.so:system/lib/libcam_platform.so \
     vendor/google/sprout/proprietary/lib/libcam_utils.so:system/lib/libcam_utils.so \
     vendor/google/sprout/proprietary/lib/libcamalgo.so:system/lib/libcamalgo.so \
     vendor/google/sprout/proprietary/lib/libcamdrv.so:system/lib/libcamdrv.so \
+    vendor/google/sprout/proprietary/lib/libcamdrv_FrmB.so:system/lib/libcamdrv_FrmB.so \
+    vendor/google/sprout/proprietary/lib/libcamera_metadata.so:system/lib/libcamera_metadata.so \
     vendor/google/sprout/proprietary/lib/libcameracustom.so:system/lib/libcameracustom.so \
     vendor/google/sprout/proprietary/lib/libcurl.so:system/lib/libcurl.so \
+    vendor/google/sprout/proprietary/lib/libcustom_nvram.so:system/lib/libcustom_nvram.so \
     vendor/google/sprout/proprietary/lib/libcvsd_mtk.so:system/lib/libcvsd_mtk.so \
     vendor/google/sprout/proprietary/lib/libdpframework.so:system/lib/libdpframework.so \
     vendor/google/sprout/proprietary/lib/libfeatureio.so:system/lib/libfeatureio.so \
     vendor/google/sprout/proprietary/lib/libfile_op.so:system/lib/libfile_op.so \
     vendor/google/sprout/proprietary/lib/libgralloc_extra.so:system/lib/libgralloc_extra.so \
     vendor/google/sprout/proprietary/lib/libimageio.so:system/lib/libimageio.so \
+    vendor/google/sprout/proprietary/lib/libimageio_FrmB.so:system/lib/libimageio_FrmB.so \
     vendor/google/sprout/proprietary/lib/libimageio_plat_drv.so:system/lib/libimageio_plat_drv.so \
+    vendor/google/sprout/proprietary/lib/libimageio_plat_drv_FrmB.so:system/lib/libimageio_plat_drv_FrmB.so \
     vendor/google/sprout/proprietary/lib/libion.so:system/lib/libion.so \
     vendor/google/sprout/proprietary/lib/libion_mtk.so:system/lib/libion_mtk.so \
     vendor/google/sprout/proprietary/lib/libm4u.so:system/lib/libm4u.so \
@@ -106,11 +125,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libmsbc_mtk.so:system/lib/libmsbc_mtk.so \
     vendor/google/sprout/proprietary/lib/libmtk_drvb.so:system/lib/libmtk_drvb.so \
     vendor/google/sprout/proprietary/lib/libmtk_mali_user.so:system/lib/libmtk_mali_user.so \
+    vendor/google/sprout/proprietary/lib/libmtk_mmutils.so:system/lib/libmtk_mmutils.so \
     vendor/google/sprout/proprietary/lib/libmtkcamera_client.so:system/lib/libmtkcamera_client.so \
     vendor/google/sprout/proprietary/lib/libmtkjpeg.so:system/lib/libmtkjpeg.so \
     vendor/google/sprout/proprietary/lib/libmtkplayer.so:system/lib/libmtkplayer.so \
     vendor/google/sprout/proprietary/lib/libnvram.so:system/lib/libnvram.so \
-    vendor/google/sprout/proprietary/lib/libcustom_nvram.so:system/lib/libcustom_nvram.so \
     vendor/google/sprout/proprietary/lib/libnvram_daemon_callback.so:system/lib/libnvram_daemon_callback.so \
     vendor/google/sprout/proprietary/lib/libnvram_platform.so:system/lib/libnvram_platform.so \
     vendor/google/sprout/proprietary/lib/librilmtk.so:system/lib/librilmtk.so \
