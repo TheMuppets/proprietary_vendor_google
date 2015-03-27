@@ -76,6 +76,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libblisrc32.so:system/lib/libblisrc32.so \
     vendor/google/sprout/proprietary/lib/libbluetooth_mtk.so:system/lib/libbluetooth_mtk.so \
     vendor/google/sprout/proprietary/lib/libbluetooth_mtk_pure.so:system/lib/libbluetooth_mtk_pure.so \
+    vendor/google/sprout/proprietary/lib/libbt-vendor.so:system/lib/libbt-vendor.so \
     vendor/google/sprout/proprietary/lib/libbwc.so:system/lib/libbwc.so \
     vendor/google/sprout/proprietary/lib/libcam.camadapter.so:system/lib/libcam.camadapter.so \
     vendor/google/sprout/proprietary/lib/libcam.campipe.so:system/lib/libcam.campipe.so \
