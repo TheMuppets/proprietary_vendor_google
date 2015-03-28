@@ -88,6 +88,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libcam.exif.v3.so:system/lib/libcam.exif.v3.so \
     vendor/google/sprout/proprietary/lib/libcam.hal3a.v3.so:system/lib/libcam.hal3a.v3.so \
     vendor/google/sprout/proprietary/lib/libcam.halsensor.so:system/lib/libcam.halsensor.so \
+    vendor/google/sprout/proprietary/lib/libcam.iopipe.so.so:system/lib/libcam.iopipe.so \
     vendor/google/sprout/proprietary/lib/libcam.iopipe_FrmB.so:system/lib/libcam.iopipe_FrmB.so \
     vendor/google/sprout/proprietary/lib/libcam.metadata.so:system/lib/libcam.metadata.so \
     vendor/google/sprout/proprietary/lib/libcam.metadataprovider.so:system/lib/libcam.metadataprovider.so \
@@ -115,6 +116,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libfeatureio.so:system/lib/libfeatureio.so \
     vendor/google/sprout/proprietary/lib/libfile_op.so:system/lib/libfile_op.so \
     vendor/google/sprout/proprietary/lib/libgralloc_extra.so:system/lib/libgralloc_extra.so \
+    vendor/google/sprout/proprietary/lib/libhwm.so:system/lib/libhwm.so \
     vendor/google/sprout/proprietary/lib/libimageio.so:system/lib/libimageio.so \
     vendor/google/sprout/proprietary/lib/libimageio_FrmB.so:system/lib/libimageio_FrmB.so \
     vendor/google/sprout/proprietary/lib/libimageio_plat_drv.so:system/lib/libimageio_plat_drv.so \
