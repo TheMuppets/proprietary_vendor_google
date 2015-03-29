@@ -30,6 +30,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/bin/nvram_daemon:system/bin/nvram_daemon \
     vendor/google/sprout/proprietary/bin/thermal_manager:system/bin/thermal_manager \
     vendor/google/sprout/proprietary/bin/wmt_loader:system/bin/wmt_loader \
+    vendor/google/sprout/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \
     vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_0_hdr.bin:system/etc/firmware/ROMv1_patch_1_0_hdr.bin \
     vendor/google/sprout/proprietary/etc/firmware/ROMv1_patch_1_1_hdr.bin:system/etc/firmware/ROMv1_patch_1_1_hdr.bin \
     vendor/google/sprout/proprietary/etc/firmware/WIFI_RAM_CODE_SOC:system/etc/firmware/WIFI_RAM_CODE_SOC \
@@ -48,6 +49,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v5_patch.bin:system/etc/firmware/mt6627/mt6627_fm_v5_patch.bin \
     vendor/google/sprout/proprietary/etc/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg \
     vendor/google/sprout/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    vendor/google/sprout/proprietary/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    vendor/google/sprout/proprietary/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     vendor/google/sprout/proprietary/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
     vendor/google/sprout/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     vendor/google/sprout/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
@@ -88,7 +91,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libcam.exif.v3.so:system/lib/libcam.exif.v3.so \
     vendor/google/sprout/proprietary/lib/libcam.hal3a.v3.so:system/lib/libcam.hal3a.v3.so \
     vendor/google/sprout/proprietary/lib/libcam.halsensor.so:system/lib/libcam.halsensor.so \
-    vendor/google/sprout/proprietary/lib/libcam.iopipe.so.so:system/lib/libcam.iopipe.so \
+    vendor/google/sprout/proprietary/lib/libcam.iopipe.so:system/lib/libcam.iopipe.so \
     vendor/google/sprout/proprietary/lib/libcam.iopipe_FrmB.so:system/lib/libcam.iopipe_FrmB.so \
     vendor/google/sprout/proprietary/lib/libcam.metadata.so:system/lib/libcam.metadata.so \
     vendor/google/sprout/proprietary/lib/libcam.metadataprovider.so:system/lib/libcam.metadataprovider.so \
@@ -107,7 +110,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libcamalgo.so:system/lib/libcamalgo.so \
     vendor/google/sprout/proprietary/lib/libcamdrv.so:system/lib/libcamdrv.so \
     vendor/google/sprout/proprietary/lib/libcamdrv_FrmB.so:system/lib/libcamdrv_FrmB.so \
-    vendor/google/sprout/proprietary/lib/libcamera_metadata.so:system/lib/libcamera_metadata.so \
     vendor/google/sprout/proprietary/lib/libcameracustom.so:system/lib/libcameracustom.so \
     vendor/google/sprout/proprietary/lib/libcurl.so:system/lib/libcurl.so \
     vendor/google/sprout/proprietary/lib/libcustom_nvram.so:system/lib/libcustom_nvram.so \
