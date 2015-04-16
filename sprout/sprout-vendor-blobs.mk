@@ -73,6 +73,9 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libaudiocustparam.so:system/lib/libaudiocustparam.so \
     vendor/google/sprout/proprietary/lib/libaudiodcrflt.so:system/lib/libaudiodcrflt.so \
     vendor/google/sprout/proprietary/lib/libaudiomtkdcremoval.so:system/lib/libaudiomtkdcremoval.so \
+    vendor/google/sprout/proprietary/lib/libaudiopolicymanager.so:system/lib/libaudiopolicymanager.so \
+    vendor/google/sprout/proprietary/lib/libaudiopolicymanagerdefault.so:system/lib/libaudiopolicymanagerdefault.so \
+    vendor/google/sprout/proprietary/lib/libaudiopolicymanagersprout.so:system/lib/libaudiopolicymanagersprout.so \
     vendor/google/sprout/proprietary/lib/libaudiosetting.so:system/lib/libaudiosetting.so \
     vendor/google/sprout/proprietary/lib/libbessound_hd_mtk.so:system/lib/libbessound_hd_mtk.so \
     vendor/google/sprout/proprietary/lib/libblisrc.so:system/lib/libblisrc.so \
