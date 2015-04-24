@@ -1,4 +1,4 @@
-# Copyright (C) 2011-2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -48,9 +48,9 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v5_coeff.bin:system/etc/firmware/mt6627/mt6627_fm_v5_coeff.bin \
     vendor/google/sprout/proprietary/etc/firmware/mt6627/mt6627_fm_v5_patch.bin:system/etc/firmware/mt6627/mt6627_fm_v5_patch.bin \
     vendor/google/sprout/proprietary/etc/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg \
+    vendor/google/sprout/proprietary/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     vendor/google/sprout/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     vendor/google/sprout/proprietary/etc/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    vendor/google/sprout/proprietary/etc/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     vendor/google/sprout/proprietary/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
     vendor/google/sprout/proprietary/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     vendor/google/sprout/proprietary/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
@@ -73,7 +73,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libaudiocustparam.so:system/lib/libaudiocustparam.so \
     vendor/google/sprout/proprietary/lib/libaudiodcrflt.so:system/lib/libaudiodcrflt.so \
     vendor/google/sprout/proprietary/lib/libaudiomtkdcremoval.so:system/lib/libaudiomtkdcremoval.so \
-    vendor/google/sprout/proprietary/lib/libaudiopolicymanager.so:system/lib/libaudiopolicymanager.so \
     vendor/google/sprout/proprietary/lib/libaudiopolicymanagerdefault.so:system/lib/libaudiopolicymanagerdefault.so \
     vendor/google/sprout/proprietary/lib/libaudiopolicymanagersprout.so:system/lib/libaudiopolicymanagersprout.so \
     vendor/google/sprout/proprietary/lib/libaudiosetting.so:system/lib/libaudiosetting.so \
@@ -148,4 +147,12 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libvcodec_utility.so:system/lib/libvcodec_utility.so \
     vendor/google/sprout/proprietary/lib/libvcodecdrv.so:system/lib/libvcodecdrv.so \
     vendor/google/sprout/proprietary/lib/mtk-ril.so:system/lib/mtk-ril.so \
+    vendor/google/sprout/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    vendor/google/sprout/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so \
+    vendor/google/sprout/proprietary/vendor/lib/libWVphoneAPI.so:system/vendor/lib/libWVphoneAPI.so \
+    vendor/google/sprout/proprietary/vendor/lib/libfrsdk.so:system/vendor/lib/libfrsdk.so \
+    vendor/google/sprout/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
+    vendor/google/sprout/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
+    vendor/google/sprout/proprietary/vendor/lib/mediadrm/libdrmclearkeyplugin.so:system/vendor/lib/mediadrm/libdrmclearkeyplugin.so \
+    vendor/google/sprout/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     vendor/google/sprout/proprietary/xbin/mnld:system/xbin/mnld
