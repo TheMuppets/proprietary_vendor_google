@@ -60,7 +60,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/hw/gralloc.mt6582.so:system/lib/hw/gralloc.mt6582.so \
     vendor/google/sprout/proprietary/lib/hw/hwcomposer.mt6582.so:system/lib/hw/hwcomposer.mt6582.so \
     vendor/google/sprout/proprietary/lib/hw/lights.default.so:system/lib/hw/lights.default.so \
-    vendor/google/sprout/proprietary/lib/hw/power.sprout.so:system/lib/hw/power.sprout.so \
     vendor/google/sprout/proprietary/lib/hw/sensors.mt6582.so:system/lib/hw/sensors.mt6582.so \
     vendor/google/sprout/proprietary/lib/lib3a.so:system/lib/lib3a.so \
     vendor/google/sprout/proprietary/lib/libJpgEncPipe.so:system/lib/libJpgEncPipe.so \
@@ -119,6 +118,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libdpframework.so:system/lib/libdpframework.so \
     vendor/google/sprout/proprietary/lib/libfeatureio.so:system/lib/libfeatureio.so \
     vendor/google/sprout/proprietary/lib/libfile_op.so:system/lib/libfile_op.so \
+    vendor/google/sprout/proprietary/lib/libfmcust.so:system/lib/libfmcust.so \
     vendor/google/sprout/proprietary/lib/libgralloc_extra.so:system/lib/libgralloc_extra.so \
     vendor/google/sprout/proprietary/lib/libhwm.so:system/lib/libhwm.so \
     vendor/google/sprout/proprietary/lib/libimageio.so:system/lib/libimageio.so \
