@@ -116,6 +116,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libcustom_nvram.so:system/lib/libcustom_nvram.so \
     vendor/google/sprout/proprietary/lib/libcvsd_mtk.so:system/lib/libcvsd_mtk.so \
     vendor/google/sprout/proprietary/lib/libdpframework.so:system/lib/libdpframework.so \
+    vendor/google/sprout/proprietary/lib/libdrmmtkutil.so:system/lib/libdrmmtkutil.so \
     vendor/google/sprout/proprietary/lib/libfeatureio.so:system/lib/libfeatureio.so \
     vendor/google/sprout/proprietary/lib/libfile_op.so:system/lib/libfile_op.so \
     vendor/google/sprout/proprietary/lib/libfmcust.so:system/lib/libfmcust.so \
