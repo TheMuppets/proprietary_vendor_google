@@ -1,0 +1,25 @@
+#Filter the log output from irrelevant modules
+DisabledModules = 10
+DebugLevel = 10
+
+# If this is uncommented then logs will be written to the file system.
+#LogFile=/data/DxDrm/Logs/cln
+
+LogcatLogs=True
+
+#log the HTTP communication
+JavaHTTPLog=true
+
+#PlayReadyLog = /data/Dxdrm/Logs
+
+#Provisioning data
+SecureDBPath = /data/DxDrm/DxSecureDB
+NVSPath = /data/DxDrm/NVS
+DeviceKeyPath = /data/DxDrm/DxDeviceKey
+PlayReadyStorePath = /data/DxDrm/DxPlayReadyDB.hds
+AutoProvisionPlayReady = PlayReady, /data/DxDrm/Credentials/PlayReady
+
+SupportAllMimeTypes=true
+
+# uncomment this line in order to support multi-user file name translation
+#TranslateUserPath=true
