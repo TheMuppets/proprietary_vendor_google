@@ -27,9 +27,9 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := FmRadioTrampoline
+LOCAL_MODULE := FmRadioTrampoline2
 LOCAL_MODULE_OWNER := google
-LOCAL_SRC_FILES := proprietary/app/FmRadioTrampoline/FmRadioTrampoline.apk
+LOCAL_SRC_FILES := proprietary/app/FmRadioTrampoline2/FmRadioTrampoline2.apk
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 LOCAL_MODULE_CLASS := APPS
