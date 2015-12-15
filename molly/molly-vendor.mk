@@ -20,8 +20,7 @@ $(call inherit-product, vendor/google/molly/molly-vendor-blobs.mk)
 PRODUCT_PACKAGES += \
     CanvasPackageInstaller \
     LeanbackIme \
-    TungstenLEDService \
-    TvVoiceInput
+    TungstenLEDService
 
 # Prebuilt jars
 PRODUCT_PACKAGES += \
