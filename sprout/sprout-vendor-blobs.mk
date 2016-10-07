@@ -120,6 +120,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sprout/proprietary/lib/libfeatureio.so:system/lib/libfeatureio.so \
     vendor/google/sprout/proprietary/lib/libfile_op.so:system/lib/libfile_op.so \
     vendor/google/sprout/proprietary/lib/libfmcust.so:system/lib/libfmcust.so \
+    vendor/google/sprout/proprietary/lib/libfmjni.so:system/lib/libfmjni.so \
     vendor/google/sprout/proprietary/lib/libgralloc_extra.so:system/lib/libgralloc_extra.so \
     vendor/google/sprout/proprietary/lib/libhwm.so:system/lib/libhwm.so \
     vendor/google/sprout/proprietary/lib/libimageio.so:system/lib/libimageio.so \
