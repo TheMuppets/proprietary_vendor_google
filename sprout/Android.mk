@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter sprout4 sprout8, $(TARGET_DEVICE)),)
+ifneq ($(filter sprout4 sprout8 sprout sprout_b, $(TARGET_DEVICE)),)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libaudiopolicymanager
