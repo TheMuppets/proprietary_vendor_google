@@ -1,0 +1,956 @@
+tc 1
+#Handset Capture
+!Capture
+Txdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC10
+DEC10 MUX:DMIC3
+DEC10 Volume:50
+IIR1 INP1 MUX:DEC10
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC10 MUX:ZERO
+DEC10 Volume:0
+IIR1 INP1 MUX:ZERO
+
+tc 2
+#Headset Capture
+!Capture
+Txdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC5
+DEC5 MUX:ADC2
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:DEC5
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC5 MUX:ZERO
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:ZERO
+
+tc 3
+#Handset Capture
+!Capture
+Txdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC7
+DEC7 MUX:DMIC1
+DEC7 Volume:50
+IIR1 INP1 MUX:DEC7
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC7 MUX:ZERO
+DEC7 Volume:0
+IIR1 INP1 MUX:ZERO
+
+tc 4
+#Handset Capture
+!Capture
+Txdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC8
+DEC8 MUX:DMIC2
+DEC8 Volume:50
+IIR1 INP1 MUX:DEC8
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC8 MUX:ZERO
+DEC8 Volume:0
+IIR1 INP1 MUX:ZERO
+
+tc 5
+#Handset Capture
+!Capture
+Txdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC9
+DEC9 MUX:DMIC4
+DEC9 Volume:50
+IIR1 INP1 MUX:DEC9
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC9 MUX:ZERO
+DEC9 Volume:0
+IIR1 INP1 MUX:ZERO
+
+tc 6
+#Handset Capture
+!Capture
+Txdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC9
+DEC9 MUX:DMIC5
+DEC9 Volume:50
+IIR1 INP1 MUX:DEC9
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC9 MUX:ZERO
+DEC9 Volume:0
+IIR1 INP1 MUX:ZERO
+
+tc 7
+#Handset Capture
+!Capture
+Txdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC7
+DEC7 MUX:DMIC6
+DEC7 Volume:50
+IIR1 INP1 MUX:DEC7
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC7 MUX:ZERO
+DEC7 Volume:0
+IIR1 INP1 MUX:ZERO
+
+tc 10
+#Headset Device
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM RX2 MUX:AIF1_PB
+SLIM_0_RX Channels:Two
+RX1 MIX1 INP1:RX1
+RX2 MIX1 INP1:RX2
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:100
+HPHR Volume:100
+RX1 Digital Volume:68
+RX2 Digital Volume:68
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+SLIM RX2 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+COMP1 Switch:0
+HPHL Volume:0
+HPHR Volume:0
+RX1 Digital Volume:0
+RX2 Digital Volume:0
+
+tc 11
+#Speaker Device
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX7 MIX1 INP1:RX1
+RX7 Digital Volume:68
+COMP0 Switch:1
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX7 MIX1 INP1:ZERO
+RX7 Digital Volume:0
+COMP0 Switch:0
+
+tc 12
+#EarPiece
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX1 MIX1 INP1:RX1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+RX1 Digital Volume:68
+DAC1 Switch:1
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX1 Digital Volume:0
+DAC1 Switch:0
+
+tc 13
+#Headset Device Right
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX2 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX2 MIX1 INP1:RX2
+COMP1 Switch:1
+HPHR Volume:100
+RX2 Digital Volume:68
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX2 MUX:ZERO
+RX2 MIX1 INP1:ZERO
+COMP1 Switch:0
+HPHL Volume:0
+HPHR Volume:0
+RX2 Digital Volume:0
+
+tc 14
+#Headset Device Left
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX1 MIX1 INP1:RX1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:100
+RX1 Digital Volume:68
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+COMP1 Switch:0
+HPHL Volume:0
+RX1 Digital Volume:0
+
+
+tc 15
+#Lineout Playback
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM RX2 MUX:AIF1_PB
+SLIM_0_RX Channels:Two
+RX3 MIX1 INP1:RX1
+RX5 MIX1 INP1:RX2
+RDAC5 MUX:DEM3_INV
+RDAC7 MUX:DEM5_INV
+COMP2 Switch:1
+RX3 Digital Volume:67
+RX5 Digital Volume:67
+RX4 Digital Volume:67
+RX6 Digital Volume:67
+LINEOUT1 Volume:100
+LINEOUT3 Volume:100
+LINEOUT2 Volume:100
+LINEOUT4 Volume:100
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+SLIM RX2 MUX:ZERO
+RX3 MIX1 INP1:ZERO
+RX5 MIX1 INP1:ZERO
+RDAC5 MUX:ZERO
+RDAC7 MUX:ZERO
+COMP2 Switch:0
+RX3 Digital Volume:0
+RX5 Digital Volume:0
+RX4 Digital Volume:0
+RX6 Digital Volume:0
+LINEOUT1 Volume:0
+LINEOUT3 Volume:0
+LINEOUT2 Volume:0
+LINEOUT4 Volume:0
+
+tc 16
+#Lineout Left Playback
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX3 MIX1 INP1:RX1
+RDAC5 MUX:DEM3_INV
+COMP2 Switch:1
+RX3 Digital Volume:67
+RX4 Digital Volume:67
+LINEOUT1 Volume:100
+LINEOUT3 Volume:100
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX3 MIX1 INP1:ZERO
+RDAC5 MUX:ZERO
+COMP2 Switch:0
+RX3 Digital Volume:0
+RX4 Digital Volume:0
+LINEOUT1 Volume:0
+LINEOUT3 Volume:0
+
+tc 17
+#Lineout Right Playback
+!Playback
+Rxdevice:0
+
+enable
+SLIM RX2 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX5 MIX1 INP1:RX2
+RDAC7 MUX:DEM5_INV
+COMP2 Switch:1
+RX5 Digital Volume:67
+RX6 Digital Volume:67
+LINEOUT2 Volume:100
+LINEOUT4 Volume:100
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX2 MUX:ZERO
+RX5 MIX1 INP1:ZERO
+RDAC7 MUX:ZERO
+COMP2 Switch:0
+RX5 Digital Volume:0
+RX6 Digital Volume:0
+LINEOUT2 Volume:0
+LINEOUT4 Volume:0
+
+tc 20
+#HeadSet Mic to Headset Speakers AFE loopback
+!AfeLoop
+Txdevice:5
+Rxdevice:5
+
+enable
+SLIMBUS_DL_HL Switch:1
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX1 MIX1 INP1:RX1
+RX2 MIX1 INP1:RX1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:20
+HPHR Volume:20
+RX1 Digital Volume:124
+RX2 Digital Volume:124
+
+AIF1_CAP Mixer SLIM TX7:1
+SLIM_0_TX Channels:One
+SLIM TX7 MUX:DEC5
+IIR1 INP1 MUX:DEC5
+DEC5 MUX:ADC2
+SLIMBUS_0_RX Port Mixer SLIM_0_TX:1
+ADC2 Volume:19
+DEC1 Volume:20
+
+disable
+SLIMBUS_DL_HL Switch:0
+SLIM RX7 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+COMP1 Switch:0
+HPHL Volume:0
+HPHR Volume:0
+RX1 Digital Volume:0
+RX2 Digital Volume:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX1 MUX:ZERO
+IIR1 INP1 MUX:ZERO
+DEC1 MUX:ZERO
+SLIMBUS_0_RX Port Mixer SLIM_0_TX:0
+ADC2 Volume:0
+DEC1 Volume:0
+
+tc 21
+#HandSet Mic to Handset Speakers AFE loopback
+!AfeLoop
+Txdevice:5
+Rxdevice:5
+
+enable
+SLIMBUS_DL_HL Switch:1
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX1 MIX1 INP1:RX1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+RX1 Digital Volume:68
+DAC1 Switch:1
+
+AIF1_CAP Mixer SLIM TX7:1
+SLIM_0_TX Channels:One
+SLIM TX7 MUX:DEC10
+IIR1 INP1 MUX:DEC10
+DEC10 MUX:DMIC3
+SLIMBUS_0_RX Port Mixer SLIM_0_TX:1
+DEC10 Volume:19
+
+disable
+SLIMBUS_DL_HL Switch:0
+SLIM RX1 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX1 Digital Volume:0
+DAC1 Switch:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX1 MUX:ZERO
+IIR1 INP1 MUX:ZERO
+DEC10 MUX:ZERO
+CLASS_H_DSM MUX:ZERO
+SLIMBUS_0_RX Port Mixer SLIM_0_TX:0
+DEC10 Volume:0
+
+tc 22
+#Speaker Phone Mic to Lineout AFE loopback
+!AfeLoop
+Txdevice:5
+Rxdevice:5
+
+enable
+SLIMBUS_DL_HL Switch:1
+SLIM RX1 MUX:AIF1_PB
+SLIM RX2 MUX:AIF1_PB
+SLIM_0_RX Channels:Two
+RX7 MIX1 INP1:RX1
+RX8 MIX1 INP1:RX2
+COMP0 Switch:1
+RX7 Digital Volume:67
+RX8 Digital Volume:67
+
+AIF1_CAP Mixer SLIM TX7:1
+SLIM_0_TX Channels:One
+SLIM TX7 MUX:DEC10
+IIR1 INP1 MUX:DEC10
+DEC10 MUX:DMIC3
+SLIMBUS_0_RX Port Mixer SLIM_0_TX:1
+DEC10 Volume:20
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+SLIM RX2 MUX:ZERO
+RX7 MIX1 INP1:ZERO
+RX8 MIX1 INP1:ZERO
+COMP0 Switch:0
+RX7 Digital Volume:0
+RX8 Digital Volume:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+IIR1 INP1 MUX:ZERO
+DEC10 MUX:ZERO
+SLIMBUS_0_RX Port Mixer SLIM_0_TX:0
+DEC10 Volume:0
+
+tc 25
+#HeadSet Mic to Headset Codec loopback
+!CodecLoop
+
+enable
+DEC5 MUX:ADC2
+ADC2 Volume:19
+DEC5 Volume:124
+IIR1 INP1 MUX:DEC5
+RX1 MIX1 INP1:IIR1
+RX2 MIX1 INP1:IIR1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:80
+HPHR Volume:80
+RX1 Digital Volume:124
+RX2 Digital Volume:124
+
+disable
+DEC5 MUX:ZERO
+ADC2 Volume:0
+DEC5 Volume:0
+IIR1 INP1 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+COMP1 Switch:0
+HPHL Volume:0
+HPHR Volume:0
+RX1 Digital Volume:0
+RX2 Digital Volume:0
+
+tc 26
+#HandSet Mic to Handset Speaker Codec loopback
+!CodecLoop
+
+enable
+IIR1 INP1 MUX:DEC10
+DEC10 MUX:DMIC3
+DEC10 Volume:20
+RX1 MIX1 INP1:IIR1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+RX1 Digital Volume:68
+DAC1 Switch:1
+
+disable
+DEC10 MUX:ZERO
+DEC10 Volume:0
+IIR1 INP1 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+RX1 Digital Volume:0
+DAC1 Switch:0
+CLASS_H_DSM MUX:ZERO
+
+tc 27
+#HeadSet Mic to Headset left Codec loopback
+!CodecLoop
+
+enable
+DEC5 MUX:ADC2
+ADC2 Volume:19
+DEC5 Volume:124
+IIR1 INP1 MUX:DEC5
+RX1 MIX1 INP1:IIR1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:80
+RX1 Digital Volume:124
+
+disable
+DEC5 MUX:ZERO
+ADC2 Volume:0
+DEC5 Volume:0
+IIR1 INP1 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+COMP1 Switch:0
+HPHL Volume:0
+RX1 Digital Volume:0
+
+tc 28
+#HeadSet Mic to Headset right Codec loopback
+!CodecLoop
+
+enable
+DEC5 MUX:ADC2
+ADC2 Volume:19
+DEC5 Volume:124
+IIR1 INP1 MUX:DEC5
+RX2 MIX1 INP1:IIR1
+COMP1 Switch:1
+HPHR Volume:80
+RX2 Digital Volume:124
+
+disable
+DEC5 MUX:ZERO
+ADC2 Volume:0
+DEC5 Volume:0
+IIR1 INP1 MUX:ZERO
+RX2 MIX1 INP1:ZERO
+COMP1 Switch:0
+HPHR Volume:0
+RX2 Digital Volume:0
+
+tc 31
+#Earpiece to Handset Mic
+!ExternalLoop
+Txdevice:0
+Rxdevice:0
+
+enable
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC10
+DEC10 MUX:DMIC3
+DEC10 Volume:50
+IIR1 INP1 MUX:DEC10
+
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX1 MIX1 INP1:RX1
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+RX1 Digital Volume:68
+DAC1 Switch:1
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+disable
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC10 MUX:ZERO
+DEC10 Volume:0
+IIR1 INP1 MUX:ZERO
+
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX1 Digital Volume:0
+DAC1 Switch:0
+
+
+tc 32
+#Handset Speakers to HeadSet Mic
+!ExternalLoop
+Txdevice:0
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX7 MIX1 INP1:RX1
+RX7 Digital Volume:68
+COMP0 Switch:1
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC5
+DEC5 MUX:ADC2
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:DEC5
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX7 MIX1 INP1:ZERO
+RX7 Digital Volume:0
+COMP0 Switch:0
+
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC5 MUX:ZERO
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:ZERO
+
+tc 33
+#Headset Speakers to HeadSet Mic
+!ExternalLoop
+Txdevice:0
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM RX2 MUX:AIF1_PB
+SLIM_0_RX Channels:Two
+RX1 MIX1 INP1:RX1
+RX2 MIX1 INP1:RX2
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:100
+HPHR Volume:100
+RX1 Digital Volume:68
+RX2 Digital Volume:68
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC5
+DEC5 MUX:ADC2
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:DEC5
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+SLIM RX2 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+COMP1 Switch:0
+HPHL Volume:0
+HPHR Volume:0
+RX1 Digital Volume:0
+RX2 Digital Volume:0
+
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC5 MUX:ZERO
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:ZERO
+
+
+tc 34
+#Headset Speakers to HandSet Mic
+!ExternalLoop
+Txdevice:0
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM RX2 MUX:AIF1_PB
+SLIM_0_RX Channels:Two
+RX1 MIX1 INP1:RX1
+RX2 MIX1 INP1:RX2
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:100
+HPHR Volume:100
+RX1 Digital Volume:68
+RX2 Digital Volume:68
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC10
+DEC10 MUX:DMIC3
+DEC10 Volume:50
+IIR1 INP1 MUX:DEC10
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+SLIM RX2 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+COMP1 Switch:0
+HPHL Volume:0
+HPHR Volume:0
+RX1 Digital Volume:0
+RX2 Digital Volume:0
+
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC10 MUX:ZERO
+DEC10 Volume:0
+IIR1 INP1 MUX:ZERO
+
+
+tc 35
+#Speakers to HandSet Mic
+!ExternalLoop
+Txdevice:0
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX7 MIX1 INP1:RX1
+RX7 Digital Volume:68
+COMP0 Switch:1
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC10
+DEC10 MUX:DMIC3
+DEC10 Volume:50
+IIR1 INP1 MUX:DEC10
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX7 MIX1 INP1:ZERO
+RX7 Digital Volume:0
+COMP0 Switch:0
+
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC10 MUX:ZERO
+DEC10 Volume:0
+IIR1 INP1 MUX:ZERO
+
+tc 36
+#Speakers to HeadSet Mic
+!ExternalLoop
+Txdevice:0
+Rxdevice:0
+
+enable
+SLIM RX1 MUX:AIF1_PB
+SLIM_0_RX Channels:One
+RX7 MIX1 INP1:RX1
+RX7 Digital Volume:68
+COMP0 Switch:1
+SLIMBUS_0_RX Audio Mixer MultiMedia1:1
+
+SLIM_0_TX Channels:One
+AIF1_CAP Mixer SLIM TX7:1
+MultiMedia1 Mixer SLIM_0_TX:1
+SLIM TX7 MUX:DEC5
+DEC5 MUX:ADC2
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:DEC5
+
+disable
+SLIMBUS_0_RX Audio Mixer MultiMedia1:0
+SLIM RX1 MUX:ZERO
+RX7 MIX1 INP1:ZERO
+RX7 Digital Volume:0
+COMP0 Switch:0
+
+MultiMedia1 Mixer SLIM_0_TX:0
+AIF1_CAP Mixer SLIM TX7:0
+SLIM TX7 MUX:ZERO
+DEC5 MUX:ZERO
+ADC2 Volume:50
+DEC5 Volume:50
+IIR1 INP1 MUX:ZERO
+
+tc 40
+#Bluetooth TX
+!Capture
+Txdevice:0
+
+enable
+MultiMedia1 Mixer SEC_AUX_PCM_UL_TX:1
+
+disable
+MultiMedia1 Mixer SEC_AUX_PCM_UL_TX:0
+
+tc 41
+#Bluetooth RX
+!Playback
+Rxdevice:0
+
+enable
+SEC_AUX_PCM_RX Audio Mixer MultiMedia1:1
+
+disable
+SEC_AUX_PCM_RX Audio Mixer MultiMedia1:0
+
+tc 50
+#FM Record
+!FM
+
+Rxdevice:5
+Txdevice:6
+
+enable
+SLIMBUS_0_RX Port Mixer PRI_MI2S_TX:1
+SLIM RX1 MUX:AIF1_PB
+SLIM RX2 MUX:AIF1_PB
+RX1 MIX1 INP1:RX1
+RX2 MIX1 INP1:RX2
+CLASS_H_DSM MUX:RX_HPHL
+HPHL DAC Switch:1
+HPHL Volume:100
+HPHR Volume:100
+SLIMBUS_DL_HL Switch:1
+SLIM_0_RX Channels:Two
+
+disable
+SLIMBUS_0_RX Port Mixer PRI_MIS_TX:0
+SLIM RX1 MUX:ZERO
+SLIM RX2 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+HPHL Volume:0
+HPHR Volume:0
+SLIMBUS_DL_HL Switch:0
+
+tc 51
+#FM Play
+!FM
+Rxdevice:5
+Txdevice:6
+
+enable
+SLIMBUS_0_RX Port Mixer PRI_MI2S_TX:1
+SLIM RX1 MUX:AIF1_PB
+SLIM RX2 MUX:AIF1_PB
+RX1 MIX1 INP1:RX1
+RX2 MIX1 INP1:RX2
+CLASS_H_DSM MUX:DSM_HPHL_RX1
+HPHL DAC Switch:1
+COMP1 Switch:1
+HPHL Volume:100
+HPHR Volume:100
+RX1 Digital Volume:68
+RX2 Digital Volume:68
+SLIMBUS_DL_HL Switch:1
+SLIM_0_RX Channels:Two
+
+disable
+SLIMBUS_0_RX Port Mixer PRI_MI2S_TX:0
+SLIM RX1 MUX:ZERO
+SLIM RX2 MUX:ZERO
+RX1 MIX1 INP1:ZERO
+RX2 MIX1 INP1:ZERO
+CLASS_H_DSM MUX:ZERO
+HPHL DAC Switch:0
+HPHL Volume:0
+HPHR Volume:0
+SLIMBUS_DL_HL Switch:0
