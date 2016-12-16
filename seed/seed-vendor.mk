@@ -456,4 +456,4 @@ PRODUCT_PACKAGES += \
     qcrilhook
 endif
 
-$(call inherit-product, vendor/qcom/binaries/msm8916/graphics/graphics-vendor.mk)
+$(call inherit-product, vendor/qcom/binaries/msm8916-32/graphics/graphics-vendor.mk)
