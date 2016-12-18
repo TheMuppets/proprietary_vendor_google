@@ -400,6 +400,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/seed/proprietary/vendor/lib/libmmcamera_truly_cm7700_eeprom.so:system/vendor/lib/libmmcamera_truly_cm7700_eeprom.so \
     vendor/google/seed/proprietary/vendor/lib/libmmcamera_wavelet_lib.so:system/vendor/lib/libmmcamera_wavelet_lib.so \
     vendor/google/seed/proprietary/vendor/lib/libmm-color-convertor.so:system/vendor/lib/libmm-color-convertor.so \
+    vendor/google/seed/proprietary/vendor/lib/libmm-disp-apis.so:system/vendor/lib/libmm-disp-apis.so \
     vendor/google/seed/proprietary/vendor/lib/libmmipl.so:system/vendor/lib/libmmipl.so \
     vendor/google/seed/proprietary/vendor/lib/libmmjpeg.so:system/vendor/lib/libmmjpeg.so \
     vendor/google/seed/proprietary/vendor/lib/libmmosal.so:system/vendor/lib/libmmosal.so \
@@ -447,13 +448,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libloc_api_v02 \
     libloc_ds_api \
-    libmm-disp-apis \
     libtime_genoff \
     shutdownlistener \
     TimeService \
     qcrilmsgtunnel \
     qcnvitems \
     qcrilhook
-
-$(call inherit-product, vendor/qcom/binaries/msm8916/graphics/graphics-vendor.mk)
 endif
+
+$(call inherit-product, vendor/qcom/binaries/msm8916-32/graphics/graphics-vendor.mk)
