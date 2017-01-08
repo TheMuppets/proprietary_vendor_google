@@ -104,7 +104,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/google/marlin/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
     vendor/google/marlin/proprietary/lib64/libloc_api_v02.so:system/lib64/libloc_api_v02.so \
-    vendor/google/marlin/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so
+    vendor/google/marlin/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so \
+    vendor/google/marlin/proprietary/lib64/libuiblur.so:system/lib64/libuiblur.so
 
 PRODUCT_PACKAGES += \
     VZWAPNLib \
