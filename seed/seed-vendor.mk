@@ -48,10 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/seed/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
     vendor/google/seed/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/google/seed/proprietary/lib/hw/camera.msm8916.so:system/lib/hw/camera.msm8916.so \
-    vendor/google/seed/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
-    vendor/google/seed/proprietary/lib/libgps.utils.so:system/lib/libgps.utils.so \
-    vendor/google/seed/proprietary/lib/libloc_core.so:system/lib/libloc_core.so \
-    vendor/google/seed/proprietary/lib/libloc_eng.so:system/lib/libloc_eng.so \
     vendor/google/seed/proprietary/lib/libmmcamera_interface.so:system/lib/libmmcamera_interface.so \
     vendor/google/seed/proprietary/lib/libmmjpeg_interface.so:system/lib/libmmjpeg_interface.so \
     vendor/google/seed/proprietary/lib/libmm-qcamera.so:system/lib/libmm-qcamera.so \
