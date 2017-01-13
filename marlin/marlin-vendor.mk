@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/bin/port-bridge:system/bin/port-bridge \
     vendor/google/marlin/proprietary/bin/radish:system/bin/radish \
     vendor/google/marlin/proprietary/bin/rmt_storage:system/bin/rmt_storage \
+    vendor/google/marlin/proprietary/bin/ssr_setup:system/bin/ssr_setup \
     vendor/google/marlin/proprietary/bin/time_daemon:system/bin/time_daemon \
     vendor/google/marlin/proprietary/bin/wcnss_filter:system/bin/wcnss_filter \
     vendor/google/marlin/proprietary/etc/acdbdata/Bluetooth_cal.acdb:system/etc/acdbdata/Bluetooth_cal.acdb \
