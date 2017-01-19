@@ -108,6 +108,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/lib64/libuiblur.so:system/lib64/libuiblur.so
 
 PRODUCT_PACKAGES += \
+    libtime_genoff \
     VZWAPNLib \
     ims \
     imssettings \
