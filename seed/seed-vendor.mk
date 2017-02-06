@@ -1,4 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -35,7 +36,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/seed/proprietary/bin/qmuxd:system/bin/qmuxd \
     vendor/google/seed/proprietary/bin/qseecomd:system/bin/qseecomd \
     vendor/google/seed/proprietary/bin/radish:system/bin/radish \
-    vendor/google/seed/proprietary/bin/rfs_access:system/bin/rfs_access \
     vendor/google/seed/proprietary/bin/rmt_storage:system/bin/rmt_storage \
     vendor/google/seed/proprietary/bin/time_daemon:system/bin/time_daemon \
     vendor/google/seed/proprietary/bin/vm_bms:system/bin/vm_bms \
