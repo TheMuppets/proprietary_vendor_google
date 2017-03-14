@@ -340,6 +340,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/seed/proprietary/vendor/lib/libdsi_netctrl.so:system/vendor/lib/libdsi_netctrl.so \
     vendor/google/seed/proprietary/vendor/lib/libdsutils.so:system/vendor/lib/libdsutils.so \
     vendor/google/seed/proprietary/vendor/lib/libfastcvopt.so:system/vendor/lib/libfastcvopt.so \
+    vendor/google/seed/proprietary/vendor/lib/libflp.so:system/vendor/lib/libflp.so \
     vendor/google/seed/proprietary/vendor/lib/libgeofence.so:system/vendor/lib/libgeofence.so \
     vendor/google/seed/proprietary/vendor/lib/libgsl.so:system/vendor/lib/libgsl.so \
     vendor/google/seed/proprietary/vendor/lib/libidl.so:system/vendor/lib/libidl.so \
