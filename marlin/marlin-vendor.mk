@@ -94,22 +94,21 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml:system/etc/qdcm_calib_data_M1_WQHD_SAMSUNG_S6E3HA3_5.5_command_mode_panel.xml \
     vendor/google/marlin/proprietary/etc/sap.conf:system/etc/sap.conf \
     vendor/google/marlin/proprietary/lib/hw/nfc_nci.msm8996.so:system/lib/hw/nfc_nci.msm8996.so \
-    vendor/google/marlin/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
-    vendor/google/marlin/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
     vendor/google/marlin/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     vendor/google/marlin/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
     vendor/google/marlin/proprietary/lib64/hw/nfc_nci.msm8996.so:system/lib64/hw/nfc_nci.msm8996.so \
-    vendor/google/marlin/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
-    vendor/google/marlin/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
     vendor/google/marlin/proprietary/lib64/libloc_api_v02.so:system/lib64/libloc_api_v02.so \
     vendor/google/marlin/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so \
-    vendor/google/marlin/proprietary/lib64/libuiblur.so:system/lib64/libuiblur.so
+    vendor/google/marlin/proprietary/lib64/libuiblur.so:system/lib64/libuiblur.so \
+    vendor/google/marlin/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
+    vendor/google/marlin/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
+    vendor/google/marlin/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
+    vendor/google/marlin/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so
 
 PRODUCT_PACKAGES += \
     libtime_genoff \
+    libtime_genoff \
     VZWAPNLib \
-    ims \
-    imssettings \
     vzw_msdc_api \
     CNEService \
     SprintDM \
@@ -118,6 +117,8 @@ PRODUCT_PACKAGES += \
     VZWAVS \
     VzwLcSilent \
     VzwOmaTrigger \
+    ims \
+    imssettings \
     QtiTelephonyServicelibrary \
     VerizonUnifiedSettings \
     embmslibrary \
