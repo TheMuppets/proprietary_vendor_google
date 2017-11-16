@@ -44,4 +44,5 @@ PRODUCT_PACKAGES += \
     VZWAVS \
     VzwLcSilent \
     VzwOmaTrigger \
+    qcrilmsgtunnel \
     VerizonUnifiedSettings
