@@ -38,11 +38,25 @@ PRODUCT_PACKAGES += \
     VZWAPNLib \
     CNEService \
     HotwordEnrollmentWCD9335 \
+    QtiTelephonyService \
+    RCSBootstraputil \
+    SSRestartDetector \
+    SecureExtAuthService \
     SprintDM \
     SprintHM \
+    TimeService \
     VZWAPNService \
     VZWAVS \
     VzwLcSilent \
     VzwOmaTrigger \
+    atfwd \
+    colorservice \
+    datastatusnotification \
+    embms \
+    fastdormancy \
+    ims \
+    imssettings \
     qcrilmsgtunnel \
+    radioconfig \
+    shutdownlistener \
     VerizonUnifiedSettings
