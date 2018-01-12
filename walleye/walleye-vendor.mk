@@ -67,7 +67,6 @@ PRODUCT_PACKAGES += \
     datastatusnotification \
     embms \
     vzw_msdc_api \
-    Asdiv \
     CNEService \
     CarrierServices \
     CarrierSetup \
