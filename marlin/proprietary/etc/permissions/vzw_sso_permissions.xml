@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<permissions>
-    <feature name="com.verizon.hardware.telephony.lte"/>
-    <feature name="com.verizon.hardware.telephony.ehrpd"/>
-    <privapp-permissions package="com.motricity.verizon.ssodownloadable">
-        <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
-        <permission name="android.permission.SET_TIME"/>
-    </privapp-permissions>
-</permissions>
