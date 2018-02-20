@@ -48,23 +48,9 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleWCD9335 \
     HotwordEnrollmentTGoogleWCD9335 \
     HotwordEnrollmentXGoogleWCD9335 \
-    QtiTelephonyService \
-    RCSBootstraputil \
-    SSRestartDetector \
-    SecureExtAuthService \
     SprintDM \
     SprintHM \
-    TimeService \
     VerizonAuthDialog \
     VzwOmaTrigger \
-    atfwd \
-    colorservice \
-    datastatusnotification \
-    embms \
-    fastdormancy \
-    ims \
-    imssettings \
     qcrilmsgtunnel \
-    radioconfig \
-    shutdownlistener \
     VerizonUnifiedSettings
