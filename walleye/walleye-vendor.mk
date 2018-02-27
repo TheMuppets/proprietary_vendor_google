@@ -57,12 +57,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/lib64/librcc.so:system/lib64/librcc.so
 
 PRODUCT_PACKAGES += \
-    ModemService \
-    QtiTelephonyService \
-    SSRestartDetector \
     Tycho \
     VZWAPNLib \
-    datastatusnotification \
     embms \
     ims \
     vzw_msdc_api \

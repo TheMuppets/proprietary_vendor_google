@@ -17,39 +17,6 @@
 LOCAL_PATH := $(call my-dir)
 ifneq ($(filter walleye,$(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
-LOCAL_MODULE := ModemService
-LOCAL_MODULE_OWNER := google
-LOCAL_SRC_FILES := proprietary/app/ModemService/ModemService.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := QtiTelephonyService
-LOCAL_MODULE_OWNER := google
-LOCAL_SRC_FILES := proprietary/app/QtiTelephonyService/QtiTelephonyService.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := SSRestartDetector
-LOCAL_MODULE_OWNER := google
-LOCAL_SRC_FILES := proprietary/app/SSRestartDetector/SSRestartDetector.apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE := Tycho
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/app/Tycho/Tycho.apk
@@ -65,17 +32,6 @@ LOCAL_MODULE := VZWAPNLib
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/app/VZWAPNLib/VZWAPNLib.apk
 LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := APPS
-LOCAL_DEX_PREOPT := false
-LOCAL_MODULE_SUFFIX := .apk
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := datastatusnotification
-LOCAL_MODULE_OWNER := google
-LOCAL_SRC_FILES := proprietary/app/datastatusnotification/datastatusnotification.apk
-LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
