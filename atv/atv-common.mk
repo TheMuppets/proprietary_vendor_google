@@ -13,5 +13,4 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += LeanbackIme \
-                    LeanbackLauncher \
-                    SetupWraith
+                    LeanbackLauncher
