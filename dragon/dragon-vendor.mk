@@ -1,4 +1,3 @@
-# Copyright (C) 2015-2016 The CyanogenMod Project
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,7 +23,7 @@ PRODUCT_PACKAGES += \
     UserInfoWidget \
     DragonKeyboardFirmwareUpdater \
     GCS \
-    HotwordEnrollment
+    HotwordEnrollmentRT5677
 
 PRODUCT_COPY_FILES += \
     vendor/google/dragon/proprietary/root/vendor/firmware/nouveau/acr_ucode.bin:root/vendor/firmware/nouveau/acr_ucode.bin \
