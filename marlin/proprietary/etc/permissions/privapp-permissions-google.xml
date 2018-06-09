@@ -386,6 +386,11 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REBOOT"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.google.android.apps.internal.betterbug">
+        <permission name="android.permission.DUMP"/>
+        <permission name="android.permission.PACKAGE_USAGE_STATS"/>
+    </privapp-permissions>
+
     <privapp-permissions package="com.google.android.apps.wallpaper">
         <permission name="android.permission.READ_WALLPAPER_INTERNAL"/>
     </privapp-permissions>
