@@ -36,7 +36,7 @@
     <allow-in-power-save package="com.qualcomm.atfwd" />
     <allow-in-power-save package="com.qualcomm.embms" />
     <allow-in-power-save package="com.qualcomm.qti.telephonyservice" />
-    <allow-in-power-save package="com.qulacomm.qcrilmsgtunnel" />
+    <allow-in-power-save package="com.qualcomm.qcrilmsgtunnel" />
     <allow-in-power-save package="com.qualcomm.qti.ims" />
     <allow-in-power-save package="com.qualcomm.qti.radioconfiginterface" />
 
