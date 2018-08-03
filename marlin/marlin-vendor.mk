@@ -42,7 +42,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
     vendor/google/marlin/proprietary/lib64/lib-imsvtutils.so:system/lib64/lib-imsvtutils.so \
     vendor/google/marlin/proprietary/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
-    vendor/google/marlin/proprietary/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so
+    vendor/google/marlin/proprietary/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so \
+    vendor/google/marlin/proprietary/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:system/priv-app/MyVerizonServices/lib/arm64/libmotricity.so
 
 PRODUCT_PACKAGES += \
     VZWAPNLib \
@@ -50,10 +51,12 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleWCD9335 \
     HotwordEnrollmentTGoogleWCD9335 \
     HotwordEnrollmentXGoogleWCD9335 \
+    MyVerizonServices \
     SprintDM \
     SprintHM \
     VerizonAuthDialog \
     VzwOmaTrigger \
+    WfcActivation \
     qcrilmsgtunnel \
     VerizonUnifiedSettings \
     com.google.android.camera.experimental2016
