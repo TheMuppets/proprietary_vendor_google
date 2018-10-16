@@ -35,8 +35,4 @@
     <privapp-permissions package="com.quicinc.cne.CNEService">
       <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
-
-    <privapp-permissions package="com.tmobile.planprovider">
-        <permission name="android.permission.MANAGE_SUBSCRIPTION_PLANS"/>
-    </privapp-permissions>
 </permissions>
