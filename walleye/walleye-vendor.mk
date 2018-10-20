@@ -1,4 +1,4 @@
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,6 +33,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/etc/permissions/obdm_permissions.xml:system/etc/permissions/obdm_permissions.xml \
     vendor/google/walleye/proprietary/etc/permissions/privapp-permissions-wahoo.xml:system/etc/permissions/privapp-permissions-wahoo.xml \
     vendor/google/walleye/proprietary/etc/permissions/vzw_mvs_permissions.xml:system/etc/permissions/vzw_mvs_permissions.xml \
+    vendor/google/walleye/proprietary/framework/VerizonUnifiedSettings.jar:system/framework/VerizonUnifiedSettings.jar \
+    vendor/google/walleye/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
+    vendor/google/walleye/proprietary/framework/com.quicinc.cne.api-V1.0-java.jar:system/framework/com.quicinc.cne.api-V1.0-java.jar \
+    vendor/google/walleye/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
+    vendor/google/walleye/proprietary/framework/embmslibrary.jar:system/framework/embmslibrary.jar \
+    vendor/google/walleye/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
+    vendor/google/walleye/proprietary/framework/rcsimssettings.jar:system/framework/rcsimssettings.jar \
+    vendor/google/walleye/proprietary/framework/vendor.qti.qcril.am-V1.0-java.jar:system/framework/vendor.qti.qcril.am-V1.0-java.jar \
     vendor/google/walleye/proprietary/lib/com.qualcomm.qti.imsrtpservice@1.0.so:system/lib/com.qualcomm.qti.imsrtpservice@1.0.so \
     vendor/google/walleye/proprietary/lib/lib-imsvideocodec.so:system/lib/lib-imsvideocodec.so \
     vendor/google/walleye/proprietary/lib/lib-imsvt.so:system/lib/lib-imsvt.so \
@@ -41,6 +49,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/lib/libdiag_system.so:system/lib/libdiag_system.so \
     vendor/google/walleye/proprietary/lib/libdmengine.so:system/lib/libdmengine.so \
     vendor/google/walleye/proprietary/lib/libdmjavaplugin.so:system/lib/libdmjavaplugin.so \
+    vendor/google/walleye/proprietary/lib/libeaselcomm.so:system/lib/libeaselcomm.so \
+    vendor/google/walleye/proprietary/lib/libeaselcontrol.amber.so:system/lib/libeaselcontrol.amber.so \
     vendor/google/walleye/proprietary/lib/libimscamera_jni.so:system/lib/libimscamera_jni.so \
     vendor/google/walleye/proprietary/lib/libimsmedia_jni.so:system/lib/libimsmedia_jni.so \
     vendor/google/walleye/proprietary/lib/librcc.so:system/lib/librcc.so \
@@ -52,11 +62,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
     vendor/google/walleye/proprietary/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so \
     vendor/google/walleye/proprietary/lib64/libdiag_system.so:system/lib64/libdiag_system.so \
+    vendor/google/walleye/proprietary/lib64/libeaselcomm.so:system/lib64/libeaselcomm.so \
+    vendor/google/walleye/proprietary/lib64/libeaselcontrol.amber.so:system/lib64/libeaselcontrol.amber.so \
     vendor/google/walleye/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/google/walleye/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
     vendor/google/walleye/proprietary/lib64/librcc.so:system/lib64/librcc.so
 
 PRODUCT_PACKAGES += \
+    EaselServicePrebuilt \
     Tycho \
     VZWAPNLib \
     embms \
@@ -78,11 +91,4 @@ PRODUCT_PACKAGES += \
     SprintHM \
     VzwOmaTrigger \
     obdm_stub \
-    qcrilmsgtunnel \
-    VerizonUnifiedSettings \
-    cneapiclient \
-    com.quicinc.cne.api-V1.0-java \
-    com.quicinc.cne \
-    embmslibrary \
-    rcsimssettings \
-    vendor.qti.qcril.am-V1.0-java
+    qcrilmsgtunnel
