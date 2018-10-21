@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/etc/firmware/dnd.sound_model:system/etc/firmware/dnd.sound_model \
     vendor/google/walleye/proprietary/etc/firmware/music_detector.descriptor:system/etc/firmware/music_detector.descriptor \
     vendor/google/walleye/proprietary/etc/firmware/music_detector.sound_model:system/etc/firmware/music_detector.sound_model \
+    vendor/google/walleye/proprietary/etc/permissions/com.android.omadm.service.xml:system/etc/permissions/com.android.omadm.service.xml \
     vendor/google/walleye/proprietary/etc/permissions/com.android.sdm.plugins.connmo.xml:system/etc/permissions/com.android.sdm.plugins.connmo.xml \
     vendor/google/walleye/proprietary/etc/permissions/com.android.sdm.plugins.sprintdm.xml:system/etc/permissions/com.android.sdm.plugins.sprintdm.xml \
     vendor/google/walleye/proprietary/etc/permissions/com.android.vzwomatrigger.xml:system/etc/permissions/com.android.vzwomatrigger.xml \
@@ -34,6 +35,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/etc/permissions/obdm_permissions.xml:system/etc/permissions/obdm_permissions.xml \
     vendor/google/walleye/proprietary/etc/permissions/privapp-permissions-wahoo.xml:system/etc/permissions/privapp-permissions-wahoo.xml \
     vendor/google/walleye/proprietary/etc/permissions/vzw_mvs_permissions.xml:system/etc/permissions/vzw_mvs_permissions.xml \
+    vendor/google/walleye/proprietary/etc/sysconfig/whitelist_com.android.omadm.service.xml:system/etc/sysconfig/whitelist_com.android.omadm.service.xml \
+    vendor/google/walleye/proprietary/framework/PowerAnomalyDataModemInterface.jar:system/framework/PowerAnomalyDataModemInterface.jar \
     vendor/google/walleye/proprietary/framework/PowerAnomalyQcril.jar:system/framework/PowerAnomalyQcril.jar \
     vendor/google/walleye/proprietary/framework/VerizonUnifiedSettings.jar:system/framework/VerizonUnifiedSettings.jar \
     vendor/google/walleye/proprietary/framework/cneapiclient.jar:system/framework/cneapiclient.jar \
@@ -76,6 +79,7 @@ PRODUCT_PACKAGES += \
     VZWAPNLib \
     embms \
     ims \
+    uceShimService \
     vzw_msdc_api \
     CNEService \
     CarrierServices \
