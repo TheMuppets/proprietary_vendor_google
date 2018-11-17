@@ -71,7 +71,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/walleye/proprietary/lib64/libeaselcontrol.amber.so:system/lib64/libeaselcontrol.amber.so \
     vendor/google/walleye/proprietary/lib64/libimscamera_jni.so:system/lib64/libimscamera_jni.so \
     vendor/google/walleye/proprietary/lib64/libimsmedia_jni.so:system/lib64/libimsmedia_jni.so \
-    vendor/google/walleye/proprietary/lib64/librcc.so:system/lib64/librcc.so
+    vendor/google/walleye/proprietary/lib64/librcc.so:system/lib64/librcc.so \
+    vendor/google/walleye/proprietary/priv-app/EuiccGoogle/esim0.img:system/priv-app/EuiccGoogle/esim0.img
 
 PRODUCT_PACKAGES += \
     EaselServicePrebuilt \
@@ -88,6 +89,7 @@ PRODUCT_PACKAGES += \
     DCMO \
     DMService \
     DiagMon \
+    EuiccGoogle \
     HotwordEnrollmentOKGoogleWCD9340 \
     HotwordEnrollmentTGoogleWCD9340 \
     HotwordEnrollmentXGoogleWCD9340 \
