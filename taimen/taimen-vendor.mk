@@ -43,6 +43,44 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/lib64/librcc.so:system/lib64/librcc.so
 
 PRODUCT_PACKAGES += \
+    Tycho \
+    AmbientSensePrebuilt \
+    AppDirectedSMSService \
+    EaselServicePrebuilt \
+    EuiccGoogle \
+    VZWAPNLib \
+    embms \
+    ims \
+    CNEService \
+    CarrierServices \
+    CarrierSetup \
+    ConnMO \
+    DCMO \
+    DMService \
+    DiagMon \
+    GCS \
+    HardwareInfo \
+    HotwordEnrollmentOKGoogleWCD9340 \
+    HotwordEnrollmentTGoogleWCD9340 \
+    HotwordEnrollmentXGoogleWCD9340 \
+    LLKAgent \
+    ModemService \
+    OBDM_Permissions \
+    OemDmTrigger \
+    QtiTelephonyService \
+    Showcase \
+    SprintDM \
+    SprintHM \
+    TimeService \
+    wahoo_gfxdrv \
+    VzwOmaTrigger \
+    WfcActivation \
+    MyVerizonServices \
+    VerizonAuthDialog \
+    datastatusnotification \
+    obdm_stub \
+    qcrilmsgtunnel \
+    VerizonUnifiedSettings \
     cneapiclient \
     com.quicinc.cne.api-V1.0-java \
     com.quicinc.cne \
