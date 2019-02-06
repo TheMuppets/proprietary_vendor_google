@@ -57,4 +57,8 @@
     <!-- Allow eMBMS middleware services to run in the background -->
     <allow-in-power-save package="com.qualcomm.ltebc_vzw" />
     <allow-in-power-save package="com.qualcomm.ltebc" />
+
+    <!-- Digital Wellbeing makes user-visible changes (e.g. puts device into grayscale) at specific
+         times, so its alarms should not be throttled. b/116700365 -->
+    <allow-in-power-save-except-idle package="com.google.android.apps.wellbeing" />
 </config>
