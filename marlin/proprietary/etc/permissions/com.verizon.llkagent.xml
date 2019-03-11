@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
-<permissions>
-    <privapp-permissions package="com.verizon.llkagent">
-        <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED" />
-        <permission name="android.permission.MANAGE_USERS" />
-    </privapp-permissions>
-</permissions>

@@ -41,9 +41,81 @@ LOCAL_MODULE_SUFFIX := .apk
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := Asdiv
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/Asdiv/Asdiv.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := CNEService
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/priv-app/CNEService/CNEService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := CarrierSetup
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/CarrierSetup/CarrierSetup.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := ConnMO
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/ConnMO/ConnMO.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := DCMO
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/DCMO/DCMO.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := DMService
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/DMService/DMService.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := DiagMon
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/DiagMon/DiagMon.apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
@@ -93,6 +165,30 @@ LOCAL_MODULE := MyVerizonServices
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/priv-app/MyVerizonServices/MyVerizonServices.apk
 LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := OBDM_Permissions
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/OBDM_Permissions/OBDM_Permissions.apk
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := OemDmTrigger
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/OemDmTrigger/OemDmTrigger.apk
+LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
@@ -161,6 +257,18 @@ LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := obdm_stub
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/priv-app/obdm_stub/obdm_stub.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_DEX_PREOPT := false
+LOCAL_MODULE_SUFFIX := .apk
+LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := qcrilmsgtunnel
 LOCAL_MODULE_OWNER := google
 LOCAL_SRC_FILES := proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
@@ -170,6 +278,46 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_PRIVILEGED_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := LowPowerMonitorDeviceInterface
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/framework/LowPowerMonitorDeviceInterface.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := LowPowerMonitorDeviceStub
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/framework/LowPowerMonitorDeviceStub.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := PowerAnomalyDataModemInterface
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/framework/PowerAnomalyDataModemInterface.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := PowerAnomalyStub
+LOCAL_MODULE_OWNER := google
+LOCAL_SRC_FILES := proprietary/framework/PowerAnomalyStub.jar
+LOCAL_CERTIFICATE := platform
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := JAVA_LIBRARIES
+LOCAL_MODULE_SUFFIX := .jar
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
