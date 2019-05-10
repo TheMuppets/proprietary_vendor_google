@@ -11,6 +11,7 @@
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.READ_NETWORK_USAGE_HISTORY"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.REAL_GET_TASKS"/>
         <permission name="android.permission.RECEIVE_DATA_ACTIVITY_CHANGE"/>
         <permission name="android.permission.REBOOT"/>
