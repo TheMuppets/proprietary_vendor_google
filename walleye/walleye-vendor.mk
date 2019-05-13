@@ -83,7 +83,6 @@ PRODUCT_PACKAGES += \
     uceShimService \
     vzw_msdc_api \
     CNEService \
-    CarrierServices \
     CarrierSetup \
     ConnMO \
     DCMO \
