@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+/******************************************************************************
+*  Copyright (C) 2016 Verizon Wireless
+*  All Rights Reserved. Verizon Wireless Proprietary and Confidential.
+*  *****************************************************************************
+*/
+-->
+<permissions>
+
+    <permission name="com.qualcomm.permission.QCOM_DIAG">
+        <group gid="diag"/>
+    </permission>
+
+    <permission name="com.qualcomm.permission.QCOM_RADIO">
+        <group gid="radio"/>
+    </permission>
+
+    <permission name="com.qualcomm.permission.QCOM_AUDIO">
+        <group gid="audio"/>
+    </permission>
+
+    <privapp-permissions package="com.verizon.obdm">
+        <permission name="android.permission.READ_LOGS"/>
+    </privapp-permissions>
+
+</permissions>
