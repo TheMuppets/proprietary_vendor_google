@@ -55,6 +55,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/google/marlin/proprietary/lib64/vendor.qti.atcmdfwd@1.0.so:system/lib64/vendor.qti.atcmdfwd@1.0.so \
     vendor/google/marlin/proprietary/lib64/vendor.qti.qcril.am@1.0.so:system/lib64/vendor.qti.qcril.am@1.0.so \
+    vendor/google/marlin/proprietary/priv-app/MyVerizonServices/lib/arm64/libakuaf.so:system/priv-app/MyVerizonServices/lib/arm64/libakuaf.so \
     vendor/google/marlin/proprietary/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:system/priv-app/MyVerizonServices/lib/arm64/libmotricity.so
 
 PRODUCT_PACKAGES += \
