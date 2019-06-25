@@ -33,7 +33,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/crosshatch/proprietary/etc/permissions/privapp-permissions-bluecross.xml:system/etc/permissions/privapp-permissions-bluecross.xml \
     vendor/google/crosshatch/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/google/crosshatch/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
-    vendor/google/crosshatch/proprietary/etc/sysconfig/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml \
     vendor/google/crosshatch/proprietary/etc/sysconfig/whitelist_com.android.omadm.service.xml:system/etc/sysconfig/whitelist_com.android.omadm.service.xml \
     vendor/google/crosshatch/proprietary/lib/lib-imsvideocodec.so:system/lib/lib-imsvideocodec.so \
     vendor/google/crosshatch/proprietary/lib/lib-imsvt.so:system/lib/lib-imsvt.so \
