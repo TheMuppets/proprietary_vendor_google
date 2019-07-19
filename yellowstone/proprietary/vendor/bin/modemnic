@@ -1,0 +1,122 @@
+#!/system/bin/sh
+#
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+#
+
+## Some variables:
+##################
+
+NETIF=4
+LOWER_DEVICE="rmnet0"
+VLAN_DEVICE_PREFIX="mdm"
+PROP_RESULT="ril.modemnic.res"
+LOGCAT_TAG="MODEMNIC"
+
+
+## Some functions:
+##################
+
+ALOGI() {
+    /system/bin/log -p i -t ${LOGCAT_TAG} "$1"
+    echo "$1"
+}
+
+ALOGE() {
+    /system/bin/log -p e -t ${LOGCAT_TAG} "$1"
+    echo "$1"
+}
+
+ALOGD() {
+    /system/bin/log -p d -t ${LOGCAT_TAG} "$1"
+    echo "$1"
+}
+abort() {
+    STATUS="ERROR: $1"
+    ALOGE "Abort status ($STATUS)"
+    setprop $PROP_RESULT "$STATUS"
+    exit 1
+}
+
+
+## Script starts here:
+######################
+
+ALOGI "Starting..."
+
+# No MACVLAN on single flash platforms
+AP=`cat /sys/devices/soc0/family`
+if [ "$AP" == "Tegra14" ]; then
+    abort "No macvlan support on single flash platform"
+fi
+
+# Testing modem support for macvlan:
+# Need to inspect lower (physical) device MAC address:
+# macvlan supported only if 4 bits LSB in 2nd byte not null
+LOWER_MAC=`cat /sys/class/net/${LOWER_DEVICE}/address`
+ALOGI "$LOWER_DEVICE MAC address: $LOWER_MAC"
+IFS=":"; set $LOWER_MAC; unset IFS
+BYTE_TWO_LSB=$(( 16#$2 & 0xf ))
+
+if [ $BYTE_TWO_LSB -gt 0 ]; then
+    # Derive macvlan interfaces MAC address prefix to be used:
+    # invert 4th byte of lower interface
+    # 6th byte will be appended later to instanciate NIC address
+    BYTE_FOUR_INVERTED=$(( 16#$4 ^ 0xff ))
+    # 4th byte inverted - decimal to hex conversion
+    LSB=$(( BYTE_FOUR_INVERTED % 16 ))
+    MSB=$(( BYTE_FOUR_INVERTED / 16 ))
+    HEXDIGITS="0123456789abcdef"
+    BYTE_FOUR_INVERTED_HEX="${HEXDIGITS:$MSB:1}${HEXDIGITS:$LSB:1}"
+    # build up resulting prefix
+    VLAN_MAC_PREFIX="${1}:${2}:${3}:${BYTE_FOUR_INVERTED_HEX}:${5}:"
+else
+    VLAN_MAC_PREFIX=""
+fi
+
+if [ "$VLAN_MAC_PREFIX" == "" ]; then
+    abort "MACVLAN not supported by modem"
+else
+    ALOGI "Modem firmware compatible";
+fi
+
+# bring up physical interface
+ALOGD "Bring up lower interface $LOWER_DEVICE"
+ip link set $LOWER_DEVICE up
+if [ $? != 0 ]; then
+    abort "Lower interface bring up failed"
+fi
+
+# instanciate a mdmX macvlan interface per modem netif
+LOOP=0
+while [ $LOOP -lt $NETIF ]; do
+    # create vlan interface
+    # MAC address: append link channel to prefix derived from lower interface address
+    VLAN_DEVICE="${VLAN_DEVICE_PREFIX}${LOOP}"
+    VLAN_MAC="${VLAN_MAC_PREFIX}${LOOP}"
+    ALOGD "Create macvlan interface ${VLAN_DEVICE} address ${VLAN_MAC}"
+
+    # delete interface if already exists
+    if [ -d /sys/class/net/${VLAN_DEVICE} ]; then
+        ip link delete ${VLAN_DEVICE}
+    fi
+    # interface creation
+    ip link add link ${LOWER_DEVICE} ${VLAN_DEVICE} address ${VLAN_MAC} type macvlan mode private
+    if [ $? != 0 ]; then
+        abort "Error creating macvlan interface"
+    fi
+
+    # disable IPv6 Duplicate Address Detection (delays RS/RA)
+    echo 0 > /proc/sys/net/ipv6/conf/${VLAN_DEVICE}/accept_dad
+
+    # concatenate macvlan devices names to report result
+    if [ "$LOOP" == "0" ]; then
+        RESULT="\"$VLAN_DEVICE\""
+    else
+        RESULT="$RESULT,\"$VLAN_DEVICE\""
+    fi
+    LOOP=$(( $LOOP + 1 ))
+done
+
+STATUS="SUCCESS: $RESULT"
+ALOGI "Exit status ($STATUS)"
+setprop $PROP_RESULT "$STATUS"
