@@ -1,0 +1,205 @@
+#!/system/bin/sh -e
+#***********************************************************************************************
+#
+# Copyright (c) 2012-2015, NVIDIA CORPORATION.  All rights reserved.
+#
+#***********************************************************************************************
+
+## Some variables:
+##################
+LOGCAT_TAG="ICEFWDLD"
+LOG_FOLDER="/data/rfs/data/debug"
+LOG_FILE="${LOG_FOLDER}/fw_update.log"
+UPDATE_FILE_LIST="/data/rfs/data/debug/update_list"
+FILE_LIST=""
+
+## Some functions:
+##################
+ALOGI() {
+    /system/bin/log -p i -t ${LOGCAT_TAG} "$1"
+}
+
+ALOGE() {
+    /system/bin/log -p e -t ${LOGCAT_TAG} "$1"
+}
+
+ALOGD() {
+    /system/bin/log -p d -t ${LOGCAT_TAG} "$1"
+}
+
+SetUsbSuspend()
+{
+    local controller=1
+    local port
+    local usbdev=""
+    local product=""
+    local found=0
+    local product_name="Bruce"
+
+    # Loop over existing USB controllers:
+    # sysfs access points for USB controllers will be incremental list:
+    # sys/bus/usb/devices/usb1, sys/bus/usb/devices/usb2, ...
+    while [ 1 ]
+    do
+        if [ -e "/sys/bus/usb/devices/usb${controller}" ]; then
+            # Loop over 127 possible ports for a given USB controller
+            port=1
+            while [ $port -le 127 ]
+            do
+                usbdev="/sys/bus/usb/devices/${controller}-${port}"
+                if [ -e "$usbdev/product" ]; then
+                    product=`cat $usbdev/product`
+                    if [ "$product" == "${product_name}" ]; then
+                        ALOGD "${product_name} device found: ${usbdev}"
+                        echo ${1} > ${usbdev}/power/control
+                        found=1
+                        break
+                    fi
+                fi
+                port=$(( $port + 1 ))
+            done
+            controller=$(( $controller + 1 ))
+            if [ ${found} -eq 1 ]; then
+                break
+            fi
+        else
+            # No more available USB controller...
+            break
+        fi
+    done
+    if [ ${found} -eq 0 ]; then
+        ALOGE "${product_name} device not found"
+    fi
+}
+
+UpdateFileList()
+{
+    list="$(ls ${1})"
+    for file in ${list}
+    do
+        if [ -n "${FILE_LIST}" ]; then
+            FILE_LIST="${FILE_LIST};${1}/${file}"
+        else
+            FILE_LIST="${1}/$file"
+        fi
+    done
+}
+
+WaitForDevice()
+{
+    local counter=$1
+
+    # Check device really exists and wait for it if not yet
+    while [ $counter -gt 0 -a ! -e $DEV_NAME ]
+    do
+        counter=$(( $counter - 1 ))
+        sleep 1
+    done
+    if [ $counter -eq 0 ]; then
+        ALOGE "$0: device $DEV_NAME not found"
+        return 1
+    else
+        ALOGD "$0: device name:   $DEV_NAME"
+    fi
+
+    return 0
+}
+
+AddFailureNum()
+{
+    step=1
+    num="$(getprop ril.downloader.failnum)"
+    if [ -z "${num}" ]; then
+        num=1
+    else
+        num=$((num + step))
+    fi
+    setprop ril.downloader.failnum ${num}
+}
+
+PowerCycleModule()
+{
+    devparam="$(getprop gsm.modem.power.device)"
+    if [ -n "${devparam}" ]; then
+        IFS=,
+        array=($devparam)
+        path="${array[0]}"
+        off="${array[1]}"
+        on="${array[2]}"
+    else
+        ALOGE "$0: Modem Power Control not configured with gsm.modem.power.device property."
+        return 1
+    fi
+
+    if [ -f "${path}" ]; then
+        ALOGD "$0: power cycle the modem - start"
+        echo "${off}" > "${path}"
+        sleep 5
+        echo "${on}" > "${path}"
+        sleep 10
+        ALOGD "$0: power cycle the modem - finish"
+    else
+        ALOGE "$0: no power control: ${path}"
+        return 1
+    fi
+}
+
+HandleError()
+{
+    ALOGE "$0: downloader ERROR"
+
+    set +e
+
+    # - record the failure number
+    AddFailureNum
+
+    # - if no device found, power-cycle the modem to recovery.
+    if !WaitForDevice 30; then
+        ALOGD "%0 No device nodes found, reboot the modem."
+        PowerCycleModule
+        # modem power-cycle need about 13 seconds to back online.
+        sleep 13
+    fi
+
+    # restart the icera-switcher, which will restart RIL after found ports.
+    start icera-switcher
+    SetUsbSuspend "auto"
+}
+
+## Script starts here:
+######################
+DEV_NAME=$1
+
+trap HandleError ERR
+
+if [ $2 ]; then
+    # Script started manually.
+    # All files for an update pushed in "$2" folder:
+    UpdateFileList $2
+else
+    # Script started as a service
+   FILE_LIST=`cat ${UPDATE_FILE_LIST}`
+fi
+
+if [ -z "${FILE_LIST}" ]; then
+    ALOGI "$0: No file to update"
+else
+    #Stop the CPO and RIL to not interfere with modem firwmare upgrade
+    SetUsbSuspend "on"
+    stop icera-switcher
+    stop ril-daemon
+    sleep 2
+
+    if WaitForDevice 30; then
+        #execute the downloader through logwrapper
+        ALOGI "Update file list: ${FILE_LIST}"
+        logwrapper downloader -d $DEV_NAME -v 2 -f "$FILE_LIST"
+        ALOGI "$0: SUCCESS"
+    fi
+
+    #restart the RIL and CPO
+    SetUsbSuspend "auto"
+    start icera-switcher
+    start ril-daemon
+
+fi
