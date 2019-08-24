@@ -15,3 +15,5 @@
 PRODUCT_PACKAGES += LeanbackIme \
                     TVLauncher \
                     TVRecommendations
+
+PRODUCT_COPY_FILES += vendor/google/atv/privapp-permissions/privapp-permissions-google.com:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml

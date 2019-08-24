@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.google.android.tvlauncher">
+        <permission name="android.permission.BIND_APPWIDGET"/>
+        <permission name="android.permission.CHANGE_HDMI_CEC_ACTIVE_SOURCE"/>
+        <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
+        <permission name="android.permission.NOTIFY_TV_INPUTS"/>
+        <permission name="android.permission.READ_CONTENT_RATING_SYSTEMS"/>
+    </privapp-permissions>
+    <privapp-permissions package="com.google.android.tvrecommendations">
+        <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
+        <permission name="android.permission.MEDIA_CONTENT_CONTROL"/>
+        <permission name="android.permission.REAL_GET_TASKS"/>
+        <permission name="android.permission.RECEIVE_MEDIA_RESOURCE_USAGE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+</permissions>
