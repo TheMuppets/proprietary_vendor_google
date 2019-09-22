@@ -40,6 +40,69 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/lib64/librcc.so:system/lib64/librcc.so \
     vendor/google/marlin/proprietary/lib64/vendor.qti.atcmdfwd@1.0.so:system/lib64/vendor.qti.atcmdfwd@1.0.so \
     vendor/google/marlin/proprietary/lib64/vendor.qti.qcril.am@1.0.so:system/lib64/vendor.qti.qcril.am@1.0.so \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/airtel_in.pb:system/product/etc/CarrierSettings/airtel_in.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/att5g_us.pb:system/product/etc/CarrierSettings/att5g_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/att_us.pb:system/product/etc/CarrierSettings/att_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/bell_ca.pb:system/product/etc/CarrierSettings/bell_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/bouygues_fr.pb:system/product/etc/CarrierSettings/bouygues_fr.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/carrier_list.pb:system/product/etc/CarrierSettings/carrier_list.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/cellcom_us.pb:system/product/etc/CarrierSettings/cellcom_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/cht_tw.pb:system/product/etc/CarrierSettings/cht_tw.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/cricket5g_us.pb:system/product/etc/CarrierSettings/cricket5g_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/cricket_us.pb:system/product/etc/CarrierSettings/cricket_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/cspire_us.pb:system/product/etc/CarrierSettings/cspire_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/default.pb:system/product/etc/CarrierSettings/default.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/docomo_jp.pb:system/product/etc/CarrierSettings/docomo_jp.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/ee_gb.pb:system/product/etc/CarrierSettings/ee_gb.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/fet_tw.pb:system/product/etc/CarrierSettings/fet_tw.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/fi_us.pb:system/product/etc/CarrierSettings/fi_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/fido_ca.pb:system/product/etc/CarrierSettings/fido_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/firstnet_us.pb:system/product/etc/CarrierSettings/firstnet_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/firstnetpacific_us.pb:system/product/etc/CarrierSettings/firstnetpacific_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/fizz_ca.pb:system/product/etc/CarrierSettings/fizz_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/freedommobile_ca.pb:system/product/etc/CarrierSettings/freedommobile_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/h3_gb.pb:system/product/etc/CarrierSettings/h3_gb.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/idea_in.pb:system/product/etc/CarrierSettings/idea_in.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/idmobile_gb.pb:system/product/etc/CarrierSettings/idmobile_gb.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/kddi_jp.pb:system/product/etc/CarrierSettings/kddi_jp.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/koodo_ca.pb:system/product/etc/CarrierSettings/koodo_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/luckymobile_ca.pb:system/product/etc/CarrierSettings/luckymobile_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/o2_de.pb:system/product/etc/CarrierSettings/o2_de.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/o2postpaid_gb.pb:system/product/etc/CarrierSettings/o2postpaid_gb.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/o2prepaid_gb.pb:system/product/etc/CarrierSettings/o2prepaid_gb.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/optus_au.pb:system/product/etc/CarrierSettings/optus_au.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/orange_es.pb:system/product/etc/CarrierSettings/orange_es.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/orange_fr.pb:system/product/etc/CarrierSettings/orange_fr.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/others.pb:system/product/etc/CarrierSettings/others.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/pcmobilebell_ca.pb:system/product/etc/CarrierSettings/pcmobilebell_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/rakuten_jp.pb:system/product/etc/CarrierSettings/rakuten_jp.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/rjio_in.pb:system/product/etc/CarrierSettings/rjio_in.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/rogers_ca.pb:system/product/etc/CarrierSettings/rogers_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/sfr_fr.pb:system/product/etc/CarrierSettings/sfr_fr.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/singtel_sg.pb:system/product/etc/CarrierSettings/singtel_sg.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/softbank_jp.pb:system/product/etc/CarrierSettings/softbank_jp.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/solomobile_ca.pb:system/product/etc/CarrierSettings/solomobile_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/sprint_us.pb:system/product/etc/CarrierSettings/sprint_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/sprintwholesale_us.pb:system/product/etc/CarrierSettings/sprintwholesale_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/starhub_sg.pb:system/product/etc/CarrierSettings/starhub_sg.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/telekom_de.pb:system/product/etc/CarrierSettings/telekom_de.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/telstra_au.pb:system/product/etc/CarrierSettings/telstra_au.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/telus_ca.pb:system/product/etc/CarrierSettings/telus_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/tmobile_us.pb:system/product/etc/CarrierSettings/tmobile_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/twm_tw.pb:system/product/etc/CarrierSettings/twm_tw.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/uscc_us.pb:system/product/etc/CarrierSettings/uscc_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/verizon_us.pb:system/product/etc/CarrierSettings/verizon_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/videotron_ca.pb:system/product/etc/CarrierSettings/videotron_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/virgin_ca.pb:system/product/etc/CarrierSettings/virgin_ca.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/visible_us.pb:system/product/etc/CarrierSettings/visible_us.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/vodafone_au.pb:system/product/etc/CarrierSettings/vodafone_au.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/vodafone_de.pb:system/product/etc/CarrierSettings/vodafone_de.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/vodafone_es.pb:system/product/etc/CarrierSettings/vodafone_es.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/vodafone_gb.pb:system/product/etc/CarrierSettings/vodafone_gb.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/vodafone_in.pb:system/product/etc/CarrierSettings/vodafone_in.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/vodafone_it.pb:system/product/etc/CarrierSettings/vodafone_it.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/vodafone_nl.pb:system/product/etc/CarrierSettings/vodafone_nl.pb \
+    vendor/google/marlin/proprietary/product/etc/CarrierSettings/xfinity_us.pb:system/product/etc/CarrierSettings/xfinity_us.pb \
     vendor/google/marlin/proprietary/product/etc/permissions/com.android.omadm.service.xml:system/product/etc/permissions/com.android.omadm.service.xml \
     vendor/google/marlin/proprietary/product/etc/permissions/com.android.sdm.plugins.connmo.xml:system/product/etc/permissions/com.android.sdm.plugins.connmo.xml \
     vendor/google/marlin/proprietary/product/etc/permissions/com.android.sdm.plugins.dcmo.xml:system/product/etc/permissions/com.android.sdm.plugins.dcmo.xml \
@@ -68,6 +131,7 @@ PRODUCT_PACKAGES += \
     VzwOmaTrigger \
     qcrilmsgtunnel \
     VZWAPNLib \
+    CarrierSettings \
     CarrierSetup \
     ConnMO \
     DCMO \
