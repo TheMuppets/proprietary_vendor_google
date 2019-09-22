@@ -44,7 +44,7 @@
     <disabled-until-used-preinstalled-carrier-app package="com.google.android.apps.tycho" />
 
     <!-- Verizon MVS app: pre-installed and should be disabled until Verizon SIM inserted. -->
-    <!--disabled-until-used-preinstalled-carrier-app package="com.verizon.mips.services" /-->
+    <disabled-until-used-preinstalled-carrier-app package="com.verizon.mips.services" />
     <!-- Verizon MVS app: whitelist from app-standby. b/112366401 -->
     <!-- Verizon MVS app: whitelist from doze mode for P SDK. b/124487200 -->
     <allow-in-power-save package="com.verizon.mips.services" />

@@ -63,6 +63,7 @@ PRODUCT_PACKAGES += \
     ims \
     Asdiv \
     CNEService \
+    CarrierSettings \
     CarrierSetup \
     ConnMO \
     DCMO \
