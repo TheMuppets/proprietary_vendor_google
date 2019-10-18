@@ -17,3 +17,12 @@
 PRODUCT_COPY_FILES += \
     vendor/google/sargo/proprietary/product/etc/firmware/music_detector.descriptor:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.descriptor \
     vendor/google/sargo/proprietary/product/etc/firmware/music_detector.sound_model:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model
+PRODUCT_COPY_FILES += \
+    vendor/google/sargo/proprietary/vendor/etc/sensors/config/s4_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/s4_ak991x_0.json \
+    vendor/google/sargo/proprietary/vendor/etc/sensors/config/s4_tmd2725_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/s4_tmd2725_0.json \
+    vendor/google/sargo/proprietary/vendor/etc/thermal-engine-sargo.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-sargo.conf \
+    vendor/google/sargo/proprietary/vendor/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_60.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_60.bin \
+    vendor/google/sargo/proprietary/vendor/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_Medium_38.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_Medium_38.bin \
+    vendor/google/sargo/proprietary/vendor/firmware/confirmationui_fonts/LeapFrog_Roboto_38.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/confirmationui_fonts/LeapFrog_Roboto_38.bin \
+    vendor/google/sargo/proprietary/vendor/lib/hw/sensors.sargo.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.sargo.so \
+    vendor/google/sargo/proprietary/vendor/lib64/hw/sensors.sargo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.sargo.so

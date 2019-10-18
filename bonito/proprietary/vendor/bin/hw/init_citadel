@@ -1,0 +1,125 @@
+#! /vendor/bin/sh
+#
+# Copyright (C) 2017 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Helper script to load a firmware update to Citadel.
+
+UPDATER=/vendor/bin/hw/citadel_updater
+FIRMWARE=/vendor/firmware/citadel/ec.bin
+LOG_TAG=init_citadel
+
+KNOWN_OLD_SHA=(
+    bb8465bd     # Factory
+    56a55232a    # 2017-12-21
+    c6e941852    # 2018-01-10
+    ef657547a    # 2018-01-18
+    f103bb741    # 2018-02-06
+    395a75736    # 2018-02-08
+    05c0e03bd    # 2018-02-22
+    08f0df09a    # 2018-03-30
+    1e2e0b0ef    # 2018-04-16
+    9f3093c29+   # 2018-05-01 (DVT1-factory)
+    b27785118    # 2018-05-17 (PVT1-factory)
+    26d13fe33    # 2018-05-31
+    ba9f1d086    # 2018-06-07
+    24f084edb    # 2018-06-12
+    7dd8665ed    # 2018-06-13
+    de8c7c6fb    # 2018-06-15
+    c6832f6d6    # 2018-06-19
+    2c6c1a847    # 2018-06-20
+    c2ed0e52f    # 2018-06-26 (FIH-RC1)
+    8b06aa778    # 2018-06-28
+    2089eefbd    # 2018-07-14 (FIH-RC2)
+    e0c55f0bb    # 2018-07-16 (FIH-RC3)
+    ba0029fdd    # 2018-07-16 (FIH-RC4)
+    a32876a42    # 2018-07-16 (FIH-RC5)
+    6799dc530    # 2018-07-31 (FIH-RC6)
+    632a0c58b    # 2018-08-14 (FIH-RC7)
+    03e9a1391    # 2018-10-02 (OTA-RC8)
+    89f6e56e3    # 2018-11-08 (OTA-RC9)
+    ba09257ef    # 2018-11-15 (OTA-RC10)
+    d4b88b081    # 2019-02-07 (OTA-RC11)
+    0229d0f99    # 2019-06-06 (OTA-RC12)
+    #5b47d37e     # 2019-06-25 (OTA-RC13)
+)
+
+set -u
+
+# Log to logcat and the shell
+log_info() {
+    log -p i -t "${LOG_TAG}" "$1"
+    echo "$1"
+}
+
+log_error() {
+    log -p e -t "${LOG_TAG}" "$1"
+    echo "$1" >&2
+}
+
+# Check whether the firmare needs to be loaded
+# TODO: change to check if the new firmware is already uploaded
+log_info "Checking citadel version"
+version=$("${UPDATER}" -v)
+if [[ $? -ne 0 ]] ; then
+  log_error "Failed to get citadel version. Aborting update."
+  exit 1
+fi
+log_info "Citadel version: ${version}"
+
+for known in ${KNOWN_OLD_SHA[@]}
+do
+    # Only update from known versions that we released. This makes development
+    # easier as our custom builds won't be overwritten.
+    if [[ "${version}" = *"${known}"* ]]; then
+        log_info "Citadel is running a known older firmware so sending update"
+
+        # See if Citadel is a production chip (assume it's not if this fails)
+        citadel_is_pvt=$("${UPDATER}" -l | grep 'Citadel C2-PVT')
+        if [ -n "${citadel_is_pvt}" ] ; then
+          also_ro="--ro"
+          log_info "Citadel is C2-PVT, allowing RO updates"
+        else
+          also_ro=
+          log_info "Citadel is not C2-PVT, only allowing RW updates"
+        fi
+
+        # Upload the firmware to Citadel
+        if ! "${UPDATER}" --rw ${also_ro} "${FIRMWARE}"; then
+            log_error "Failed to load Citadel update"
+            exit 1
+        fi
+
+        log_info "Citadel update loaded"
+
+        # Attempt to activate the update in case there isn't an update password
+        if "${UPDATER}" --enable_rw --enable_ro ""; then
+            log_info "Citadel update enabled"
+        else
+            log_info "Could not enable Citadel update: password required"
+        fi
+
+        # Reboot to load the new firmware if it was activated.
+        # Do a hard reset to clear the retry counter, because b/80131663
+        if "${UPDATER}" --force_reset; then
+            log_info "Citadel rebooted"
+        else
+            log_error "Failed to reboot Citadel"
+            exit 1
+        fi
+        exit 0
+    fi
+done
+
+log_info "Citadel isn't running a known older firmware so not updating"

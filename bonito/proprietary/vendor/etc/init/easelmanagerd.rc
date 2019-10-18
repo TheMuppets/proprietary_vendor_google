@@ -1,0 +1,4 @@
+service easelmanagerd /vendor/bin/easelmanagerd
+    class main
+    user nobody
+    group nobody
