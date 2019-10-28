@@ -24,5 +24,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/sargo/proprietary/vendor/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_60.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_60.bin \
     vendor/google/sargo/proprietary/vendor/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_Medium_38.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/confirmationui_fonts/LeapFrog_Google_Sans_Display_Medium_38.bin \
     vendor/google/sargo/proprietary/vendor/firmware/confirmationui_fonts/LeapFrog_Roboto_38.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/confirmationui_fonts/LeapFrog_Roboto_38.bin \
+    vendor/google/sargo/proprietary/vendor/firmware/synaptics_0.img:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_0.img \
+    vendor/google/sargo/proprietary/vendor/firmware/synaptics_2.img:$(TARGET_COPY_OUT_VENDOR)/firmware/synaptics_2.img \
     vendor/google/sargo/proprietary/vendor/lib/hw/sensors.sargo.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.sargo.so \
     vendor/google/sargo/proprietary/vendor/lib64/hw/sensors.sargo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.sargo.so
