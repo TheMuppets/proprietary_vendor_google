@@ -119,6 +119,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/libtsec_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtsec_wrapper.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libtsechdcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtsechdcp.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libussrd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libussrd.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libw.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libwvm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwvm.so \
     vendor/google/yellowstone/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/mediadrm/libwvdrmengine.so
 
