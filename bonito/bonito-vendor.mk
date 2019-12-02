@@ -117,7 +117,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gatekeeper@1.0-service-qti \
     vendor/google/bonito/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     vendor/google/bonito/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.0-service-paintbox:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.0-service-paintbox \
-    vendor/google/bonito/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.1-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.1-service-qti \
+    vendor/google/bonito/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.2-service-qti \
     vendor/google/bonito/proprietary/vendor/bin/hw/init_citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/init_citadel \
     vendor/google/bonito/proprietary/vendor/bin/hw/qcrild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/qcrild \
     vendor/google/bonito/proprietary/vendor/bin/hw/vendor.google.radioext@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.radioext@1.0-service \
@@ -272,7 +272,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc \
     vendor/google/bonito/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
     vendor/google/bonito/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-service-qti.rc \
-    vendor/google/bonito/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.1-service-qti.rc \
+    vendor/google/bonito/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc \
     vendor/google/bonito/proprietary/vendor/etc/init/easelmanagerd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/easelmanagerd.rc \
     vendor/google/bonito/proprietary/vendor/etc/init/init-ramoops.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-ramoops.rc \
     vendor/google/bonito/proprietary/vendor/etc/init/init_citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_citadel.rc \
@@ -507,6 +507,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/lib/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib/btaudio_offload_if.so \
     vendor/google/bonito/proprietary/vendor/lib/camera/com.qti.sensormodule.metric_imx363.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.metric_imx363.bin \
     vendor/google/bonito/proprietary/vendor/lib/camera/com.qti.sensormodule.primax_imx355.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.primax_imx355.bin \
+    vendor/google/bonito/proprietary/vendor/lib/camera/com.qti.sensormodule.primax_imx355_s.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.sensormodule.primax_imx355_s.bin \
     vendor/google/bonito/proprietary/vendor/lib/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.tuned.default.bin \
     vendor/google/bonito/proprietary/vendor/lib/camera/fdconfigpreview.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigpreview.bin \
     vendor/google/bonito/proprietary/vendor/lib/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigpreviewlite.bin \
@@ -710,6 +711,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/lib/libssc_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssc_default_listener.so \
     vendor/google/bonito/proprietary/vendor/lib/libssc_proto.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssc_proto.so \
     vendor/google/bonito/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
+    vendor/google/bonito/proprietary/vendor/lib/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_bufferpool@2.0.1.so \
     vendor/google/bonito/proprietary/vendor/lib/libstreamparser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstreamparser.so \
     vendor/google/bonito/proprietary/vendor/lib/libsubsystem_control.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsubsystem_control.so \
     vendor/google/bonito/proprietary/vendor/lib/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libswregistrationalgo.so \
@@ -785,15 +787,19 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/lib64/android.hardware.automotive.vehicle@2.0-manager-lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.automotive.vehicle@2.0-manager-lib.so \
     vendor/google/bonito/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/com.google.tuned.b4s4_imx355.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.google.tuned.b4s4_imx355.bin \
+    vendor/google/bonito/proprietary/vendor/lib64/camera/com.google.tuned.b4s4_imx355_s.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.google.tuned.b4s4_imx355_s.bin \
     vendor/google/bonito/proprietary/vendor/lib64/camera/com.google.tuned.b4s4_imx363.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.google.tuned.b4s4_imx363.bin \
     vendor/google/bonito/proprietary/vendor/lib64/camera/com.qti.sensor.imx355.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx355.so \
+    vendor/google/bonito/proprietary/vendor/lib64/camera/com.qti.sensor.imx355_s.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx355_s.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/com.qti.sensor.imx363.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensor.imx363.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/com.qti.sensormodule.metric_imx363.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.metric_imx363.bin \
     vendor/google/bonito/proprietary/vendor/lib64/camera/com.qti.sensormodule.primax_imx355.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.primax_imx355.bin \
+    vendor/google/bonito/proprietary/vendor/lib64/camera/com.qti.sensormodule.primax_imx355_s.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.primax_imx355_s.bin \
     vendor/google/bonito/proprietary/vendor/lib64/camera/com.qti.tuned.default.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.tuned.default.bin \
     vendor/google/bonito/proprietary/vendor/lib64/camera/components/com.custom.stats.aec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.custom.stats.aec.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/components/com.custom.stats.awb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.custom.stats.awb.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/components/com.google.3atuning.b4s4_imx355.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.3atuning.b4s4_imx355.so \
+    vendor/google/bonito/proprietary/vendor/lib64/camera/components/com.google.3atuning.b4s4_imx355_s.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.3atuning.b4s4_imx355_s.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/components/com.google.3atuning.b4s4_imx363.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.3atuning.b4s4_imx363.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/components/com.google.3atuning.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.3atuning.default.so \
     vendor/google/bonito/proprietary/vendor/lib64/camera/components/com.google.node.eis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.eis.so \
@@ -1040,6 +1046,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/lib64/libssc_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc_default_listener.so \
     vendor/google/bonito/proprietary/vendor/lib64/libssc_proto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc_proto.so \
     vendor/google/bonito/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
+    vendor/google/bonito/proprietary/vendor/lib64/libstagefright_bufferpool@2.0.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_bufferpool@2.0.1.so \
     vendor/google/bonito/proprietary/vendor/lib64/libsubsystem_control.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsubsystem_control.so \
     vendor/google/bonito/proprietary/vendor/lib64/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswvdec.so \
     vendor/google/bonito/proprietary/vendor/lib64/libsysmon_cdsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysmon_cdsp_skel.so \
@@ -1054,6 +1061,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/lib64/libxml.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libxml.so \
     vendor/google/bonito/proprietary/vendor/lib64/qcrild_librilutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/qcrild_librilutils.so \
     vendor/google/bonito/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
+    vendor/google/bonito/proprietary/vendor/lib64/unnhal-acc-adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-adreno.so \
+    vendor/google/bonito/proprietary/vendor/lib64/unnhal-acc-common.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-common.so \
+    vendor/google/bonito/proprietary/vendor/lib64/unnhal-acc-hvx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/unnhal-acc-hvx.so \
+    vendor/google/bonito/proprietary/vendor/lib64/vendor-pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor-pixelatoms-cpp.so \
     vendor/google/bonito/proprietary/vendor/lib64/vendor.display.color@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.0.so \
     vendor/google/bonito/proprietary/vendor/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.1.so \
     vendor/google/bonito/proprietary/vendor/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.2.so \
@@ -1104,6 +1115,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/vendor/media/ensemble_fd_model.emd:$(TARGET_COPY_OUT_VENDOR)/media/ensemble_fd_model.emd \
     vendor/google/bonito/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/google/bonito/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
+    vendor/google/bonito/proprietary/vendor/radio/qcril_database/upgrade/10_remove_germany_hard_ecc_110.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/10_remove_germany_hard_ecc_110.sql \
     vendor/google/bonito/proprietary/vendor/radio/qcril_database/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/1_version_intro.sql \
     vendor/google/bonito/proprietary/vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/2_version_add_wps_config.sql \
     vendor/google/bonito/proprietary/vendor/radio/qcril_database/upgrade/3_version_google_feature.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/3_version_google_feature.sql \
