@@ -16,7 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter crosshatch blueline,$(TARGET_DEVICE)),)
-
+ifeq ($(TARGET_DEVICE),crosshatch)
 
 endif

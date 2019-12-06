@@ -1,0 +1,49 @@
+<rig>
+    <device_id>0</device_id>
+    <camera>
+        <camera_model type="calibu_fu_fv_u0_v0_k1_k2_k3" index="0">
+            <rolling_shutter_readout_time>0.032225063000000005</rolling_shutter_readout_time>
+            <rolling_shutter_direction>vertical</rolling_shutter_direction>
+            <height>480</height>
+            <width>640</width>
+            <params> [507.1130804271212;507.6099834220249;321.1178589142295;241.3313689397189;0.1495740852020673;-0.4609650612638042;0.4430024777156821] </params>
+        </camera_model>
+    </camera>
+    <camera>
+        <camera_model type="calibu_fu_fv_u0_v0_k1_k2_k3" index="1">
+            <rolling_shutter_readout_time>0.032225063000000005</rolling_shutter_readout_time>
+            <rolling_shutter_direction>vertical</rolling_shutter_direction>
+            <height>1080</height>
+            <width>1920</width>
+            <params> [1521.339241281363;1522.829950266075;964.3535767426885;544.9941068191567;0.1495740852020673;-0.4609650612638042;0.4430024777156821] </params>
+        </camera_model>
+    </camera>
+    <intrinsic_imu_calibration name="" imu_id="100" type="linear_imu_sg_mg_sa_ma_gqa">
+        <b_w_b_a> [-0.0007955975477191078;0.001112316861532765;3.887676521406854e-05;0.1755984736057605;-0.1655295975118239;0.2007937552247014] </b_w_b_a>
+        <intrinsics> [1.012256836117444;1.006302304549382;1.001833384545946;0.002296726960445439;-0.0009706688471697281;-0.004639402960329546;0.9999760830295772;0.9988970846522914;1.000769881355609;-0.002432443759641542;-0.01063321166991412;-0.002240802485396713;0.001582340793990934;0.004168814328638593;-0.0006574251630543914;0.9999898424368421] </intrinsics>
+        <gyro_noise_sigma>0.00012888600000000001</gyro_noise_sigma>
+        <gyro_bias_sigma>0.00022338999999999999</gyro_bias_sigma>
+        <accel_noise_sigma>0.0016347200000000001</accel_noise_sigma>
+        <accel_bias_sigma>0.0064444480000000002</accel_bias_sigma>
+    </intrinsic_imu_calibration>
+    <extrinsic_calibration frame_A_id="100" frame_B_id="1">
+        <!--A_R_B ~=  [1.00, -0.01, 0.01;-0.01, -1.00, -0.00;0.01, 0.00, -1.00] -->
+        <A_q_B> [-0.9999636074812968;0.004072663880663123;-0.007396760582940855;0.001218628239010685] </A_q_B>
+        <A_p_B> [-0.04992;0.08312;-0.003065] </A_p_B>
+    </extrinsic_calibration>
+    <extrinsic_calibration frame_A_id="100" frame_B_id="0">
+        <!--A_R_B ~=  [1.00, -0.01, 0.01;-0.01, -1.00, -0.00;0.01, 0.00, -1.00] -->
+        <A_q_B> [-0.9999636074812968;0.004072663880663123;-0.007396760582940855;0.001218628239010685] </A_q_B>
+        <A_p_B> [-0.04992;0.08312;-0.003065] </A_p_B>
+    </extrinsic_calibration>
+    <extrinsic_calibration frame_A_id="100" frame_B_id="40">
+        <!--A_R_B ~=  [0.00, -1.00, 0.00;1.00, 0.00, 0.00;0.00, 0.00, 1.00] -->
+        <A_q_B> [-0;-0;-0.7071067811865429;0.7071067811865521] </A_q_B>
+        <A_p_B> [0;0;0] </A_p_B>
+    </extrinsic_calibration>
+    <extrinsic_calibration frame_A_id="40" frame_B_id="42">
+        <!--A_R_B ~=  [0.00, 1.00, 0.00;-1.00, 0.00, 0.00;0.00, 0.00, 1.00] -->
+        <A_q_B> [0;0;0.7071067811865475;0.7071067811865476] </A_q_B>
+        <A_p_B> [0;0;0] </A_p_B>
+    </extrinsic_calibration>
+</rig>

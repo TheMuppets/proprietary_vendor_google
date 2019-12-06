@@ -161,6 +161,66 @@ dex_import {
 	jars: ["proprietary/framework/vendor.qti.ims.callinfo-V1.0-java.jar"],
 }
 
+cc_prebuilt_library_shared {
+	name: "libMpeg4SwEncoder",
+	owner: "google",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libMpeg4SwEncoder.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libMpeg4SwEncoder.so"],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libbtnv",
+	owner: "google",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libbtnv.so"],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libbtnv.so"],
+		},
+	},
+	compile_multilib: "both",
+	prefer: true,
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "TimeService",
+	owner: "google",
+	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "crosshatch_game_driver",
+	owner: "google",
+	apk: "proprietary/vendor/app/crosshatch_game_driver/crosshatch_game_driver.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
 android_app_import {
 	name: "AmbientSensePrebuilt",
 	owner: "google",
@@ -327,5 +387,12 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
+}
+
+dex_import {
+	name: "com.google.android.camera.experimental2018",
+	owner: "google",
+	jars: ["proprietary/vendor/framework/com.google.android.camera.experimental2018.jar"],
+	soc_specific: true,
 }
 

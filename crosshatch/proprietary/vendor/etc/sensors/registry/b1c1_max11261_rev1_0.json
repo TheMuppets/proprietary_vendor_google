@@ -1,0 +1,86 @@
+{
+  "config":{
+    "hw_platform": ["OEM"],
+    "soc_id": ["321"],
+    "platform_version": [ "0x10003", "0x10004", "0x10005",
+                          "0x20002", "0x2000A", "0x2000B" ]
+  },
+  "max11259_0_platform":{
+    "owner": "max11259",
+    ".max11259_config":{
+      "owner": "max11259",
+      "model":{ "type": "str", "ver": "0",
+        "data": "max11261"
+      },
+      "revision":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "gain":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "lp_mode":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "reset_gpio":{ "type": "int", "ver": "0",
+        "data": "116"
+      },
+      "gpo_delay":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "mux_delay":{ "type": "int", "ver": "0",
+        "data": "20"
+      },
+      "poll_period":{ "type": "int", "ver": "0",
+        "data": "0"
+      }
+    },
+    ".config":{
+      "owner": "max11259",
+      "bus_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "bus_instance":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "slave_config":{ "type": "int", "ver": "0",
+        "data": "48"
+      },
+      "min_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "max_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "reg_addr_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "dri_irq_num":{ "type": "int", "ver": "0",
+        "data": "128"
+      },
+      "irq_pull_type":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "irq_is_chip_pin":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "irq_drive_strength":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_trigger_type":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "num_rail":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "rail_on_state":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "vddio_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vddio"
+      },
+      "rigid_body_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      }
+    }
+  }
+}

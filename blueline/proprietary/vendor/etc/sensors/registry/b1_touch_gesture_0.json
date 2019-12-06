@@ -1,0 +1,21 @@
+{
+  "config": {
+    "hw_platform": ["OEM"],
+    "soc_id": ["321"],
+    "platform_version": [ "0x20000:0xFFFF0000" ],
+    "-platform_version": [ "0x20003", "0x20004" ]
+  },
+  "touch_gesture_0_platform": { "owner": "sns_touch_gesture",
+    ".config": { "owner": "sns_touch_gesture",
+      "controller_id"      : { "type": "int", "ver": "0", "data": "1"   },
+      "bus_instance"       : { "type": "int", "ver": "0", "data": "5"   },
+      "slave_address"      : { "type": "int", "ver": "0", "data": "73"  },
+      "irq_num"            : { "type": "int", "ver": "0", "data": "125" },
+      "irq_trigger_type"   : { "type": "int", "ver": "0", "data": "1"   },
+      "irq_drive_strength" : { "type": "int", "ver": "0", "data": "0"   },
+      "irq_pull_type"      : { "type": "int", "ver": "0", "data": "0"   },
+      "irq_is_chip_pin"    : { "type": "int", "ver": "0", "data": "1"   },
+      "irq_skip_pin_config": { "type": "int", "ver": "0", "data": "1"   }
+    }
+  }
+}
