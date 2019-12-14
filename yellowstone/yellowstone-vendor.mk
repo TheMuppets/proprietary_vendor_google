@@ -134,7 +134,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/etc/ril_atc.config:system/etc/ril_atc.config \
     vendor/google/yellowstone/proprietary/framework/libtango_device.jar:system/framework/libtango_device.jar \
     vendor/google/yellowstone/proprietary/framework/libtango_device2.jar:system/framework/libtango_device2.jar \
-    vendor/google/yellowstone/proprietary/lib/hw/sensors.tegra.so:system/lib/hw/sensors.tegra.so \
+    vendor/google/yellowstone/proprietary/lib/sensors.tegra.so:system/lib/sensors.tegra.so \
     vendor/google/yellowstone/proprietary/lib/hw/ts.default.so:system/lib/hw/ts.default.so \
     vendor/google/yellowstone/proprietary/lib/libcxsparse.so:system/lib/libcxsparse.so \
     vendor/google/yellowstone/proprietary/lib/libjpegnv.so:system/lib/libjpegnv.so \
