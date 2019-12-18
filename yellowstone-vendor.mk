@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/hw/gps.brcm.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gps.brcm.so \
     vendor/google/yellowstone/proprietary/vendor/lib/hw/gralloc.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.tegra.so \
     vendor/google/yellowstone/proprietary/vendor/lib/hw/hwcomposer.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/hwcomposer.tegra.so \
-    vendor/google/yellowstone/proprietary/vendor/lib/hw/keystore.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.tegra.so \
     vendor/google/yellowstone/proprietary/vendor/lib/hw/memtrack.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/memtrack.tegra.so \
     vendor/google/yellowstone/proprietary/vendor/lib/hw/vulkan.tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.tegra.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libWVStreamControlAPI_L1.so \
