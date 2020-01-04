@@ -172,6 +172,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.dialer">
         <permission name="android.permission.ALLOW_ANY_CODEC_FOR_PLAYBACK"/>
         <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
@@ -180,8 +181,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REGISTER_CONNECTION_MANAGER"/>
         <permission name="android.permission.STATUS_BAR"/>
         <permission name="android.permission.STOP_APP_SWITCHES"/>
-        <permission name="android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="com.android.voicemail.permission.READ_VOICEMAIL"/>
         <permission name="com.android.voicemail.permission.WRITE_VOICEMAIL"/>
     </privapp-permissions>
