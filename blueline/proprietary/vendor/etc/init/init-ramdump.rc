@@ -7,6 +7,7 @@ service vendor.ramdump_auto /vendor/bin/ramdump -a
     disabled
     oneshot
     ioprio idle 0
+    writepid /dev/blkio/background/tasks
 
 on property:ro.boot.ramdump=detected
     setprop debug.ramdump "detected"
