@@ -1,4 +1,4 @@
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,7 +23,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/bin/crash-check-arm:$(TARGET_COPY_OUT_VENDOR)/bin/crash-check-arm \
     vendor/google/yellowstone/proprietary/vendor/bin/downloader:$(TARGET_COPY_OUT_VENDOR)/bin/downloader \
     vendor/google/yellowstone/proprietary/vendor/bin/glgps_nvidiaTegra2android:$(TARGET_COPY_OUT_VENDOR)/bin/glgps_nvidiaTegra2android \
-    vendor/google/yellowstone/proprietary/vendor/bin/gps_select.sh:system/vendor/bin/gps_select.sh \
+    vendor/google/yellowstone/proprietary/vendor/bin/gps_select.sh:$(TARGET_COPY_OUT_VENDOR)/bin/gps_select.sh \
+    vendor/google/yellowstone/proprietary/vendor/bin/hdcp_test:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp_test \
     vendor/google/yellowstone/proprietary/vendor/bin/icera-crashlogs:$(TARGET_COPY_OUT_VENDOR)/bin/icera-crashlogs \
     vendor/google/yellowstone/proprietary/vendor/bin/icera-feedback:$(TARGET_COPY_OUT_VENDOR)/bin/icera-feedback \
     vendor/google/yellowstone/proprietary/vendor/bin/icera-loader:$(TARGET_COPY_OUT_VENDOR)/bin/icera-loader \
@@ -31,12 +32,13 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/bin/icera_log_serial_arm:$(TARGET_COPY_OUT_VENDOR)/bin/icera_log_serial_arm \
     vendor/google/yellowstone/proprietary/vendor/bin/modemnic:$(TARGET_COPY_OUT_VENDOR)/bin/modemnic \
     vendor/google/yellowstone/proprietary/vendor/bin/tlk_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/tlk_daemon \
+    vendor/google/yellowstone/proprietary/vendor/bin/tsechdcp_test:$(TARGET_COPY_OUT_VENDOR)/bin/tsechdcp_test \
     vendor/google/yellowstone/proprietary/vendor/bin/ussrd:$(TARGET_COPY_OUT_VENDOR)/bin/ussrd \
+    vendor/google/yellowstone/proprietary/vendor/firmware/bcm43341.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm43341.hcd \
     vendor/google/yellowstone/proprietary/vendor/firmware/gk20a/NETB_img.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gk20a/NETB_img.bin \
     vendor/google/yellowstone/proprietary/vendor/firmware/gk20a/fecs.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gk20a/fecs.bin \
     vendor/google/yellowstone/proprietary/vendor/firmware/gk20a/gpccs.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gk20a/gpccs.bin \
     vendor/google/yellowstone/proprietary/vendor/firmware/gk20a/gpmu_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gk20a/gpmu_ucode.bin \
-    vendor/google/yellowstone/proprietary/vendor/firmware/bcm43341.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm43341.hcd \
     vendor/google/yellowstone/proprietary/vendor/firmware/nvavp_aacdec_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nvavp_aacdec_ucode.bin \
     vendor/google/yellowstone/proprietary/vendor/firmware/nvavp_aud_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nvavp_aud_ucode.bin \
     vendor/google/yellowstone/proprietary/vendor/firmware/nvavp_mp3dec_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nvavp_mp3dec_ucode.bin \
@@ -78,11 +80,15 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvblit.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvblit.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvcamerautils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvcamerautils.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvcamlog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvcamlog.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libnvcap.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvcap.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libnvcapclk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvcapclk.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvcpl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvcpl.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvddk_2d_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvddk_2d_v2.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvddk_vic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvddk_vic.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvglsi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvglsi.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvgr.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libnvhdcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvhdcp.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libnvhrcv.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvhrcv.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvhwc_service.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvhwc_service.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvmm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvmm.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvmm_audio.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvmm_audio.so \
@@ -107,13 +113,16 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvrm_gpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvrm_gpu.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvrm_graphics.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvrm_graphics.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvrmapi_tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvrmapi_tegra.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libnvtestresults.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvtestresults.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvtnr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvtnr.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libnvtsecmpeg2ts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvtsecmpeg2ts.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvtvmr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvtvmr.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvvicsi_v3.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvvicsi_v3.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvwsi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvwsi.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libopencv24_tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/libopencv24_tegra.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libphs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libphs.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libril-icera.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-icera.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libstagefright_hdcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_hdcp.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libtbb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtbb.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libtlk_secure_hdcp_up.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtlk_secure_hdcp_up.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libtsec_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtsec_wrapper.so \
@@ -134,7 +143,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/etc/ril_atc.config:system/etc/ril_atc.config \
     vendor/google/yellowstone/proprietary/framework/libtango_device.jar:system/framework/libtango_device.jar \
     vendor/google/yellowstone/proprietary/framework/libtango_device2.jar:system/framework/libtango_device2.jar \
-    vendor/google/yellowstone/proprietary/lib/sensors.tegra.so:system/lib/sensors.tegra.so \
     vendor/google/yellowstone/proprietary/lib/hw/ts.default.so:system/lib/hw/ts.default.so \
     vendor/google/yellowstone/proprietary/lib/libcxsparse.so:system/lib/libcxsparse.so \
     vendor/google/yellowstone/proprietary/lib/libjpegnv.so:system/lib/libjpegnv.so \
@@ -177,6 +185,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/lib/para_12_01_01_a0.so:system/lib/para_12_01_01_a0.so \
     vendor/google/yellowstone/proprietary/lib/para_12_01_02_a0.so:system/lib/para_12_01_02_a0.so \
     vendor/google/yellowstone/proprietary/lib/para_12_01_03_a0.so:system/lib/para_12_01_03_a0.so \
+    vendor/google/yellowstone/proprietary/lib/sensors.tegra.so:system/lib/sensors.tegra.so \
     vendor/google/yellowstone/proprietary/vendor/firmware/bcm43341/BCM43341NFCB0_002.001.009.0031.0059_Generic_I2C_NCD_Signed_configdata.ncd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm43341/BCM43341NFCB0_002.001.009.0031.0059_Generic_I2C_NCD_Signed_configdata.ncd \
     vendor/google/yellowstone/proprietary/vendor/firmware/bcm43341/BCM43341NFCB0_002.001.009.0031.0059_Generic_PreI2C_NCD_Signed_configdata.._.ncd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm43341/BCM43341NFCB0_002.001.009.0031.0059_Generic_PreI2C_NCD_Signed_configdata.._.ncd \
     vendor/google/yellowstone/proprietary/vendor/firmware/bcm43341/fw_bcmdhd.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm43341/fw_bcmdhd.bin \
