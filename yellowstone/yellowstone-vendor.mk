@@ -73,6 +73,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/libgov_spincircle.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgov_spincircle.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libgov_tbc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgov_tbc.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libgov_ui.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgov_ui.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libim501.so:$(TARGET_COPY_OUT_VENDOR)/lib/libim501.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvRSCompiler.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvRSCompiler.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvRSDriver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvRSDriver.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvaudiofx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvaudiofx.so \
@@ -118,6 +119,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvtsecmpeg2ts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvtsecmpeg2ts.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvtvmr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvtvmr.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvvicsi_v3.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvvicsi_v3.so \
+    vendor/google/yellowstone/proprietary/vendor/lib/libnvvisualizer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvvisualizer.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libnvwsi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libnvwsi.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libopencv24_tegra.so:$(TARGET_COPY_OUT_VENDOR)/lib/libopencv24_tegra.so \
     vendor/google/yellowstone/proprietary/vendor/lib/libphs.so:$(TARGET_COPY_OUT_VENDOR)/lib/libphs.so \
