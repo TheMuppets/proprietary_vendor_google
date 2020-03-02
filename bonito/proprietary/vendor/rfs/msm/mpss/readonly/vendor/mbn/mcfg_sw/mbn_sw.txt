@@ -6,15 +6,20 @@ mcfg_sw/generic/AUNZ/Optus/Commercial/AU/mcfg_sw.mbn
 mcfg_sw/generic/AUNZ/Telstra/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/AUNZ/Vodafone/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/EU/Bouygues/Commercial/France/mcfg_sw.mbn
+mcfg_sw/generic/EU/DT/Commercial/NL/mcfg_sw.mbn
 mcfg_sw/generic/EU/DT/VoLTE/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/EU/EE/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/EU/H3G/Commercial/UK/mcfg_sw.mbn
 mcfg_sw/generic/EU/Orange/Commercial/France/mcfg_sw.mbn
+mcfg_sw/generic/EU/Orange/Commercial/Spain/mcfg_sw.mbn
 mcfg_sw/generic/EU/SFR/Commercial/FR/mcfg_sw.mbn
+mcfg_sw/generic/EU/Swisscom/Commercial/Swiss/mcfg_sw.mbn
 mcfg_sw/generic/EU/Telefonica/Commercial/DE/mcfg_sw.mbn
 mcfg_sw/generic/EU/Telefonica/Commercial/UK/mcfg_sw.mbn
+mcfg_sw/generic/EU/TIM/Commercial/Italy/mcfg_sw.mbn
 mcfg_sw/generic/EU/Vodafone/VoLTE/Germany/mcfg_sw.mbn
 mcfg_sw/generic/EU/Vodafone/VoLTE/Netherlands/mcfg_sw.mbn
+mcfg_sw/generic/EU/Vodafone/VoLTE/Turkey/mcfg_sw.mbn
 mcfg_sw/generic/EU/Vodafone/VoLTE/UK/mcfg_sw.mbn
 mcfg_sw/generic/NA/ATT/Cricket/mcfg_sw.mbn
 mcfg_sw/generic/NA/ATT/FirstNet/mcfg_sw.mbn
@@ -51,5 +56,6 @@ mcfg_sw/generic/Pixel/APAC/Airtel/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/APAC/Vodafone/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/TMO_FI/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/Sprint_FI/Commercial/mcfg_sw.mbn
+mcfg_sw/generic/Pixel/NA/Sprint_FI_Data/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/USCC_FI/Commercial/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/Visible/visible/mcfg_sw.mbn

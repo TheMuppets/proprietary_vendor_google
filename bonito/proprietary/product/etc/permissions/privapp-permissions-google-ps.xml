@@ -88,6 +88,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.BRIGHTNESS_SLIDER_USAGE"/>
         <permission name="android.permission.CHANGE_APP_IDLE_STATE"/>
         <permission name="android.permission.CONFIGURE_DISPLAY_BRIGHTNESS"/>
+        <permission name="android.permission.DUMP"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.POWER_SAVER"/>
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
@@ -98,6 +99,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS"/>
         <permission name="android.permission.CONTROL_DISPLAY_SATURATION"/>
         <permission name="android.permission.INTERACT_ACROSS_PROFILES"/>
+        <permission name="android.permission.LOCATION_HARDWARE"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.OBSERVE_APP_USAGE"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
