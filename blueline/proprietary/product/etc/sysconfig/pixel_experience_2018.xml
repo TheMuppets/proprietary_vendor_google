@@ -5,9 +5,6 @@
     <!-- Allow Pixel modem service in background -->
     <allow-in-power-save package="com.google.modemservice" />
 
-    <!-- Allow SCONE JobIntentService & Services to run in background -->
-    <allow-in-power-save package="com.google.android.apps.scone" />
-
     <!-- Allow PixelLogger LoggingService to run in background -->
     <allow-in-power-save package="com.android.pixellogger" />
 

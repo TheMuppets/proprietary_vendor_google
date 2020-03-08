@@ -21,13 +21,13 @@
 
 
 
-  <project groups="non-hlos,modem,partner" name="platform/vendor/qcom/sdm845/non-hlos/config" path="config" revision="79d22ef75af675112ef859851785e4451868cd50">
+  <project groups="non-hlos,modem,partner" name="platform/vendor/qcom/sdm845/non-hlos/config" path="config" revision="4bbd0168ed0982137735f768d134ffd86d59fabe">
     <linkfile dest="contents.xml" src="contents.xml" />
 
     <linkfile dest="Makefile" src="Makefile" />
 </project>
 
-  <project groups="non-hlos,partner" name="platform/vendor/qcom/sdm845/non-hlos/slpi_proc" path="slpi_proc" revision="968fa31693ba2776c760a7910a2995728c37924a" />
+  <project groups="non-hlos,partner" name="platform/vendor/qcom/sdm845/non-hlos/slpi_proc" path="slpi_proc" revision="52b1d638c3388a81f6ae4a890d3831e7f59021d7" />
 
 
 
