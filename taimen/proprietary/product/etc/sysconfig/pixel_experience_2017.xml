@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These are configurations that should exist on Google's 2017 and newer Nexus devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
+    <feature name="com.google.android.feature.PIXEL_2017_EXPERIENCE" />
+
+    <!-- Allow SCONE JobIntentService & Services to run in background -->
+    <allow-in-power-save package="com.google.android.apps.scone" />
+
+    <!-- Allow Better Bug to take bug report. -->
+    <bugreport-whitelisted package="com.google.android.apps.betterbug" />
+    <bugreport-whitelisted package="com.google.android.apps.internal.betterbug" />
+</config>
