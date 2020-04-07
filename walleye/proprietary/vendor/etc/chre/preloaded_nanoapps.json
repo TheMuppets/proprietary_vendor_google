@@ -1,0 +1,9 @@
+{ "nanoapps": [
+    "/vendor/lib/dsp/activity",
+    "/vendor/lib/dsp/elmyra",
+    "/vendor/lib/dsp/geofence",
+    "/vendor/lib/dsp/gesture",
+    "/vendor/lib/dsp/imu_cal",
+    "/vendor/lib/dsp/sleep",
+    "/vendor/lib/dsp/smartbatching"
+]}

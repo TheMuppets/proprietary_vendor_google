@@ -1,0 +1,75 @@
+chassis {
+  sensors {
+    gain: 1
+    sensitivity: 5.75705
+  }
+  sensors {
+    source: 1
+    gain: 1
+    sensitivity: 3.15557
+  }
+  sensors {
+    source: 2
+    sensitivity: 8.8574
+  }
+  sensors {
+    source: 3
+    gain: 1
+    sensitivity: 3.68936
+  }
+  sensors {
+    source: 4
+    gain: -1
+    sensitivity: 2.23614
+  }
+  sensors {
+    source: 5
+    sensitivity: 5.59284
+  }
+  default_filters {
+    median {
+      window_size: 5
+    }
+  }
+  default_filters {
+    fir {
+      coefficients: 0.035036922
+      coefficients: 0.1200171
+      coefficients: 0.21575411
+      coefficients: 0.25838372
+      coefficients: 0.21575411
+      coefficients: 0.1200171
+      coefficients: 0.035036922
+    }
+  }
+  default_filters {
+    highpass {
+      cutoff: 0.2
+      rate: 50
+    }
+  }
+}
+sampling_interval: 10000000
+detector_setup {
+  root {
+  }
+  detectors {
+    id {
+    }
+    aggregate_builder {
+      count: 6
+      single {
+        slope {
+        }
+      }
+    }
+  }
+  min_sensitivity: 0.46
+  max_sensitivity: 0.46
+  min_upper_threshold: 13000
+  max_upper_threshold: 4000
+  min_lower_threshold: -800
+  max_lower_threshold: -600
+  min_time_threshold: 1000
+  max_time_threshold: 1000
+}
