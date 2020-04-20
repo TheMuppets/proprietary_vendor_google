@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_PACKAGES += LeanbackIme \
-                    TVLauncher \
+PRODUCT_PACKAGES += TVLauncher \
                     TVRecommendations
 
 PRODUCT_COPY_FILES += vendor/google/atv/permissions/privapp-permissions-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml
