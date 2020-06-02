@@ -20,29 +20,9 @@ soong_namespace {
 }
 
 android_app_import {
-	name: "QAS_DVC_MSP_VZW",
-	owner: "google",
-	apk: "proprietary/app/QAS_DVC_MSP_VZW/QAS_DVC_MSP_VZW.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
 	name: "datastatusnotification",
 	owner: "google",
 	apk: "proprietary/app/datastatusnotification/datastatusnotification.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
-	name: "embms",
-	owner: "google",
-	apk: "proprietary/app/embms/embms.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -64,16 +44,6 @@ android_app_import {
 	owner: "google",
 	apk: "proprietary/app/uceShimService/uceShimService.apk",
 	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
-	name: "vzw_msdc_api",
-	owner: "google",
-	apk: "proprietary/app/vzw_msdc_api/vzw_msdc_api.apk",
-	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -431,12 +401,6 @@ dex_import {
 	name: "com.quicinc.cne",
 	owner: "google",
 	jars: ["proprietary/framework/com.quicinc.cne.jar"],
-}
-
-dex_import {
-	name: "embmslibrary",
-	owner: "google",
-	jars: ["proprietary/framework/embmslibrary.jar"],
 }
 
 dex_import {
