@@ -28,7 +28,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/etc/permissions/com.android.vzwomatrigger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.android.vzwomatrigger.xml \
     vendor/google/taimen/proprietary/etc/permissions/com.customermobile.preload.vzw.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.customermobile.preload.vzw.xml \
     vendor/google/taimen/proprietary/etc/permissions/com.google.android.camera.experimental2017.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.google.android.camera.experimental2017.xml \
-    vendor/google/taimen/proprietary/etc/permissions/com.verizon.embms.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.embms.xml \
     vendor/google/taimen/proprietary/etc/permissions/com.verizon.llkagent.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.verizon.llkagent.xml \
     vendor/google/taimen/proprietary/etc/permissions/privapp-permissions-aosp_wahoo.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-aosp_wahoo.xml \
     vendor/google/taimen/proprietary/etc/permissions/privapp-permissions-google.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-google.xml \
@@ -92,6 +91,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/freedommobile_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/freedommobile_ca.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/h3_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_at.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/h3_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_gb.pb \
+    vendor/google/taimen/proprietary/product/etc/CarrierSettings/h3_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_se.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/idea_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idea_in.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/idmobile_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/idmobile_gb.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/kddi_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/kddi_jp.pb \
@@ -111,6 +111,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/rjio_in.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rjio_in.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/rogers_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/rogers_ca.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/sfr_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/sfr_fr.pb \
+    vendor/google/taimen/proprietary/product/etc/CarrierSettings/shaw_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/shaw_ca.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/singtel_sg.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/singtel_sg.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/softbank_jp.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/softbank_jp.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/solomobile_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/solomobile_ca.pb \
@@ -130,6 +131,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/telia_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telia_se.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/telstra_au.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telstra_au.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/telus_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/telus_ca.pb \
+    vendor/google/taimen/proprietary/product/etc/CarrierSettings/three_dk.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/three_dk.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/tim_it.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tim_it.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/tmobile_nl.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmobile_nl.pb \
     vendor/google/taimen/proprietary/product/etc/CarrierSettings/tmobile_us.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/tmobile_us.pb \
@@ -178,12 +180,9 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/product/priv-app/MyVerizonServices/lib/arm64/libmotricity.so:$(TARGET_COPY_OUT_PRODUCT)/priv-app/MyVerizonServices/lib/arm64/libmotricity.so
 
 PRODUCT_PACKAGES += \
-    QAS_DVC_MSP_VZW \
     datastatusnotification \
-    embms \
     ims \
     uceShimService \
-    vzw_msdc_api \
     CNEService \
     LLKAgent \
     VzwOmaTrigger \
@@ -216,15 +215,11 @@ PRODUCT_PACKAGES += \
     com.google.android.camera.experimental2017 \
     com.quicinc.cne.api-V1.0-java \
     com.quicinc.cne \
-    embmslibrary \
     qcrilhook \
     rcsimssettings \
     vendor.qti.qcril.am-V1.0-java \
     libhwinfo
 PRODUCT_COPY_FILES += \
-    vendor/google/taimen/proprietary/vendor/app/embms/oem/vzw/config_params.xml:$(TARGET_COPY_OUT_VENDOR)/app/embms/oem/vzw/config_params.xml \
-    vendor/google/taimen/proprietary/vendor/app/embms/oem/vzw/provisioning_params.xml:$(TARGET_COPY_OUT_VENDOR)/app/embms/oem/vzw/provisioning_params.xml \
-    vendor/google/taimen/proprietary/vendor/app/embms/oem/vzw/verizon_config_params.txt:$(TARGET_COPY_OUT_VENDOR)/app/embms/oem/vzw/verizon_config_params.txt \
     vendor/google/taimen/proprietary/vendor/bin/ATFWD-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ATFWD-daemon \
     vendor/google/taimen/proprietary/vendor/bin/KmInstallKeybox:$(TARGET_COPY_OUT_VENDOR)/bin/KmInstallKeybox \
     vendor/google/taimen/proprietary/vendor/bin/PktRspTest:$(TARGET_COPY_OUT_VENDOR)/bin/PktRspTest \
@@ -315,7 +310,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/taimen/proprietary/vendor/etc/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf-profile0.conf \
     vendor/google/taimen/proprietary/vendor/etc/permissions/cneapiclient.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/cneapiclient.xml \
     vendor/google/taimen/proprietary/vendor/etc/permissions/com.quicinc.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.quicinc.cne.xml \
-    vendor/google/taimen/proprietary/vendor/etc/permissions/embms.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/embms.xml \
     vendor/google/taimen/proprietary/vendor/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qcrilhook.xml \
     vendor/google/taimen/proprietary/vendor/etc/permissions/qti-vzw-ims-internal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/qti-vzw-ims-internal.xml \
     vendor/google/taimen/proprietary/vendor/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/telephonyservice.xml \
