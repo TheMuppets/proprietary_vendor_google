@@ -30,16 +30,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "QAS_DVC_MSP_VZW",
-	owner: "google",
-	apk: "proprietary/app/QAS_DVC_MSP_VZW/QAS_DVC_MSP_VZW.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
 	name: "QtiTelephonyService",
 	owner: "google",
 	apk: "proprietary/app/QtiTelephonyService/QtiTelephonyService.apk",
@@ -70,16 +60,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "embms",
-	owner: "google",
-	apk: "proprietary/app/embms/embms.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
 	name: "ims",
 	owner: "google",
 	apk: "proprietary/app/ims/ims.apk",
@@ -93,16 +73,6 @@ android_app_import {
 	name: "uceShimService",
 	owner: "google",
 	apk: "proprietary/app/uceShimService/uceShimService.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-}
-
-android_app_import {
-	name: "vzw_msdc_api",
-	owner: "google",
-	apk: "proprietary/app/vzw_msdc_api/vzw_msdc_api.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -141,12 +111,6 @@ dex_import {
 	name: "com.qualcomm.qti.uceservice-V2.0-java",
 	owner: "google",
 	jars: ["proprietary/framework/com.qualcomm.qti.uceservice-V2.0-java.jar"],
-}
-
-dex_import {
-	name: "embmslibrary",
-	owner: "google",
-	jars: ["proprietary/framework/embmslibrary.jar"],
 }
 
 dex_import {
@@ -427,7 +391,7 @@ android_app_import {
 	name: "OemDmTrigger",
 	owner: "google",
 	apk: "proprietary/product/priv-app/OemDmTrigger/OemDmTrigger.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
