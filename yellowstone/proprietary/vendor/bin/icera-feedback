@@ -1,0 +1,17 @@
+#!/system/bin/sh
+#
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+#
+
+LOGCAT_TAG="icera-feedback"
+
+crashdir=`getprop gsm.modem.feedback.args`
+if [ "$crashdir" == "" ]; then
+    intentextras=""
+else
+    intentextras="--es dir $crashdir"
+fi
+
+FEEDBACK_CMD="logwrapper /system/bin/am broadcast -a com.nvidia.feedback.NVIDIAFEEDBACK $intentextras"
+/system/bin/log -p i -t ${LOGCAT_TAG} "command: $FEEDBACK_CMD"
+$FEEDBACK_CMD
