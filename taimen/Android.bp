@@ -64,7 +64,7 @@ android_app_import {
 	name: "LLKAgent",
 	owner: "google",
 	apk: "proprietary/priv-app/LLKAgent/LLKAgent.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -75,7 +75,7 @@ android_app_import {
 	name: "VzwOmaTrigger",
 	owner: "google",
 	apk: "proprietary/priv-app/VzwOmaTrigger/VzwOmaTrigger.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -94,21 +94,10 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SSRestartDetector",
-	owner: "google",
-	apk: "proprietary/product/app/SSRestartDetector/SSRestartDetector.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
-}
-
-android_app_import {
 	name: "VZWAPNLib",
 	owner: "google",
 	apk: "proprietary/product/app/VZWAPNLib/VZWAPNLib.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -167,7 +156,7 @@ android_app_import {
 	name: "CarrierSetup",
 	owner: "google",
 	apk: "proprietary/product/priv-app/CarrierSetup/CarrierSetup.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -299,7 +288,7 @@ android_app_import {
 	name: "MyVerizonServices",
 	owner: "google",
 	apk: "proprietary/product/priv-app/MyVerizonServices/MyVerizonServices.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -311,7 +300,7 @@ android_app_import {
 	name: "OBDM_Permissions",
 	owner: "google",
 	apk: "proprietary/product/priv-app/OBDM_Permissions/OBDM_Permissions.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -347,7 +336,7 @@ android_app_import {
 	name: "TetheringEntitlement",
 	owner: "google",
 	apk: "proprietary/product/priv-app/TetheringEntitlement/TetheringEntitlement.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -359,7 +348,7 @@ android_app_import {
 	name: "WfcActivation",
 	owner: "google",
 	apk: "proprietary/product/priv-app/WfcActivation/WfcActivation.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -371,7 +360,7 @@ android_app_import {
 	name: "obdm_stub",
 	owner: "google",
 	apk: "proprietary/product/priv-app/obdm_stub/obdm_stub.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -465,7 +454,7 @@ android_app_import {
 	name: "wahoo_gfxdrv",
 	owner: "google",
 	apk: "proprietary/vendor/app/wahoo_gfxdrv/wahoo_gfxdrv.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},

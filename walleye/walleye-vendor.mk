@@ -187,7 +187,6 @@ PRODUCT_PACKAGES += \
     LLKAgent \
     VzwOmaTrigger \
     qcrilmsgtunnel \
-    SSRestartDetector \
     VZWAPNLib \
     AmbientSensePrebuilt \
     AppDirectedSMSService \
