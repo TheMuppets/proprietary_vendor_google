@@ -527,7 +527,7 @@ android_app_import {
 	name: "WfcActivation",
 	owner: "google",
 	apk: "proprietary/product/priv-app/WfcActivation/WfcActivation.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},

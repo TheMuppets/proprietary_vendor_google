@@ -392,7 +392,6 @@ PRODUCT_PACKAGES += \
     OBDM_Permissions \
     OemDmTrigger \
     OsloFeedback \
-    RefreshRateControl \
     RilConfigService \
     SCONE \
     Showcase \
