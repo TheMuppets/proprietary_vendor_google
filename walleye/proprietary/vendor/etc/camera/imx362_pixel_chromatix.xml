@@ -1,0 +1,177 @@
+<!--
+  Copyright (c) 2016 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!--
+CommonChromatixInfo:
+	CommonChromatixInfo is the information about chromatix needed for
+		various use cases.
+	Ex:- Preview, Snapshot, ZSL, HFR, HDR, Video, Liveshot for ISP, CPP,
+		3A and SW PostProc.
+	Entries in this node are common for all sensor modes.
+
+ResolutionChromatixInfo:
+	ResolutionChromatixInfo is the information about chromatix needed for
+		various use cases.
+	Ex:- Preview, Snapshot, ZSL, HFR, HDR, Video, Liveshot for ISP, CPP,
+		3A and SW PostProc.
+	Entries in this node are specific to sensor resolution.
+
+ChromatixName:
+	Contains the list of chromatix names for all modules.
+	special_mode_mask:
+		It is the bit mask for special modes, which is used for
+			chromatix selection.
+		Special modes can be any mode that needs a special chromatix.
+		Ex:- scene mode, DZOOM mode, OIS capture mode, flash mode
+		This is applicable for CommonChromatixInfo and
+			ResolutionChromatixInfo.
+		special_mode_mask="0" means none of the special modes are
+			selected.
+	sensor_resolution_index:
+		It is the sensor resolution index for which chromatix libraries
+			will be choosen.
+		It is applicable only in ResolutionChromatixInfo.
+
+ISPCommon :
+	Common tuning library name for ISP
+ISPPreview :
+	Preview tuning library name for ISP
+ISPSnapshot :
+	Snapshot tuning library name for ISP
+CPPCommon :
+	Common tuning library name for CPP
+CPPPreview :
+	Preview tuning library name for CPP
+CPPSnapshot :
+	Snapshot tuning library name for CPP
+CPPLiveshot :
+	Liveshot tuning library name for CPP
+PostProc :
+	Tuning library name for postproc module
+A3Preview :
+	Preview tuning library for 3A
+A3Video :
+	Video tuning library for 3A
+
+Order of Resolution Pick:
+	Assume the current sensor mode is "r" and special mode mask is "s".
+	Chromatix for a module and type is choosen in this order till we find a
+		valid chroamtix file name or else NULL is returned.
+	1) From ResolutionChromatixInfo node for which sensor_resolution_index
+		is "r" and special_mode_mask is "s".
+	2) From CommonChromatixInfo node for which special_mode_mask is "s".
+	3) From ResolutionChromatixInfo node for which sensor_resolution_index
+		is "r" and special_mode_mask is "0".
+	4) From CommonChromatixInfo node for which special_mode_mask is "0".
+	5) NULL is returned if we dont find in any of the above cases.
+
+special_mode_mask values:
+	SENSOR_SPECIAL_MODE_NONE = 0,
+	SENSOR_SPECIAL_MODE_FLASH = 1,
+	SENSOR_SPECIAL_MODE_ZOOM_UPSCALE = 2,
+	SENSOR_SPECIAL_MODE_ZOOM_DOWNSCALE = 4,
+	SENSOR_SPECIAL_MODE_OIS_CAPTURE = 8,
+-->
+
+<ChromatixConfigurationRoot>
+  <CommonChromatixInfo>
+    <ChromatixName special_mode_mask="0">
+      <ISPCommon>imx362_pixel_common</ISPCommon>
+      <PostProc>imx362_pixel_postproc</PostProc>
+    </ChromatixName>
+  </CommonChromatixInfo>
+  <ResolutionChromatixInfo>
+    <ChromatixName sensor_resolution_index="0">
+      <ISPPreview>imx362_pixel_res0_snapshot_isp_preview</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res0_snapshot_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res0_snapshot_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res0_snapshot_cpp_preview</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res0_snapshot_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res0_snapshot_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res0_snapshot_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res0_snapshot_3a</A3Preview>
+      <A3Video>imx362_pixel_res0_snapshot_3a</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="1">
+      <ISPPreview>imx362_pixel_res1_video_30_isp</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res1_video_30_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res1_video_30_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res1_video_30_cpp</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res1_video_30_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res1_video_30_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res1_video_30_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res1_video_30_3a</A3Preview>
+      <A3Video>imx362_pixel_res1_video_30_3a</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="2">
+      <ISPCommon>imx362_pixel_zzhdr_common</ISPCommon>
+      <ISPPreview>imx362_pixel_res1_zzhdr_video_30_isp</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res1_zzhdr_video_30_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res1_zzhdr_video_30_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res1_zzhdr_video_30_cpp</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res1_zzhdr_video_30_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res1_zzhdr_video_30_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res1_zzhdr_video_30_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res1_zzhdr_video_30_3a</A3Preview>
+      <A3Video>imx362_pixel_res1_zzhdr_video_30_3a</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="3">
+      <ISPPreview>imx362_pixel_res2_video_60_isp</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res2_video_60_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res2_video_60_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res2_video_60_cpp</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res2_video_60_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res2_video_60_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res2_video_60_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res2_video_60_3a</A3Preview>
+      <A3Video>imx362_pixel_res2_video_60_3a</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="4">
+      <ISPPreview>imx362_pixel_res3_video_120_isp</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res3_video_120_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res3_video_120_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res3_video_120_cpp</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res3_video_120_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res3_video_120_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res3_video_120_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res3_video_120_3a</A3Preview>
+      <A3Video>imx362_pixel_res3_video_120_3a</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="5">
+      <ISPPreview>imx362_pixel_res4_video_240_isp</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res4_video_240_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res4_video_240_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res4_video_240_cpp</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res4_video_240_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res4_video_240_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res4_video_240_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res4_video_240_3a</A3Preview>
+      <A3Video>imx362_pixel_res4_video_240_3a</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="6">
+      <ISPPreview>imx362_pixel_res4_video_60_fullfov_isp</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res4_video_60_fullfov_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res4_video_60_fullfov_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res4_video_60_fullfov_cpp</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res4_video_60_fullfov_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res4_video_60_fullfov_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res4_video_60_fullfov_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res4_video_60_fullfov_3a</A3Preview>
+      <A3Video>imx362_pixel_res4_video_60_fullfov_3a</A3Video>
+    </ChromatixName>
+    <ChromatixName sensor_resolution_index="7">
+      <ISPPreview>imx362_pixel_res7_video_30_llv_isp_preview</ISPPreview>
+      <ISPSnapshot>imx362_pixel_res7_video_30_llv_isp</ISPSnapshot>
+      <ISPVideo>imx362_pixel_res7_video_30_llv_isp</ISPVideo>
+      <CPPPreview>imx362_pixel_res7_video_30_llv_cpp_preview</CPPPreview>
+      <CPPSnapshot>imx362_pixel_res7_video_30_llv_cpp</CPPSnapshot>
+      <CPPVideo>imx362_pixel_res7_video_30_llv_cpp</CPPVideo>
+      <CPPLiveshot>imx362_pixel_res7_video_30_llv_cpp</CPPLiveshot>
+      <A3Preview>imx362_pixel_res7_video_30_llv_3a</A3Preview>
+      <A3Video>imx362_pixel_res7_video_30_llv_3a</A3Video>
+    </ChromatixName>
+  </ResolutionChromatixInfo>
+</ChromatixConfigurationRoot>

@@ -1,0 +1,189 @@
+#! /vendor/bin/sh
+#
+# Copyright (C) 2017 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Helper script to install eSE firmware/applets.
+#
+# Usage:
+#  # ese_load.sh auto|noauto
+#  # ese_load.sh noauto [starting-step-number]
+
+set -u
+set -e
+
+# Defaults.
+DATADIR=/data/vendor/ese
+FW=/vendor/firmware/ese
+KEY=prodkeys
+MAX_STEPS=99
+
+if ! (test -d "${DATADIR}" && touch "${DATADIR}/.exists"); then
+    echo "Please create and allow write access to ${DATADIR}."
+    exit 2
+fi
+
+is_in_list() {
+    local tomatch="$1"
+    shift
+    for m in "$@" ; do
+        if [ "$m" = "$tomatch" ] ; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+get_data() {
+  local base="$1"
+  local datatype="$2"
+  local key="$3"
+  local step="$4"
+  echo "${base}.f${datatype}${step}.${key}"
+}
+
+get_sha() {
+  local base="$1"
+  local key="$2"
+  echo "${base}.shadata.${key}"
+}
+
+test_if_needed() {
+  local data="$1"
+  local log="$2"
+  echo -n "Step ${step}: evaluating eligibility . . . "
+  if test -e "${data}"; then
+    if cat "${data}" | ese-replay nq-nci | grep -q Aborting; then
+      echo "failed"
+      return 1
+    fi
+  else
+    echo "No eligibility test at ${data}" >> "${log}"
+  fi
+  echo "ok"  # Missing is a default pass.
+  return 0
+}
+
+upload_data() {
+  local shadata="$1"
+  local data="$2"
+  local tmpdir="$3"
+  local log="$4"
+  local ret=0
+  local resp="${tmpdir}/response"
+  touch "${resp}"
+  echo "" > "${resp}"
+  echo -n "Step ${step}: uploading data . . ."
+  if ese-ls-provision "${shadata}" "${data}" "${resp}"; then
+    echo "ok"
+    echo "upload_data[${data}]=ok" >> "${log}"
+    ret=0
+  else
+    echo "failed"
+    echo "upload_data[${data}]=failed" >> "${log}"
+    echo "See ${log} and logcat for details!"
+    ret=1
+  fi
+  if test -e "${resp}"; then
+    cat "${resp}" >> "${log}"
+  else
+    echo "ese-ls-provision did not create response file!" >> "${log}"
+  fi
+  rm -f "${resp}"
+  return "${ret}"
+}
+
+apply_scripts() {
+  local start="${1:-0}"
+  local key="${2:-${KEY}}"
+  local fw="${3:-${FW}}"
+  local datadir="${4:-${DATADIR}}"
+  local log="${datadir}/ese_provision.log"
+  local base=${fw}/${key}/ese
+  local step=
+  local fails=0
+  local total=0
+
+  touch "${log}"
+  echo "" > "${log}"
+  for step in `seq -w "$start" "${MAX_STEPS}"`; do
+    if ! ls `get_data "${base}" "[0-9]" "${key}" "${step}"` &>/dev/null; then
+      # No files for the step so we're done.
+      break
+    fi
+    echo "==== STEP ${step} ====" >> "${log}"
+    local f=$(get_data "${base}" 0 "${key}" "${step}")
+    if test_if_needed "${f}" "${log}"; then
+      echo "needed=yes" >> "${log}"
+    else
+      echo "needed=no" >> "${log}"
+      return 1
+    fi
+
+    # Note that any stage cannot have both required and optional files.
+    f=$(get_data "${base}" 1 "${key}" "${step}")
+    sha=$(get_sha "${base}" "${key}")
+    echo -n "Checking for required data for step ${step} . . . "
+    if test -e "$f"; then
+      echo "found"
+      upload_data "${sha}" "${f}" "${DATADIR}" "${log}"
+      total=$((total+1))
+      continue
+    else
+      echo "none"
+      echo "No required data at $f" >> "${log}"
+    fi
+
+    echo -n "Checking for optional data for step ${step} . . . "
+    f=$(get_data "${base}" 2 "${key}" "${step}")
+    if test -e "$f"; then
+      echo "found"
+      # Optional data can fail.
+      if ! upload_data "${sha}" "${f}" "${datadir}" "${log}"; then
+        fails=$((fails+1))
+      fi
+      total=$((total+1))
+      continue
+    else
+      echo "none"
+      echo "No optional data at $f" >> "${log}"
+    fi
+
+    # No more files!
+    break
+  done
+  echo "${total} total steps processed:"
+  echo "- all required steps completed successfully."
+  echo "- ${fails} optional steps failed."
+  return 0
+}
+
+# Only apply to specific hw revisions.
+if [[ "x$1" == "xauto" ]]; then
+  hw=`getprop ro.boot.revision NOPE`
+  if [[ "x$hw" == "xNOPE" ]]; then
+    hw=`getprop ro.boot.hardware.revision NOPE`
+    if [[ "x$hw" == "xNOPE" ]]; then
+      touch "${DATADIR}/.no_rev"
+      exit 1
+    fi
+  fi
+  if ! ( is_in_list $hw rev_a rev_b EVT2 EVT2-1 EVT2-2 ) ; then
+    ( getprop ro.boot.revision NOPE ; getprop ro.boot.hardware.revision NOPE ; echo xhwx=x${hw}x ) \
+        > "${DATADIR}/.wrong_rev" 2>&1
+    exit 1
+  fi
+fi
+shift
+apply_scripts "$@"
