@@ -1,0 +1,15 @@
+service vendor.bluetooth-1-0 /vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+    class hal
+    user bluetooth
+    group bluetooth system wakelock oem_2901
+    capabilities BLOCK_SUSPEND NET_ADMIN SYS_NICE
+    writepid /dev/stune/foreground/tasks
+
+on property:vts.native_server.on=1 && property:ro.build.type=userdebug
+    stop vendor.bluetooth-1-0
+on property:vts.native_server.on=1 && property:ro.build.type=eng
+    stop vendor.bluetooth-1-0
+on property:vts.native_server.on=0 && property:ro.build.type=userdebug
+    start vendor.bluetooth-1-0
+on property:vts.native_server.on=0 && property:ro.build.type=eng
+    start vendor.bluetooth-1-0
