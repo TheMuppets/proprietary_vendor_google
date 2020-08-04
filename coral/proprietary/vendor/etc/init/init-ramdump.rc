@@ -1,0 +1,13 @@
+on post-fs-data
+    mkdir /data/vendor/ramdump 0761 root system
+    restorecon /data/vendor/ramdump
+    start vendor.ramdump_auto
+
+service vendor.ramdump_auto /vendor/bin/ramdump -a
+    disabled
+    oneshot
+    ioprio idle 0
+    writepid /dev/blkio/background/tasks
+
+on property:ro.boot.ramdump=detected
+    setprop debug.ramdump "detected"

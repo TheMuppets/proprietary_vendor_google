@@ -1,0 +1,14 @@
+libqti-perfd-client.so
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+liblistenjni.so
+liblistensoundmodel2.so
+libOpenCL-pixel.so
+lib_aion_buffer.so
+libqdMetaData.so
+libairbrush-pixel.so
+libhta_controller.so
+libhta_hexagon_runtime.so
+unnhal-acc-hta.so

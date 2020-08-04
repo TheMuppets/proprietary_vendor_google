@@ -1,0 +1,27 @@
+# Copyright (c) 2019 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+# msm specific files that need to be created on /data
+on post-fs-data
+    #Create port-bridge log dir
+    mkdir /data/vendor/port_bridge 0770 radio radio
+    chmod 0770 /data/vendor/port_bridge
+
+service vendor.port-bridge /system/vendor/bin/port-bridge
+    class main
+    user radio
+    group radio system inet
+    disabled
+    oneshot
+
+# Manage port-bridge based on value of property
+on property:persist.vendor.data.mode=tethered
+    start vendor.port-bridge
+
+on property:persist.vendor.data.mode=concurrent
+    start vendor.port-bridge
+
+on property:persist.vendor.data.mode=embedded
+    stop vendor.port-bridge

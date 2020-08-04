@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<manifest>
+  <remote fetch=".." name="poly" review="sso://googleplex-polygon-android/" />
+
+  <default remote="poly" revision="floral-qt-qpr2" />
+
+
+
+  <project groups="non-hlos" name="platform/vendor/google/common/non-hlos/ssc/goog/vsc/algos-internal" path="nested/vsc/algos-internal" revision="c6063e37ce78634e6fa19e82d5b9f8398ae2da02" />
+
+
+
+
+  <project groups="non-hlos,modem,partner" name="platform/vendor/qcom/sm8150/non-hlos/tools" path="tools" revision="5e926f419295083a1bc4c6f7f73b29ccba510644">
+    <linkfile dest="LINUX/android/prebuilts" src="prebuilts" />
+</project>
+
+
+
+  <project groups="non-hlos" name="embedded/google/slpy" path="nested/embedded/google/oslo" revision="59809b82421c8f3938a2c1ab804693077fc0f256" />
+
+
+  <project groups="non-hlos,partner" name="platform/vendor/google_devices/common/non-hlos/ssc/goog" path="nested/ssc/goog" revision="91d379dcec58bf593ee62fb0e8b0ed63d76fdc91" />
+
+
+
+
+  <project groups="non-hlos,modem,partner" name="platform/vendor/qcom/sm8150/non-hlos/config" path="config" revision="89475b41b632b1751feec4cc12b9988f9eeb3bdf">
+    <linkfile dest="contents.xml" src="contents.xml" />
+
+    <linkfile dest="Makefile" src="Makefile" />
+</project>
+
+  <project groups="modem,partner" name="platform/vendor/qcom/sm8150/non-hlos/slpi_proc" path="slpi_proc" revision="c1a8542bf51b58979e6a0018b0d1c7eb021f4414" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</manifest>

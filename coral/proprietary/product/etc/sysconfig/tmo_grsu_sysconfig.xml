@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- T-Mobile GRSU (Device Unlock) app: pre-installed and should be disabled until PAI enables it. b/138150105 -->
+    <disabled-until-used-preinstalled-carrier-app package="com.tmobile.grsuapp" />
+</config>

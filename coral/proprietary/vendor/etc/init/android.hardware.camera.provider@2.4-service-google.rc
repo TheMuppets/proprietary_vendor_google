@@ -1,0 +1,7 @@
+service vendor.camera-provider-2-4-google /vendor/bin/hw/android.hardware.camera.provider@2.4-service-google
+    class hal
+    user system
+    group system
+    capabilities SYS_NICE
+    rlimit rtprio 10 10
+    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/camera-daemon/tasks
