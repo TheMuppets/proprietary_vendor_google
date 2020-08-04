@@ -223,6 +223,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.CALL_PRIVILEGED"/>
         <permission name="android.permission.CAPTURE_AUDIO_HOTWORD"/>
         <permission name="android.permission.GLOBAL_SEARCH"/>
+        <permission name="android.permission.INTERACT_ACROSS_PROFILES"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
         <permission name="android.permission.MANAGE_SOUND_TRIGGER"/>
