@@ -403,6 +403,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/blueline/proprietary/vendor/etc/qdcm_calib_data_S6E3HA8_6.3_command_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_S6E3HA8_6.3_command_mode_panel.xml \
     vendor/google/blueline/proprietary/vendor/etc/qdcm_calib_data_sw43408_cmd_mode_dsc_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_sw43408_cmd_mode_dsc_dsi_panel.xml \
     vendor/google/blueline/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+    vendor/google/blueline/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
+    vendor/google/blueline/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
     vendor/google/blueline/proprietary/vendor/etc/sensors/registry/b1_bmi160_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/b1_bmi160_0.json \
     vendor/google/blueline/proprietary/vendor/etc/sensors/registry/b1_evt1_bmi160_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/b1_evt1_bmi160_0.json \
     vendor/google/blueline/proprietary/vendor/etc/sensors/registry/b1_lis2mdl_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/b1_lis2mdl_0.json \
