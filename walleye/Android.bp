@@ -72,6 +72,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "OemDmTrigger",
+	owner: "google",
+	apk: "proprietary/priv-app/OemDmTrigger/OemDmTrigger.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "VzwOmaTrigger",
 	owner: "google",
 	apk: "proprietary/priv-app/VzwOmaTrigger/VzwOmaTrigger.apk",
