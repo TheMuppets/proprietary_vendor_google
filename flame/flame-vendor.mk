@@ -22,6 +22,22 @@ PRODUCT_COPY_FILES += \
     vendor/google/flame/proprietary/product/lib/lib-imsvideocodec.so:$(TARGET_COPY_OUT_PRODUCT)/lib/lib-imsvideocodec.so \
     vendor/google/flame/proprietary/product/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/lib-imsvideocodec.so
 PRODUCT_COPY_FILES += \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Bluetooth_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Codec_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/General_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Global_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Handset_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Hdmi_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Headset_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-f2proto-snd-card/Speaker_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Bluetooth_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Codec_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Codec_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/General_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Global_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Global_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Handset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Handset_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Hdmi_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Headset_cal.acdb \
+    vendor/google/flame/proprietary/vendor/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/OEM/sm8150-iaxxx-flame-snd-card/Speaker_cal.acdb \
     vendor/google/flame/proprietary/vendor/etc/default_f2proto.mps:$(TARGET_COPY_OUT_VENDOR)/etc/default_f2proto.mps \
     vendor/google/flame/proprietary/vendor/etc/default_flame.mps:$(TARGET_COPY_OUT_VENDOR)/etc/default_flame.mps \
     vendor/google/flame/proprietary/vendor/etc/input_classifier_model.pb:$(TARGET_COPY_OUT_VENDOR)/etc/input_classifier_model.pb \
@@ -61,10 +77,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/flame/proprietary/vendor/firmware/ftm5_fw_f2_evt2.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/ftm5_fw_f2_evt2.ftb \
     vendor/google/flame/proprietary/vendor/firmware/ftm5_fw_f2_p2.ftb:$(TARGET_COPY_OUT_VENDOR)/firmware/ftm5_fw_f2_p2.ftb \
     vendor/google/flame/proprietary/vendor/lib/hw/audio.primary.msmnile.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.msmnile.so \
-    vendor/google/flame/proprietary/vendor/lib/hw/bootctrl.msmnile.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/bootctrl.msmnile.so \
-    vendor/google/flame/proprietary/vendor/lib/hw/sensors.flame.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sensors.flame.so \
     vendor/google/flame/proprietary/vendor/lib/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.ssc.so \
     vendor/google/flame/proprietary/vendor/lib64/hw/audio.primary.msmnile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.msmnile.so \
-    vendor/google/flame/proprietary/vendor/lib64/hw/bootctrl.msmnile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/bootctrl.msmnile.so \
-    vendor/google/flame/proprietary/vendor/lib64/hw/sensors.flame.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sensors.flame.so \
     vendor/google/flame/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so
