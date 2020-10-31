@@ -53,21 +53,10 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SSRestartDetector",
-	owner: "google",
-	apk: "proprietary/product/app/SSRestartDetector/SSRestartDetector.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
-}
-
-android_app_import {
 	name: "VZWAPNLib",
 	owner: "google",
 	apk: "proprietary/product/app/VZWAPNLib/VZWAPNLib.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -155,7 +144,7 @@ android_app_import {
 	name: "AmbientSensePrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/AmbientSensePrebuilt/AmbientSensePrebuilt.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -167,7 +156,7 @@ android_app_import {
 	name: "AppDirectedSMSService",
 	owner: "google",
 	apk: "proprietary/product/priv-app/AppDirectedSMSService/AppDirectedSMSService.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -215,7 +204,7 @@ android_app_import {
 	name: "CarrierSetup",
 	owner: "google",
 	apk: "proprietary/product/priv-app/CarrierSetup/CarrierSetup.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -299,7 +288,7 @@ android_app_import {
 	name: "DreamlinerUpdater",
 	owner: "google",
 	apk: "proprietary/product/priv-app/DreamlinerUpdater/DreamlinerUpdater.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -383,7 +372,7 @@ android_app_import {
 	name: "MyVerizonServices",
 	owner: "google",
 	apk: "proprietary/product/priv-app/MyVerizonServices/MyVerizonServices.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -440,30 +429,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "SCONE",
-	owner: "google",
-	apk: "proprietary/product/priv-app/SCONE/SCONE.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "Showcase",
-	owner: "google",
-	apk: "proprietary/product/priv-app/Showcase/Showcase.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
 	name: "SprintDM",
 	owner: "google",
 	apk: "proprietary/product/priv-app/SprintDM/SprintDM.apk",
@@ -491,7 +456,7 @@ android_app_import {
 	name: "TetheringEntitlement",
 	owner: "google",
 	apk: "proprietary/product/priv-app/TetheringEntitlement/TetheringEntitlement.apk",
-	presigned: true,
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
@@ -762,55 +727,17 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libqdMetaData",
+	name: "libplatformconfig",
 	owner: "google",
 	strip: {
 		none: true,
 	},
 	target: {
 		android_arm: {
-			srcs: ["proprietary/vendor/lib/libqdMetaData.so"],
+			srcs: ["proprietary/vendor/lib/libplatformconfig.so"],
 		},
 		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqdMetaData.so"],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libqdutils",
-	owner: "google",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libqdutils.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqdutils.so"],
-		},
-	},
-	compile_multilib: "both",
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libqservice",
-	owner: "google",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libqservice.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libqservice.so"],
+			srcs: ["proprietary/vendor/lib64/libplatformconfig.so"],
 		},
 	},
 	compile_multilib: "both",
@@ -901,7 +828,7 @@ android_app_import {
 	name: "TrustZoneAccessService",
 	owner: "google",
 	apk: "proprietary/vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -912,7 +839,7 @@ android_app_import {
 	name: "adreno_graphics_driver",
 	owner: "google",
 	apk: "proprietary/vendor/app/adreno_graphics_driver/adreno_graphics_driver.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
