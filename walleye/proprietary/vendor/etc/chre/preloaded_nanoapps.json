@@ -1,0 +1,9 @@
+{ "source_dir": "/vendor/lib/dsp",
+  "nanoapps": [
+    "activity",
+    "elmyra",
+    "geofence",
+    "gesture",
+    "imu_cal",
+    "smartbatching"
+]}
