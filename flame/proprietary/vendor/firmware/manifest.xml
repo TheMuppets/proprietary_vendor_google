@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<manifest>
+  <remote fetch="../.." name="googleplex-polygon" review="sso://googleplex-polygon-android/" />
+
+  <default remote="googleplex-polygon" revision="master" />
+
+  <project groups="athletico" name="embedded/knowles/athletico" path="athletico" revision="86683e70433b07bca8786fc522980ed2c16ef618" />
+
+  <project groups="buildserver" name="embedded/knowles/license" path="license" revision="df2ed634a499325009513cbe1e138fbbdf3f2124" />
+
+  <project groups="athletico" name="embedded/google/slpy" path="oslo" revision="cc689ae356a369df2a518d6774cbae0f339b52a4" />
+
+
+  <project groups="buildserver" name="embedded/knowles/build" path="build" revision="adb38d4dc0c0ab8d5174c2869f844e5d4ea037d3" />
+
+  <project groups="athletico" name="embedded/knowles/tools" path="tools" revision="cb011f2624c811f21b8aeb6567c0811a41c4747e" />
+</manifest>

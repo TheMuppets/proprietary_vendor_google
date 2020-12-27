@@ -1,0 +1,4 @@
+service wireless_charger /vendor/bin/hw/vendor.google.wireless_charger@1.2-service-vendor
+    class hal
+    user system
+    group system

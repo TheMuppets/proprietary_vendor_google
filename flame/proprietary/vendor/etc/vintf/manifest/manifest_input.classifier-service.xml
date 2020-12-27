@@ -1,0 +1,11 @@
+<manifest version="1.0" type="device">
+    <hal format="hidl">
+        <name>android.hardware.input.classifier</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IInputClassifier</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+</manifest>

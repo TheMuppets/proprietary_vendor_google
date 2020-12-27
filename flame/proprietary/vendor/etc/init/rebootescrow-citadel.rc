@@ -1,0 +1,6 @@
+service vendor.rebootescrow-citadel /vendor/bin/hw/android.hardware.rebootescrow-service.citadel
+    interface aidl android.hardware.rebootescrow.IRebootEscrow/default
+    disabled
+    class hal
+    user hsm
+    group hsm
