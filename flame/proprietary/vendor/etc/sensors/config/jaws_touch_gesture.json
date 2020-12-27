@@ -1,0 +1,22 @@
+{
+  "config":
+  {
+    "hw_platform": ["OEM", "SLVTE_SURF"],
+    "soc_id": ["339"],
+    "platform_version": ["0x50000"]
+  },
+  "touch_gesture_0_platform": { "owner": "sns_touch_gesture",
+    ".config": { "owner": "sns_touch_gesture",
+      "controller_id"      : { "type": "int", "ver": "0", "data": "1"   },
+      "bus_speed"          : { "type": "int", "ver": "0", "data": "10000" },
+      "bus_instance"       : { "type": "int", "ver": "0", "data": "2"   },
+      "slave_address"      : { "type": "int", "ver": "0", "data": "0"  },
+      "irq_num"            : { "type": "int", "ver": "0", "data": "118" },
+      "irq_trigger_type"   : { "type": "int", "ver": "0", "data": "1"   },
+      "irq_drive_strength" : { "type": "int", "ver": "0", "data": "0"   },
+      "irq_pull_type"      : { "type": "int", "ver": "0", "data": "0"   },
+      "irq_is_chip_pin"    : { "type": "int", "ver": "0", "data": "1"   },
+      "irq_skip_pin_config": { "type": "int", "ver": "0", "data": "1"   }
+    }
+  }
+}

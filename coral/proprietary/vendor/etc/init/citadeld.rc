@@ -1,0 +1,4 @@
+service vendor.citadeld /vendor/bin/hw/citadeld
+    class early_hal
+    user hsm
+    group hsm

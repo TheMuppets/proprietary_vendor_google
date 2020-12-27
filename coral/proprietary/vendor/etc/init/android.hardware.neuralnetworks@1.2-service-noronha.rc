@@ -1,0 +1,78 @@
+# When enabling on a device, SELinux policies need to be added for the driver
+# binary. Android startup services should run in their own SELinux domain.
+# https://source.android.com/security/selinux/device-policy#label_new_services_and_address_denials
+service hal_neuralnetworks_darwinn /vendor/bin/hw/android.hardware.neuralnetworks@1.2-service-noronha
+    class hal
+    user system
+    group system
+
+on boot
+    # Main HAL options.
+    setprop vendor.darwinn.cpu_affinity 0  # Enables CPU affinity settings. Default to be off.
+    setprop vendor.darwinn.driver_watchdog_timeout 10000000000  # 10 seconds
+    setprop vendor.darwinn.power_mode 0    # Power management mode (default=0, debugging=1, off=2)
+    setprop vendor.darwinn.tpu_watchdog_timeout 1000000000  # 1 seconds
+    setprop vendor.darwinn.verbosity 0     # Log verbosity.
+    setprop vendor.darwinn.verify_signature true # Verify digital signature of OEM models.
+
+    # Compiler options.
+    setprop vendor.darwinn.parameter_caching true
+    setprop vendor.darwinn.embed_model_config_in_executable false
+    setprop vendor.darwinn.compile_in_separate_process true
+    setprop vendor.darwinn.compile_in_separate_process_timeout_sec 10
+    setprop vendor.darwinn.co_compilation.enabled true
+    setprop vendor.darwinn.co_compilation.sweep_period_ms 200     # How often are models checked.
+    setprop vendor.darwinn.co_compilation.cool_off_period_ms 7500 # Cool off period in millseconds.
+    setprop vendor.darwinn.co_compilation.stable_sweep_periods 5  # Models set must be stable.
+    setprop vendor.darwinn.co_compilation.threshold_use_count 5   # Must be used to count as active.
+    setprop vendor.darwinn.co_compilation.size_limit_mb 5         # Any bigger model disables CC.
+    setprop vendor.darwinn.co_compilation.aging_rate 1            # Each sweep, how much to age.
+    setprop vendor.darwinn.co_compilation.allow_subsets true      # Subsets considered no change?
+    setprop vendor.darwinn.limit_to_single_subgraph true
+    setprop vendor.darwinn.early_compilation_when_limiting_to_single_subgraph true
+    setprop vendor.darwinn.early_compilation_cache_entries 1
+    setprop vendor.darwinn.early_compilation_cache_clear_in_prepare_model true
+    setprop vendor.darwinn.disable_hanging_models true
+    setprop vendor.darwinn.max_consecutive_timeouts 4
+
+    # PowerHint related props.
+    setprop vendor.darwinn.power_hint false  # Enables PowerHint to Power HAL. Default to be off.
+    setprop vendor.darwinn.power_boost_gap 100000000 # Rate limit. Default once every 100 ms.
+    setprop vendor.darwinn.power_boost_duration 100000000 # Boost duration. Default 100 ms.
+
+    # QoS Settings.
+    setprop vendor.darwinn.qos_mode 1  # 0=disabled, 1=sla, 2=real_time(experimental)
+    setprop vendor.darwinn.max_scheduled_work_ns 100000000  # 100ms
+
+    # Power management settings for Noronha. See http://go/noronha-power-settings for more info.
+    # The following settings mean TPU starts at OnNormal state, goes to OnReady, and finally Off.
+
+    # Off. See AirbrushPowerState enum for complete mapping.
+    setprop vendor.noronha.explicit_close_state 0
+
+    # Active states for each execution preference.
+    setprop vendor.noronha.low_power.state 8                     # X04 states
+    setprop vendor.noronha.low_power.timeout 1000                # 1us
+    setprop vendor.noronha.single_fast_answer.state 9            # X05 states
+    setprop vendor.noronha.single_fast_answer.timeout 2000000000 # 2s
+    setprop vendor.noronha.sustained_speed.state 9               # X05 states
+    setprop vendor.noronha.sustained_speed.timeout 100000000     # 100ms
+    setprop vendor.noronha.timeout.DramActive 100000000          # 100ms
+
+    # How long after last inference execution preference stays in effect.
+    setprop vendor.noronha.execution_preference_timeout 100000000 # 100ms
+
+    # Idle states and their cooldown timeouts.
+    setprop vendor.noronha.timeout.Off 0
+    setprop vendor.noronha.timeout.Suspend -1
+    setprop vendor.noronha.timeout.DeepSleep -1
+    setprop vendor.noronha.timeout.Sleep -1
+    setprop vendor.noronha.timeout.OnReady 1000000000           # 1s
+    setprop vendor.noronha.timeout.OnAon -1
+    setprop vendor.noronha.timeout.OnMin -1
+    setprop vendor.noronha.timeout.OnLow -1
+    setprop vendor.noronha.timeout.OnMid -1
+    setprop vendor.noronha.timeout.OnNormal -1
+    setprop vendor.noronha.timeout.OnBoost -1
+
+    setprop vendor.darwinn.properties_set 1
