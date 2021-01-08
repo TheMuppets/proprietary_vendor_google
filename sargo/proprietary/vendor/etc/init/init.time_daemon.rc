@@ -1,0 +1,11 @@
+#
+# Copyright (c) 2019 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+service time_daemon /vendor/bin/time_daemon
+    class main
+    user system
+    group system
+    capabilities SYS_TIME

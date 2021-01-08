@@ -1,0 +1,17 @@
+<manifest version="1.0" type="device">
+    <hal format="hidl">
+        <name>android.hardware.weaver</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IWeaver/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.oemlock</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IOemLock/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.authsecret</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IAuthSecret/default</fqname>
+    </hal>
+</manifest>

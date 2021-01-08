@@ -1,0 +1,408 @@
+#! /vendor/bin/sh
+#
+# Copyright (C) 2017 The Android Open Source Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# This script automates Citadel firmware updates
+set -u
+
+#
+# We only update from known previous releases.
+#
+# Below is a list of all SHA hashes for released firmware; either
+# as commited to Android or initial Scribe firmware.
+#
+# The current release appears last, but is COMMENTED OUT so that the script
+# won't upload it again on every boot.
+#
+FIRMWARE=/vendor/firmware/citadel/ec.bin
+
+# NOTE: Update citadel_embedding_versions.h when updating this section.
+KNOWN_OLD_SHA=(
+    9f3093c29+   # 2018-05-01 (DVT1-factory) NOTE: DEV-FUSING
+    b27785118    # 2018-05-17 (PVT1-factory) NOTE: PROD-FUSING
+    de8c7c6fb    # 2018-06-15           NOTE: DEV-FUSING here on
+    c6832f6d6    # 2018-06-19
+    2c6c1a847    # 2018-06-20
+    c2ed0e52f    # 2018-06-26 (FIH-RC1)
+    8b06aa778    # 2018-06-28
+    2089eefbd    # 2018-07-14 (FIH-RC2)
+    e0c55f0bb    # 2018-07-16 (FIH-RC3) NOTE: PROD-FUSING here on
+    ba0029fdd    # 2018-07-16 (FIH-RC4)
+    a32876a42    # 2018-07-16 (FIH-RC5)
+    6799dc530    # 2018-07-31 (FIH-RC6)
+    632a0c58b    # 2018-08-14 (FIH-RC7)
+    03e9a1391    # 2018-10-02 (OTA-RC8)
+    89f6e56e3    # 2018-11-08 (OTA-RC9)
+    ba09257ef    # 2018-11-15 (OTA-RC10)
+    d3e98fe92    # 2019-01-04 (abandoned)
+    d4b88b081    # 2019-02-07 (OTA-RC11)
+    0229d0f99    # 2019-06-06 (OTA-RC12)
+    5b47d37e     # 2019-06-25 (OTA-RC13)
+    2d3a8cfc     # 2019-09-17 (OTA-RC14)
+    # device-specific, pre-mp images
+    168c7ec08    # 2018-11-30 (first Doodle FW)
+    b7db2674f    # 2018-12-11 (Doodle WIP1)
+    7f516ee83    # 2019-01-25 (Doodle WIP2)
+    62e7035d3    # 2019-02-07 (Doodle WIP3)
+    38d10d93f    # 2019-03-14 (Doodle WIP4)
+    98e16c0e1    # 2019-03-28 (Doodle WIP5)
+    d9ff43fe7    # 2019-04-03 (Doodle WIP6)
+    4675e8e44    # 2019-04-23 (Doodle WIP7)
+    ef639238c    # 2019-05-08 (Doodle WIP8)
+    1cf7101a0    # 2019-05-22 (Doodle WIP9)
+    e02538ac     # 2019-05-28 (Doodle WIP10)
+    c505cfb6d    # 2019-06-05 (Doodle WIP11)
+    8a1e090d0    # 2019-06-17 (Doodle WIP12)
+    6f2093b2     # 2019-06-27 (Doodle WIP13)
+    dc30da591    # 2019-06-28 (Doodle WIP14)
+    # MP releases from here on.
+    dae6a9c1     # 2019-07-17 (MP-P19-01)
+    50626124     # 2019-07-23 (MP-P19-02)
+    9ea02b0d     # 2019-07-31 (MP-P19-03)
+    2d9d149eb    # 2019-08-02 (MP-P19-04)
+    64f79b44d    # 2019-08-06 (MP-P19-05)
+    177b4177     # 2019-08-14 (MP-P19-06)
+    aef72653e    # 2019-08-15 (MP-P19-07)
+    323ff7c2     # 2019-08-19 (MP-P19-08)
+    0ed4da475    # 2019-08-28 (MP-P19-09)
+    83417fbe     # 2019-08-20 (MP-QT-QPR1-01)
+    6a19699d     # 2019-08-23 (MP-QT-QPR1-02)
+    a589ff0c     # 2019-09-11 (MP-QT-QPR1-03)
+    db8b670a     # 2019-09-17 (MP-QT-QPR1-04)
+    5b0ba5b53    # 2019-09-24 (MP-QT-QPR1-05)
+    14cb8152     # 2019-10-02 (MP-QT-QPR1-06)
+    07463a51f    # 2019-12-05 (MP-QT-QPR1-07)
+    da8b82770    # 2019-12-10 (MP-QT-QPR1-08)
+    6ab893d86    # 2019-12-09 (MP-QT-QPR1-09)
+    a9dacb5c9    # 2020-01-15 (MP-QT-QPR1-10)
+    3bfefeddb    # 2020-02-10 (MP-QT-QPR1-11)
+    2208be32c    # 2019-10-25 (MP-RVC-01)
+    3c1018c58    # 2019-12-11 (MP-RVC-02)
+    a596dd972    # 2019-01-19 (MP-RVC-03)
+    008a08cda    # 2019-03-24 (MP-RVC-04)
+    734cf2fdb    # 2019-04-10 (abandoned)
+    53a62202c    # 2020-04-10 (MP-RVC-05)
+    29c97ad31    # 2020-04-29 (MP-RVC-06)
+    db1a711bd    # 2020-06-04 (MP-RVC-07)
+    afbd4d2ca    # 2020-06-16 (MP-RVC-08)
+    57402c8aa    # 2020-06-25 (MP-RVC-09)
+    97b23b2e4    # 2020-07-02 (MP-RVC-10)
+    #b1e3ea340    # 2020-09-25 (MP-RVC-11)
+    # NOTE: Update citadel_embedding_versions.h when updating this section.
+)
+
+#
+# NOTE: Updating from releases marked `TEST-FUSING' require a special
+# trampoline via an update to an RO signed for DVT-FUSING, which are listed
+# here. This special case applies to Pixel '18 EVT1 devices, and Pixel '19 Jaws
+# boards. Further documentation regarding this issue is in b/118686196.
+#
+DVT_FIRMWARE=/vendor/firmware/citadel/FIH-RC1-dev-fusing.ec.bin
+
+KNOWN_TEST_SHA=(
+    bb8465bd     # Factory      NOTE: TEST-FUSING
+    56a55232a    # 2017-12-21   NOTE: TEST-FUSING
+    c6e941852    # 2018-01-10   NOTE: TEST-FUSING
+    ef657547a    # 2018-01-18   NOTE: TEST-FUSING
+    f103bb741    # 2018-02-06   NOTE: TEST-FUSING
+    395a75736    # 2018-02-08   NOTE: TEST-FUSING
+    05c0e03bd    # 2018-02-22   NOTE: TEST-FUSING
+    08f0df09a    # 2018-03-30   NOTE: TEST-FUSING
+    1e2e0b0ef    # 2018-04-16   NOTE: TEST-FUSING
+    26d13fe33    # 2018-05-31   NOTE: TEST-FUSING
+    ba9f1d086    # 2018-06-07   NOTE: TEST-FUSING
+    24f084edb    # 2018-06-12   NOTE: TEST-FUSING
+    7dd8665ed    # 2018-06-13   NOTE: TEST-FUSING
+)
+
+# Log messages to both logcat and the shell
+LOG_TAG=init_citadel
+
+log_info() {
+    log -p i -t "${LOG_TAG}" "$1"
+    echo "$1"
+}
+
+log_error() {
+    log -p e -t "${LOG_TAG}" "$1"
+    echo "$1" >&2
+}
+
+# Update tool
+UPDATER=/vendor/bin/hw/citadel_updater
+
+update_firmware() {
+    TARGET=$1
+
+    # Get the current running version.
+    log_info "Checking citadel version"
+    version=$("${UPDATER}" -v)
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        log_error "Failed to get citadel version. Aborting update."
+        return 1
+    fi
+    log_info "Citadel version: ${version}"
+
+    if [[ "${TARGET}" = "${DVT_FIRMWARE}" ]]; then
+        log_info "Citadel is running DVT update check"
+        KNOWN_SHA=${KNOWN_TEST_SHA[@]}
+
+        # allowing RO update for loading citadel DVT update
+        also_ro="--ro"
+    else
+        log_info "Citadel is running official update check"
+        KNOWN_SHA=${KNOWN_OLD_SHA[@]}
+
+        # See if Citadel is a production chip (assume it's not if this fails)
+        citadel_is_pvt=$("${UPDATER}" -l | grep 'Citadel C2-PVT')
+        if [[ -n "${citadel_is_pvt}" ]] ; then
+            also_ro="--ro"
+            log_info "Citadel is C2-PVT, allowing RO updates"
+        else
+            also_ro=
+            log_info "Citadel is not C2-PVT, only allowing RW updates"
+        fi
+    fi
+
+    for known in ${KNOWN_SHA[@]}
+    do
+        # Only update from known versions that we released. This makes development
+        # easier as custom or device-specific builds won't be overwritten.
+        if [[ "${version}" = *"${known}"* ]]; then
+            log_info "Citadel is running a known firmware so sending update"
+
+            # Upload the firmware to citadel
+            if ! "${UPDATER}" --rw ${also_ro} "${TARGET}"; then
+                log_error "Failed to load citadel update ${TARGET}"
+                return 2
+            fi
+
+            log_info "Citadel update loaded: ${TARGET}"
+
+            # Attempt to activate the update in case there isn't an update password
+            if "${UPDATER}" --enable_rw --enable_ro ""; then
+                log_info "Citadel update enabled"
+
+                # That worked, reboot to load the new firmware now
+                if "${UPDATER}" --reboot; then
+                    log_info "Citadel rebooted"
+                else
+                    log_info "Failed to reboot citadel nicely, forcing it"
+                    if ! "${UPDATER}" --force_reset; then
+                        log_error "Failed to force reboot citadel"
+                        return 3
+                    fi
+                fi
+                sleep 1
+            else
+                log_info "Could not enable Citadel update: password required"
+            fi
+
+            # See what we can tell
+            version=$("${UPDATER}" -v)
+            if [[ $? -ne 0 ]] ; then
+              log_error "Failed to get citadel version after update"
+            else
+              log_info "now Citadel version: ${version}"
+
+              # long info?
+              version=$("${UPDATER}" -l)
+              if [[ $? -eq 0 ]] ; then
+                log_info "more Citadel info: ${version}"
+              fi
+            fi
+
+            break
+        fi
+    done
+
+    return 0
+}
+
+# Set Citadel's Board ID if required.
+# See go/nugget-boardid for details.
+write_board_id() {
+    log_info "Checking Citadel Board ID..."
+
+    bid=$("${UPDATER}" --board_id 2>/dev/null)
+    if [[ -z "${bid}" ]]; then
+        log_error "Board ID is not supported on this system/image"
+        return 1
+    fi
+
+    case "${bid}" in
+        (*unset*)       log_info "Board ID: ${bid}" ;;  # needs setting
+        (*corrupted*)   log_error "Board ID: ${bid}"; return 2 ;; # broken forever
+        (*)             log_info "Board ID: ${bid}"; return 0; # already set, done
+    esac
+
+    # The running firmware supports Board ID, but it hasn't been set. Set it now.
+
+    # Use the board revision to determine the flags value. This comes from
+    # the bootloader and should be reliable.
+    revision=$(getprop ro.boot.revision)
+    if [[ -z "${revision}" ]]; then
+        log_error "Empty ro.boot.revision"
+        return 3
+    fi
+    case "${revision}" in
+        (DEV*)      flags="0xff00007f" ;;
+        (PROTO1.0)  flags="0xff00007e" ;;
+        (PROTO*)    flags="0xff00007c" ;;
+        (EVT1.0)    flags="0xff000078" ;;
+        (EVT*)      flags="0xff000070" ;;
+        (DVT1.0)    flags="0xff000060" ;;
+        (DVT*)      flags="0xff000040" ;;
+        (FRB*)      flags="0xff000040" ;;
+        (PVT*)      flags="0xff000080" ;;
+        (MP*)       flags="0xff000080" ;;
+        (*)         log_error "Unknown revision: ${revision}"; return 4 ;;
+    esac
+
+    log_info "Board revision is ${revision}, flags value is ${flags}"
+
+    # Obtain the Major ID number from the CDT. This tells which phone it is.
+
+    # The bootloader on some phones exports the CDT info directly
+    cdt=$(getprop ro.boot.cdt_hwid)
+    if [[ -n "${cdt}" ]]; then
+        major=$(( (${cdt} & 0x00ff0000) >> 16))
+        log_info "ro.boot.ctd_hwid is ${cdt}, Major ID is ${major}"
+    else
+        # okay, try to get it from the device tree info
+        cdt=$(xxd -i -g 1 /sys/firmware/devicetree/base/qcom,board-id)
+        if [[ -z "${cdt}" ]]; then
+            log_error "Can't determine CDT Major ID"
+            return 5;
+        fi
+        hex=$(echo "${cdt}" | cut -d, -f 2)
+        major=$(( ${hex} ))
+        log_info "qcom,board-id is ${cdt}, Major ID is ${major}"
+    fi
+
+    # Starting from Floral(Major-ID: 5 and 6), we have features by default.
+    # The design of Citadel Uart, DAM(SuzyQ) and Major ID would be rarely changed
+    # after first hardware build, so we would default set the "features config"
+    # to true. In contrast, disable it if the project won't use features.
+    # Features:
+    #   - Citadel UART moved to DIOM0/DIOM1
+    #   - SuzyQable detection handled by PMIC
+    #   - Airbrush support (option)
+    feature=1
+    case "${major}" in
+        (1|2) feature=0 ;;
+        (3|4) feature=0 ;;
+    esac
+
+    # Construct the Board ID type value from the Feature set and Major ID
+    typeval=$(printf '0x%02x%02x0000' "${feature}" "${major}")
+    log_info "Design Features is ${feature}, type value is $typeval"
+
+    # Compute the type inverse as well, so we aren't prompted to confirm.
+    tmp=$(( ~${typeval} ))
+    # printf uses uint64_t for '%x'. We need uint32_t.
+    inv=$(printf '0x%08x' ${tmp} | sed -e 's/0xffffffff\(..*\)/0x\1/')
+
+    # Write the Board ID
+    if ! "${UPDATER}" --board_id "${typeval}" "${flags}" "${inv}"; then
+        log_error "Unable to write Citadel Board ID"
+        return 6
+    fi
+
+    log_info "Citadel Board ID written"
+
+    # Reboot so that the running firmware can see its Board ID
+    log_info "Rebooting Citadel so the new Board ID takes effect"
+    if ! "${UPDATER}" --force_reset; then
+        log_error "Failed to reboot Citadel"
+        return 7
+    fi
+    log_info "Citadel rebooted"
+    sleep 1
+
+    version=$("${UPDATER}" -v)
+    if [[ $? -ne 0 ]] ; then
+        log_error "Failed to get Citadel version after reboot"
+        return 8
+    fi
+    log_info "Citadel version: ${version}"
+
+    bid=$("${UPDATER}" --board_id 2>/dev/null)
+    if [[ -z "${bid}" ]]; then
+        log_error "Board ID is not supported on this system/image"
+        return 9
+    fi
+    log_info "Board ID: ${bid}"
+
+    return 0
+}
+
+main() {
+    # Update TEST firmware to DVT firmware
+    update_firmware ${DVT_FIRMWARE}
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        return $status
+    fi
+
+    # Update to official firmware
+    update_firmware ${FIRMWARE}
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        return $status
+    fi
+
+    # Write Board ID
+    write_board_id
+    status=$?
+    if [[ $status -ne 0 ]] ; then
+        return $status
+    fi
+}
+
+
+MAX_ROUNDS=3
+round=0
+retval=0
+
+while :
+do
+    log_info "Starting round $round..."
+
+    main
+    retval=$?
+    if [[ $retval -eq 0 ]] ; then
+        log_info "Round $round succeed."
+        break
+    else
+        log_error "Round $round failed(ret=$retval)."
+        round=$(($round+1))
+        if [ $round -ge $MAX_ROUNDS ] ; then
+            log_error "Already failed $round rounds. Abort..."
+            break
+        fi
+        if [ $round -ge $((MAX_ROUNDS-1)) ] ; then
+            log_info "Reboot citadel forcely before final round $round..."
+            if ! "${UPDATER}" --force_reset; then
+                log_error "Failed to force reboot citadel"
+            fi
+        fi
+        # retrying next round 3 seconds later...
+        sleep 3
+    fi
+done
+
+exit $retval

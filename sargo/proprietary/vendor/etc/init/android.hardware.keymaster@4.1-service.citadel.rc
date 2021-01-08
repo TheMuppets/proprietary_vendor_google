@@ -1,0 +1,4 @@
+service vendor.keymaster-4-1-citadel /vendor/bin/hw/android.hardware.keymaster@4.1-service.citadel
+    class early_hal
+    user hsm
+    group hsm drmrpc

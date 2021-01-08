@@ -1,0 +1,2 @@
+mcfg_hw/generic/common/SDM845/LA/7+7_mode/SR_DSDS/mcfg_hw.mbn
+mcfg_hw/generic/common/SDM845/LA/SS/mcfg_hw.mbn
