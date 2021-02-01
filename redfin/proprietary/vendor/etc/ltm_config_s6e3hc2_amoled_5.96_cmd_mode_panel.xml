@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+ * Copyright (c) 2020 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<Group id='LTMConfig'>
+    <!-- version of LTMConfig.xml should be maintained -->
+    <version>"0.7"</version>
+
+    <!-- defaults will be used unless any mode overrides params -->
+    <default>
+        <AmbientLightToContrastStrengthTableInput>0 1000 1594 6000 16000 76300</AmbientLightToContrastStrengthTableInput>
+        <AmbientLightToContrastStrengthTableOutput>0 0 39 53 155 212</AmbientLightToContrastStrengthTableOutput>
+        <AmbientLightToContrastStrengthEnable>1</AmbientLightToContrastStrengthEnable>
+
+        <BacklightReductionTableInput>0 401 514 770 889 1023 1023 1023</BacklightReductionTableInput>
+        <BacklightReductionTableOutput>0 401 514 770 889 1023 1023 1023</BacklightReductionTableOutput>
+        <BacklightReductionEnable>1</BacklightReductionEnable>
+
+        <LuxStartPoint>0</LuxStartPoint>
+
+        <TemporalFilterSpeedStepSizeOne>8</TemporalFilterSpeedStepSizeOne>
+        <TemporalControlTableInput>0 30 50 128 160 256</TemporalControlTableInput>
+        <TemporalControlTableOutput>1 2 4 4 4 4</TemporalControlTableOutput>
+
+        <BacklightToContrastStrengthTableInput>0 257 514 770 1023</BacklightToContrastStrengthTableInput>
+        <BacklightToContrastStrengthTableOutput>256 256 256 256 256</BacklightToContrastStrengthTableOutput>
+        <BacklightToContrastStrengthEnable>1</BacklightToContrastStrengthEnable>
+
+        <param001>256</param001>
+        <param002>128</param002>
+        <param003>5</param003>
+        <param004>60</param004>
+
+        <param005>1.2</param005>
+
+        <param006>50</param006>
+        <param007>8</param007>
+    </default>
+
+    <mode id="hbm">
+        <AmbientLightToContrastStrengthTableInput>0 1000 1594 6000 16000 76300</AmbientLightToContrastStrengthTableInput>
+        <AmbientLightToContrastStrengthTableOutput>0 0 39 53 155 190</AmbientLightToContrastStrengthTableOutput>
+        <AmbientLightToContrastStrengthEnable>1</AmbientLightToContrastStrengthEnable>
+
+        <BacklightReductionTableInput>0 401 514 770 889 1023 1023 1023</BacklightReductionTableInput>
+        <BacklightReductionTableOutput>0 401 514 770 889 1023 1023 1023</BacklightReductionTableOutput>
+        <BacklightReductionEnable>1</BacklightReductionEnable>
+    </mode>
+
+    <mode id="power_save">
+        <AmbientLightToContrastStrengthTableInput>0 1000 1594 6000 16000 76300</AmbientLightToContrastStrengthTableInput>
+        <AmbientLightToContrastStrengthTableOutput>0 0 39 53 155 212</AmbientLightToContrastStrengthTableOutput>
+        <AmbientLightToContrastStrengthEnable>1</AmbientLightToContrastStrengthEnable>
+
+        <BacklightReductionTableInput>0 411 576 720 818 917 1023</BacklightReductionTableInput>
+        <BacklightReductionTableOutput>0 411 518 648 777 917 1023</BacklightReductionTableOutput>
+        <BacklightReductionEnable>1</BacklightReductionEnable>
+    </mode>
+</Group>

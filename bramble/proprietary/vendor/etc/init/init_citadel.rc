@@ -1,0 +1,10 @@
+# Needs to have citadeld running
+on property:init.svc.vendor.citadeld=running
+    start vendor.init_citadel
+
+service vendor.init_citadel /vendor/bin/hw/init_citadel
+    oneshot
+    disabled
+    user hsm
+    group hsm
+    ioprio idle 0
