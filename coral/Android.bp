@@ -20,17 +20,6 @@ soong_namespace {
 }
 
 android_app_import {
-	name: "MotionSenseBridgePrebuilt",
-	owner: "google",
-	apk: "proprietary/product/app/MotionSenseBridgePrebuilt/MotionSenseBridgePrebuilt.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	product_specific: true,
-}
-
-android_app_import {
 	name: "QdcmFF",
 	owner: "google",
 	apk: "proprietary/product/app/QdcmFF/QdcmFF.apk",
@@ -273,30 +262,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "DreamlinerPrebuilt",
-	owner: "google",
-	apk: "proprietary/product/priv-app/DreamlinerPrebuilt/DreamlinerPrebuilt.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "DreamlinerUpdater",
-	owner: "google",
-	apk: "proprietary/product/priv-app/DreamlinerUpdater/DreamlinerUpdater.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
 	name: "EuiccGoogle",
 	owner: "google",
 	apk: "proprietary/product/priv-app/EuiccGoogle/EuiccGoogle.apk",
@@ -396,18 +361,6 @@ android_app_import {
 	name: "OemDmTrigger",
 	owner: "google",
 	apk: "proprietary/product/priv-app/OemDmTrigger/OemDmTrigger.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-android_app_import {
-	name: "OsloFeedback",
-	owner: "google",
-	apk: "proprietary/product/priv-app/OsloFeedback/OsloFeedback.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
