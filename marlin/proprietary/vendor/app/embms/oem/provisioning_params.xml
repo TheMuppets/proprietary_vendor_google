@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MSDCProvisioningParams Version="1.0" xsi:schemaLocation="urn:3gpp:qualcomm:MSDC:ProvisioningFile-1 MSP_ProvisioningParams.xsd" xmlns="urn:3gpp:qualcomm:MSDC:ProvisioningFile-1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<CarrierNetworkParams>
+<CycleTimes>980:10</CycleTimes>
+<FECProcessingMaxMemorySize>6815744</FECProcessingMaxMemorySize>
+
+<MSDCServiceClass Name="urn:oma:bcast:ext_bsc_vzw:bootconfig_file">
+<MSDCFileURIs Purpose="Configuration">http://usd.vzw.net/provision/MSPConfig.xml</MSDCFileURIs>
+
+<MSDCFileURIs Purpose="Carrier-Specific-Configuration">https://usd.vzw.net/provision/bootconfig.file.gz</MSDCFileURIs>
+
+</MSDCServiceClass>
+
+<ServiceDiscoveryBootstrap>
+<BootstrapURI>https://usd.vzw.net/provision/bootconfig.file.gz</BootstrapURI>
+<BootstrapAccessPointName></BootstrapAccessPointName>
+<BootstrapRetriesRandomPeriod>PT0H</BootstrapRetriesRandomPeriod>
+</ServiceDiscoveryBootstrap>
+
+
+<ServiceDiscoveryNumberOfRetries>1</ServiceDiscoveryNumberOfRetries>
+<AccessPointNameMapping>
+<AccessPointName>VZWApp</AccessPointName>
+<AccessPointFeature>vzwlib</AccessPointFeature>
+</AccessPointNameMapping>
+<AccessPointNameMapping>
+<AccessPointName>Default</AccessPointName>
+<AccessPointFeature>enableHIPRI</AccessPointFeature>
+</AccessPointNameMapping>
+<NetworkConstraintForADP>LTE</NetworkConstraintForADP>
+<RSSIPollingInterval>PT2.56S</RSSIPollingInterval>
+<NumberOfConcurrentStreaming>2</NumberOfConcurrentStreaming>
+
+<PLMN>
+<MCC>311</MCC>
+<MNC>480</MNC>
+</PLMN>
+
+<CarrierNetworkParamsExtension>
+<StorageFileDelivery>
+
+<MaxFileDeliveryTTL>PT2H</MaxFileDeliveryTTL>
+</StorageFileDelivery>
+<CarrierNetworkParamsExtension1>
+<CarrierNetworkParamsExtension2>
+<APNCapability>
+<AccessPointName>VZWApp</AccessPointName>
+<NetworkCapability>-777</NetworkCapability>
+</APNCapability>
+<APNCapability>
+<AccessPointName>default</AccessPointName>
+<NetworkCapability>12</NetworkCapability>
+</APNCapability>
+<allowCarrierChange>false</allowCarrierChange>
+</CarrierNetworkParamsExtension2>
+</CarrierNetworkParamsExtension1>
+</CarrierNetworkParamsExtension>
+</CarrierNetworkParams>
+
+<OEMParams>
+<ScratchSpacePath>sd/scratch1</ScratchSpacePath>
+<SuppressReceptionTime>PT5S</SuppressReceptionTime>
+<TMGIActivationTimeout>PT10S</TMGIActivationTimeout>
+<StreamingTMGIActivationRetryTimeOut>PT1S</StreamingTMGIActivationRetryTimeOut>
+<MSDCSocketInterfacePort startingPortNumber="4000" PortRange="10"/>
+<DASHStreamingPort startingPortNumber="4500" PortRange="10"/>
+<TimeShiftBuffer>
+<MaxTimeShiftBufferDepth>PT600S</MaxTimeShiftBufferDepth>
+<TimeShiftBufferMarginSecond>PT4S</TimeShiftBufferMarginSecond>
+<TimeShiftBufferMarginPercentage>0.2</TimeShiftBufferMarginPercentage>
+</TimeShiftBuffer>
+
+<!-- The MSDCUpgradeCheckURI element below needs to be updated with a valid URL to enable checking for updates -->
+<MSDCUpgradeCheckURI>https://play.google.com/store/apps/details?id=com.oem.embms</MSDCUpgradeCheckURI>
+
+<OEMParamsExtension>
+<HTTPFileDelivery startingPortNumber="4600" portRange="10">
+<MaxNumberHTTPConnections>10</MaxNumberHTTPConnections>
+</HTTPFileDelivery>
+<OEMParamsExtension1>
+<FileDeliveryParams>
+<MetEntriesSizeCleanUpThreshold>8500</MetEntriesSizeCleanUpThreshold>
+</FileDeliveryParams>
+</OEMParamsExtension1>
+</OEMParamsExtension>
+</OEMParams>
+
+</MSDCProvisioningParams>
