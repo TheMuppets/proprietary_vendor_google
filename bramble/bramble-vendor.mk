@@ -219,7 +219,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/system_ext/lib/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.display.color@1.1.so \
     vendor/google/bramble/proprietary/system_ext/lib/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.display.color@1.2.so \
     vendor/google/bramble/proprietary/system_ext/lib/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.display.postproc@1.0.so \
-    vendor/google/bramble/proprietary/system_ext/lib/vendor.google.google_battery@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.google.google_battery@1.0.so \
     vendor/google/bramble/proprietary/system_ext/lib/vendor.google.wifi_ext@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.google.wifi_ext@1.0.so \
     vendor/google/bramble/proprietary/system_ext/lib/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.data.factory@2.0.so \
     vendor/google/bramble/proprietary/system_ext/lib/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/vendor.qti.data.factory@2.1.so \
@@ -308,7 +307,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.display.color@1.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.color@1.1.so \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.display.color@1.2.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.color@1.2.so \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.display.postproc@1.0.so \
-    vendor/google/bramble/proprietary/system_ext/lib64/vendor.google.google_battery@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.google.google_battery@1.0.so \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.google.wifi_ext@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.google.wifi_ext@1.0.so \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.data.factory@2.0.so \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.data.factory@2.1.so \
@@ -467,7 +465,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/bin/hw/init_citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/init_citadel \
     vendor/google/bramble/proprietary/vendor/bin/hw/qcrild:$(TARGET_COPY_OUT_VENDOR)/bin/hw/qcrild \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
-    vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.google_battery@1.0-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.google_battery@1.0-service-vendor \
+    vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.google_battery@1.1-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.google_battery@1.1-service-vendor \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.radioext@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.radioext@1.0-service \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.wifi_ext@1.0-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.wifi_ext@1.0-service-vendor \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.esepowermanager@1.0-service \
@@ -596,6 +594,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/dsp/adsp/sns_bring_to_ear.so:$(TARGET_COPY_OUT_VENDOR)/dsp/adsp/sns_bring_to_ear.so \
     vendor/google/bramble/proprietary/vendor/dsp/adsp/uv_exposure.napp_header:$(TARGET_COPY_OUT_VENDOR)/dsp/adsp/uv_exposure.napp_header \
     vendor/google/bramble/proprietary/vendor/dsp/adsp/uv_exposure.so:$(TARGET_COPY_OUT_VENDOR)/dsp/adsp/uv_exposure.so \
+    vendor/google/bramble/proprietary/vendor/dsp/cdsp/example_image.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/example_image.so \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/fastrpc_shell_3:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/fastrpc_shell_3 \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/fastrpc_shell_unsigned_3:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/fastrpc_shell_unsigned_3 \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/libbenchmark_skel.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libbenchmark_skel.so \
@@ -608,6 +607,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/libdsp_streamer_workloop.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libdsp_streamer_workloop.so \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/libhcp_rpc_skel.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libhcp_rpc_skel.so \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/libhta_dsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libhta_dsp_skel.so \
+    vendor/google/bramble/proprietary/vendor/dsp/cdsp/libloadalgo_skel.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libloadalgo_skel.so \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/libnn_preproc.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libnn_preproc.so \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/libnn_preproc_postproc.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libnn_preproc_postproc.so \
     vendor/google/bramble/proprietary/vendor/dsp/cdsp/libstabilitydomain_skel.so:$(TARGET_COPY_OUT_VENDOR)/dsp/cdsp/libstabilitydomain_skel.so \
@@ -725,7 +725,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/etc/init/rlsservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rlsservice.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/tloc_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tloc_daemon.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
-    vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.google_battery@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.google_battery@1.0-service.rc \
+    vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.google_battery@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.google_battery@1.1-service.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.radioext@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.radioext@1.0-service.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.wifi_ext@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.wifi_ext@1.0-service.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
@@ -815,7 +815,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
     vendor/google/bramble/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/google/bramble/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
-    vendor/google/bramble/proprietary/vendor/etc/thermal_info_config_m.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_m.json \
     vendor/google/bramble/proprietary/vendor/etc/wifi/aoa_cldb_falcon.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_falcon.bin \
     vendor/google/bramble/proprietary/vendor/etc/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
     vendor/google/bramble/proprietary/vendor/etc/xtra_root_cert.pem:$(TARGET_COPY_OUT_VENDOR)/etc/xtra_root_cert.pem \
@@ -1450,6 +1449,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/lib64/camera/components/com.google.node.hdrp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.hdrp.so \
     vendor/google/bramble/proprietary/vendor/lib64/camera/components/com.google.node.llv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.llv.so \
     vendor/google/bramble/proprietary/vendor/lib64/camera/components/com.google.node.multicam.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.multicam.so \
+    vendor/google/bramble/proprietary/vendor/lib64/camera/components/com.google.node.publish.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.publish.so \
     vendor/google/bramble/proprietary/vendor/lib64/camera/components/com.google.node.rectiface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.rectiface.so \
     vendor/google/bramble/proprietary/vendor/lib64/camera/components/com.google.node.sd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.sd.so \
     vendor/google/bramble/proprietary/vendor/lib64/camera/components/com.google.node.steadiface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/components/com.google.node.steadiface.so \
@@ -1898,6 +1898,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.display.color@1.5.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.color@1.5.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.display.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.display.postproc@1.0.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.google_battery@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.google_battery@1.0.so \
+    vendor/google/bramble/proprietary/vendor/lib64/vendor.google.google_battery@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.google_battery@1.1.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.radioext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.0.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.radioext@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.1.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.radioext@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.2.so \
@@ -2001,6 +2002,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/radio/qcril_database/upgrade/13_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/13_version_update_ecc_table.sql \
     vendor/google/bramble/proprietary/vendor/radio/qcril_database/upgrade/14_add_fr_normal_ecc.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/14_add_fr_normal_ecc.sql \
     vendor/google/bramble/proprietary/vendor/radio/qcril_database/upgrade/15_fr_normal_ecc_on_wifi.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/15_fr_normal_ecc_on_wifi.sql \
+    vendor/google/bramble/proprietary/vendor/radio/qcril_database/upgrade/16_ch_normal_ecc.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/16_ch_normal_ecc.sql \
     vendor/google/bramble/proprietary/vendor/radio/qcril_database/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/1_version_intro.sql \
     vendor/google/bramble/proprietary/vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/2_version_add_wps_config.sql \
     vendor/google/bramble/proprietary/vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/3_version_update_wps_config.sql \
@@ -2037,14 +2039,16 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Free/Commercial/pixel_Free/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Free/Commercial/pixel_Free/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_Denmark/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_Denmark/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_IE/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_IE/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_Italy/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_Italy/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_SE/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_SE/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_UK/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G/Commercial/pixel_UK/mcfg_sw.mbn \
-    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G_FI/Commercial/pixel_UK/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G_FI/Commercial/pixel_UK/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G_FI/Commercial/pixel_Austria/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/H3G_FI/Commercial/pixel_Austria/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/ID/Commercial/pixel_UK/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/ID/Commercial/pixel_UK/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Orange/Commercial/pixel_France/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Orange/Commercial/pixel_France/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Orange/Commercial/pixel_Spain/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Orange/Commercial/pixel_Spain/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/SFR/Commercial/pixel_FR/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/SFR/Commercial/pixel_FR/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Smarty/Commercial/pixel_UK/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Smarty/Commercial/pixel_UK/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Sunrise/Commercial/pixel_Sunrise/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Sunrise/Commercial/pixel_Sunrise/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Swisscom/Commercial/pixel_Swiss/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Swisscom/Commercial/pixel_Swiss/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/TDC/Commercial/pixel_Denmark/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/TDC/Commercial/pixel_Denmark/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/TIM/Commercial/pixel_Italy/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/TIM/Commercial/pixel_Italy/mcfg_sw.mbn \
@@ -2066,6 +2070,9 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Vodafone/VoLTE/pixel_Turkey/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Vodafone/VoLTE/pixel_Turkey/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Vodafone/VoLTE/pixel_UK/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Vodafone/VoLTE/pixel_UK/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Vodafone/pixel_Non_VoLTE/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/Vodafone/pixel_Non_VoLTE/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/wDT/Commercial/pixel_CZ/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/wDT/Commercial/pixel_CZ/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/wVirgin/Commercial/pixel_Virgin/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/wVirgin/Commercial/pixel_Virgin/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/wVodafone/VoLTE/pixel_CZ/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/EU/wVodafone/VoLTE/pixel_CZ/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/ATT/pixel_5G/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/ATT/pixel_5G/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/ATT/pixel_FirstNet/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/ATT/pixel_FirstNet/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/ATT/pixel_VoLTE/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/ATT/pixel_VoLTE/mcfg_sw.mbn \
@@ -2078,9 +2085,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/CBRS_Chatr/pixel_CBRS_Chatr/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/CBRS_Chatr/pixel_CBRS_Chatr/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/CSpire/VoLTE/pixel_CSpire/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/CSpire/VoLTE/pixel_CSpire/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cellcom/pixel_Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cellcom/pixel_Commercial/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cellcom_Core/pixel_Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cellcom_Core/pixel_Commercial/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Charter/pixel_Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Charter/pixel_Commercial/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cricket/pixel_5G/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cricket/pixel_5G/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cricket/pixel_Cricket/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Cricket/pixel_Cricket/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Dish/pixel_Dish/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Dish/pixel_Dish/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Freedom/pixel_VoLTE/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Freedom/pixel_VoLTE/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Inland/pixel_Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Inland/pixel_Commercial/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Rogers/Chatr/pixel_CA/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/NA/Rogers/Chatr/pixel_CA/mcfg_sw.mbn \
@@ -2109,9 +2118,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/Singtel/Commercial/pixel_Singapore/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/Singtel/Commercial/pixel_Singapore/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/StarHub/Commercial/pixel_SG/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/StarHub/Commercial/pixel_SG/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/TM/pixel_Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/TM/pixel_Commercial/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/TStar/Commercial/pixel_TW/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/TStar/Commercial/pixel_TW/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/wAPT/pixel_Commercial/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/wAPT/pixel_Commercial/mcfg_sw.mbn \
-    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/wTStar/Commercial/pixel_TW/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/SEA/wTStar/Commercial/pixel_TW/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/TestSIM/pixel_EIOTTestSIM/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/TestSIM/pixel_EIOTTestSIM/mcfg_sw.mbn \
+    vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/TestSIM/pixel_EIOTTestSIM_MTV/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/TestSIM/pixel_EIOTTestSIM_MTV/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/TestSIM/pixel_TestSIM/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/TestSIM/pixel_TestSIM/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/common/Ubigi/pixel_Ubigi/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/common/Ubigi/pixel_Ubigi/mcfg_sw.mbn \
     vendor/google/bramble/proprietary/vendor/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/common/WildCard/pixel_WildCard/mcfg_sw.mbn:$(TARGET_COPY_OUT_VENDOR)/rfs/msm/mpss/readonly/vendor/mbn/mcfg_sw/generic/Pixel/common/WildCard/pixel_WildCard/mcfg_sw.mbn \

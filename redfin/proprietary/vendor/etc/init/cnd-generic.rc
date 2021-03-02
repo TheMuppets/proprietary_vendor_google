@@ -1,4 +1,4 @@
 service vendor.cnd /system/vendor/bin/cnd
     class main
     user radio
-    group wifi inet radio wakelock vendor_qti_diag
+    group wifi inet radio wakelock

@@ -5,4 +5,4 @@
 service vendor.imsrcsservice /vendor/bin/imsrcsd
     class main
     user radio
-    group radio vendor_qti_diag log inet wakelock
+    group radio diag log inet wakelock
