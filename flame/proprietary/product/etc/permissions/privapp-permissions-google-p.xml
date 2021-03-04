@@ -84,6 +84,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.scone">
+        <deny-permission name="android.permission.ACCESS_CONTEXT_HUB"/>
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
         <permission name="android.permission.LOCATION_HARDWARE"/>
@@ -161,6 +162,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.REGISTER_CONNECTION_MANAGER"/>
         <permission name="android.permission.STATUS_BAR"/>
         <permission name="android.permission.STOP_APP_SWITCHES"/>
+        <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="com.android.voicemail.permission.READ_VOICEMAIL"/>

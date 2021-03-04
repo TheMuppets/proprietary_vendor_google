@@ -118,6 +118,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.RECEIVE_EMERGENCY_BROADCAST"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="android.permission.STATUS_BAR" />
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.cellbroadcastservice">

@@ -41,6 +41,7 @@ mcfg_sw/generic/Pixel/NA/CBRS/pixel_CBRS/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/CBRS_Chatr/pixel_CBRS_Chatr/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/CSpire/VoLTE/pixel_CSpire/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/Cellcom/pixel_Cellcom/mcfg_sw.mbn
+mcfg_sw/generic/Pixel/NA/Cellcom_Core/pixel_Cellcom_Core/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/Cricket/pixel_Cricket/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/Freedom/pixel_VoLTE/mcfg_sw.mbn
 mcfg_sw/generic/Pixel/NA/Inland/pixel_Commercial/mcfg_sw.mbn
