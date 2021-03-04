@@ -11,6 +11,10 @@
     <!-- The feature identifying devices which are able to use the Android Wellbeing app. -->
     <feature name="com.google.android.feature.WELLBEING" />
 
+    <!-- The feature identifying devices which are able to use the device-to-device migration
+        over cable provided by the Pixelmigrate app. -->
+    <feature name="com.google.android.feature.D2D_CABLE_MIGRATION_FEATURE" />
+
     <!-- Enable Zero Touch Provisioning support for 2016 and newer Nexus devices. -->
     <feature name="com.google.android.feature.ZERO_TOUCH" />
 

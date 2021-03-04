@@ -1,0 +1,8 @@
+service google_battery /vendor/bin/hw/vendor.google.google_battery@1.1-service-vendor
+    class hal
+    user system
+    group system
+
+on post-fs
+    chown system system /sys/devices/platform/soc/soc:google,battery/power_supply/battery/charge_deadline
+    chmod 0664 /sys/devices/platform/soc/soc:google,battery/power_supply/battery/charge_deadline

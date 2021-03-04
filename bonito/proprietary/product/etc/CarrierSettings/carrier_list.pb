@@ -17,8 +17,8 @@
 
 20402
 20402
-
-20403IMSI=20403
+
+voiceworks_nl
 20403
 
 20404GID1=2801
@@ -103,8 +103,8 @@ tmobile_nl
 
 20465
 20465
-#
-virginmedia_gb
+
+	virgin_gb
 20601"28000000
 
 20601GID1=4E
@@ -140,8 +140,8 @@ NRJ MOBILE
 
 20610
 20610
-#
-virginmedia_gb
+
+	virgin_gb
 20620"28000000
 
 20620
@@ -401,15 +401,15 @@ jazztel_es
 &
 22201SPN=IUSACELL
 22201IUSACELL
-$
-22201SPN=NOVERCA
-22201NOVERCA
 "
 22201SPN=UNEFON
 22201UNEFON
 
 tim_it
 22201
+
+kena_it
+22207
 
 22208
 22208
@@ -428,48 +428,22 @@ $
 
 iliad_it
 22250"F003
-#
-windtre99_it
-22288"
-0000000099
-
-windtre99_it
-22288"99
-
-windtre88_it
-22288222880
-
-windtre88_it
-22288222881
-
-windtre99_it
-22288222882
-
-windtre88_it
-22288222883
-
-windtre88_it
-22288222884
-
-windtre88_it
-22288222885
-
-windtre88_it
-22288222886
-
-windtre88_it
-22288222887
-
-windtre99_it
-22288222888
-
-windtre88_it
-22288222889
+"
+verymobile_it
+22288"00000099
+
+
+windtre_it
+22288
+"
+verymobile_it
+22299"00000099
 $
 22299SPN=FASTWEB
 22299FASTWEB
-
-windtre99_it
+
+
+windtre_it
 22299
 
 22601
@@ -489,20 +463,25 @@ $
 
 swisscom_ch
 22801
-
-22802
+
+
+sunrise_ch
 22802
 
 22803
 22803
-
-23001
+
+lycamobile_ch
+22854
+
+
+tmobile_cz
 23001
 
 23002
 23002
-
-23003
+
+vodafone_cz
 23003
 
 23101
@@ -531,7 +510,7 @@ telekom_at
 telering_at
 23207
 $
-lycamobile_ch
+lycamobile_at
 23208
 Lycamobile
 
@@ -622,6 +601,9 @@ $
 
 	smarty_gb
 23420"0309
+
+gamma_gb
+23420"030B
 
 superdrug_gb
 23420"0310
@@ -635,8 +617,8 @@ $
 23426SPN=LYCAMOBILE
 23426
 LYCAMOBILE
-#
-virginmedia_gb
+
+	virgin_gb
 23430"28000000
 
 23430GID1=B2
@@ -656,9 +638,6 @@ LYCAMOBILE
 
 23432
 23432
-#
-virginmedia_gb
-23433"28000000
 
 23433SPN=LIFE
 23433LIFE
@@ -668,15 +647,19 @@ LYCAMOBILE
 
 23434
 23434
-#
-virginmedia_gb
-23438"28000000
+
+	virgin_gb
+23438
 
 jump_gb
 23439JUMP
 
 gamma_gb
 23439
+
+dent_zz
+23450"
+3597bfd533
 !
 truphone_zz
 23450	234500008
@@ -860,9 +843,6 @@ telenor_se
 
 	gigsky_us
 24007"6F
-
-gamma_gb
-24007	240075610
 -
 24007IMSI=2400768XXXXXXXX
 240072400768
@@ -1047,6 +1027,10 @@ tinkoff_ru
 
 26003
 26003
+
+dent_zz
+26006"
+3597bfd533
 
 26006
 26006
@@ -1056,6 +1040,10 @@ tinkoff_ru
 
 26044
 26044
+
+dent_zz
+26098"
+3597bfd533
 
 congstar_de
 26201"44
@@ -1144,6 +1132,12 @@ telekom_de
 
 27211GID1=0A
 27211"0A
+
+48_ie
+2721148
+
+lycamobile_ie
+27213
 
 	siminn_is
 27401
@@ -1699,8 +1693,8 @@ tmobile_us
 
 310360
 310360
-
-310380GID1=50
+
+agms_us
 310380"50
 
 	gigsky_us
@@ -2003,11 +1997,8 @@ testing_us
 
 311430
 311430
-*
-311440SPN=BLUEGRASS
-311440	BLUEGRASS
-
-311440
+
+bluegrass_us
 311440
  
 311450SPN=PTCI
@@ -2133,12 +2124,15 @@ MOSAIC RPT
 4
 311650SPN=UNITEDWIRELESS
 311650UNITEDWIRELESS
-(
-311670SPN=PINEBELT
-311670PINEBELT
+
+pinebelt_us
+311670
 
 311740
 311740
+
+cellcommno_us
+311840"C1
 
 
 cellcom_us
@@ -2209,8 +2203,8 @@ $
 
 firstnetpacific_us
 313110
-
-firstnetpacific_us
+
+firstnetpacific2_us
 313120
 
 firstnet_us
@@ -2255,15 +2249,95 @@ OPENMOBILE
 
 334090
 334090
-
-altan_mx
-334140ALTAN
+
+
+arlonet_mx
+334140Arlonet
+
+
+walmart_mx
+334140BAIT
+ 
+addinteli_mx
+334140BYPLUS
+
+cfe_mx
+334140	CFE TEIPT
+%
+addinteli_mx
+334140CHAMO-MOVIL
+
+diri_mx
+334140DIRI
+%
+freedompop_mx
+334140
+FreedomPop
+ 
+
+guruweb_mx
+334140Gurucomm
  
 altanientc_mx
 334140IENTC
+
+inten_mx
+334140INTEN
+ 
+iusacomm_mx
+334140IUSATEL
+
+ads_mx
+334140MEXFON
+
+adm_mx
+334140MISTRAL
+#
+megacable_mx
+334140	Mega4.5 G
+
+diveracy_mx
+334140NEMI
+
+	netwey_mx
+334140NETWEY
  
 altannewww_mx
 334140NeWWW
+
+oui_mx
+334140OUI
+"
+rocketel_mx
+334140	PagaPhone
+
+
+retemex_mx
+334140RETEMEX
+'
+redpotencia_mx
+334140Redpotencia
+
+topos_mx
+334140TURBORED
+
+ubix_mx
+334140Ubix
+
+	tridex_mx
+334140VALOR
+
+wimo_mx
+334140WiMO
+
+	yonder_mx
+334140YO
+
+izzi_mx
+334140izzi
+
+altan_mx
+334140
 
 33805
 33805
@@ -3377,6 +3451,10 @@ OPENMOBILE
 
 42403
 42403
+
+dent_zz
+42501"
+3597bfd533
 
 42501
 42501
@@ -3410,6 +3488,10 @@ OPENMOBILE
 
 42516
 42516
+
+
+annatel_il
+42526
 
 42601
 42601
@@ -3541,6 +3623,9 @@ rakuten_jp
 kddi_jp
 44051"10
 
+povo_jp
+44051"26
+
 kddimvno_jp
 44051
 
@@ -3598,6 +3683,10 @@ lguplus_kr
 
 45402
 45402
+
+dent_zz
+45403"
+3597bfd533
 
 45403
 45403
@@ -3875,6 +3964,10 @@ telstra_au
 
 51502
 51502
+
+dent_zz
+51503"
+3597bfd533
 
 51503
 51503
@@ -4584,6 +4677,9 @@ starhub_sg
 
 710300
 710300
+
+yotanicaragua_ni
+71070
 
 71073
 71073
@@ -4641,12 +4737,12 @@ starhub_sg
 
 71617
 71617
-$
-72201SPN=CELULAR
-72201CELULAR
-
-72201SPN=QUAM
-72201QUAM
+
+	tuenti_ar
+72201"02
+
+	tuenti_ar
+722010"01
 
 72207
 72207
@@ -4872,4 +4968,4 @@ $
 74810
 
 bics_be
-90158ÏºµúQ
+90158ÛÎ ×U
