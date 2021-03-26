@@ -1,0 +1,9 @@
+service vendor.wifi_hal_legacy /vendor/bin/hw/vendor.google.wifi_ext@1.0-service-vendor
+    class hal
+    capabilities NET_ADMIN NET_RAW SYS_MODULE
+    user wifi
+    group wifi gps system
+
+on post-fs-data
+    mkdir /data/vendor/firmware 0770 system system
+    mkdir /data/vendor/firmware/wifi 0750 wifi wifi
