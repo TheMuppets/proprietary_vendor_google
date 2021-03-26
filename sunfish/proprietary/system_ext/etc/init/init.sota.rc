@@ -1,0 +1,13 @@
+# For Factory OTA boot mode
+on property:ro.boot.mode=sota
+    setprop ro.boot.sota enabled
+
+# Write the enable sota magic to /misc partition.
+service vendor.enable_sota /vendor/bin/misc_writer --set-sota
+    disabled
+    oneshot
+
+# Set enable sota flag
+on property:persist.vendor.factoryota.enable_sota=triggered
+    exec_start vendor.enable_sota
+    setprop persist.vendor.factoryota.enable_sota completed
