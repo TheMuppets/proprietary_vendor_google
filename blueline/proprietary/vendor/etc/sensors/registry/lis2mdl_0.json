@@ -1,0 +1,46 @@
+{
+  "config":
+  {
+    "hw_platform": ["MTP", "Dragon", "Surf", "OEM"],
+    "soc_id": ["291", "246", "305", "321"]
+  },
+  "lis2mdl_0":{
+    "owner": "lis2mdl",
+    ".mag":{
+      "owner": "lis2mdl",
+      ".config":{
+        "owner": "lis2mdl",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".temp":{
+      "owner": "lis2mdl",
+      ".config":{
+        "owner": "lis2mdl",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    }
+  }
+}
