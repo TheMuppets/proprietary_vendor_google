@@ -8,7 +8,7 @@ soong_namespace {
 android_app_import {
 	name: "ims",
 	owner: "google",
-	apk: "proprietary/app/ims/ims.apk",
+	apk: "proprietary/system/app/ims/ims.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -18,7 +18,7 @@ android_app_import {
 android_app_import {
 	name: "CNEService",
 	owner: "google",
-	apk: "proprietary/priv-app/CNEService/CNEService.apk",
+	apk: "proprietary/system/priv-app/CNEService/CNEService.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -29,7 +29,7 @@ android_app_import {
 android_app_import {
 	name: "OemDmTrigger",
 	owner: "google",
-	apk: "proprietary/priv-app/OemDmTrigger/OemDmTrigger.apk",
+	apk: "proprietary/system/priv-app/OemDmTrigger/OemDmTrigger.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -40,7 +40,7 @@ android_app_import {
 android_app_import {
 	name: "VzwOmaTrigger",
 	owner: "google",
-	apk: "proprietary/priv-app/VzwOmaTrigger/VzwOmaTrigger.apk",
+	apk: "proprietary/system/priv-app/VzwOmaTrigger/VzwOmaTrigger.apk",
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -51,7 +51,7 @@ android_app_import {
 android_app_import {
 	name: "qcrilmsgtunnel",
 	owner: "google",
-	apk: "proprietary/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+	apk: "proprietary/system/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -253,13 +253,13 @@ android_app_import {
 dex_import {
 	name: "com.google.android.camera.experimental2016",
 	owner: "google",
-	jars: ["proprietary/framework/com.google.android.camera.experimental2016.jar"],
+	jars: ["proprietary/system/framework/com.google.android.camera.experimental2016.jar"],
 }
 
 dex_import {
 	name: "qcrilhook",
 	owner: "google",
-	jars: ["proprietary/framework/qcrilhook.jar"],
+	jars: ["proprietary/system/framework/qcrilhook.jar"],
 }
 
 android_app_import {
