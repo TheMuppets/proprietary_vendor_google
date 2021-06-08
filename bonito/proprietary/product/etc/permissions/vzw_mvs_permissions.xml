@@ -6,7 +6,7 @@
         <permission name="android.permission.CONNECTIVITY_INTERNAL"/>
         <permission name="android.permission.DELETE_PACKAGES"/>
         <permission name="android.permission.GET_ACCOUNTS_PRIVILEGED"/>
-        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_SUBSCRIPTION_PLANS"/>
         <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>

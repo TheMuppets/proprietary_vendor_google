@@ -14,6 +14,7 @@
     <!-- Allow Better Bug to take bug report. -->
     <bugreport-whitelisted package="com.google.android.apps.betterbug" />
     <bugreport-whitelisted package="com.google.android.apps.internal.betterbug" />
+    <bugreport-whitelisted package="com.google.android.apps.betterbug.partners" />
 
     <!-- Allow Pixel modem service to run in background -->
     <allow-in-power-save package="com.google.modemservice" />

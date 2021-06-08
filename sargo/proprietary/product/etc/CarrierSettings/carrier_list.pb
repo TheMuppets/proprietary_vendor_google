@@ -74,11 +74,12 @@ HOT MOBILE
 ,
 20408SPN=RABO MOBIEL
 20408RABO MOBIEL
-
-20408
+
+kpn_nl
 20408
-
-20412
+
+
+telfort_nl
 20412
 "
 20416SPN=BEN NL
@@ -87,8 +88,9 @@ HOT MOBILE
 
 tmobile_nl
 20416
-
-20418
+
+
+telfort_nl
 20418
 
 
@@ -103,6 +105,9 @@ tmobile_nl
 
 20465
 20465
+
+kpn_nl
+20469
 
 	virgin_gb
 20601"28000000
@@ -493,21 +498,25 @@ tmobile_cz
 23106
 23106
 
-23201
+a1_at
 23201
+
+a1_at
+23202
 
 
-telekom_at
+tmobile_at
 23203
 
 
-telekom_at
+tmobile_at
 23204
 
 h3_at
 23205
-
-telering_at
+
+
+tmobile_at
 23207
 $
 lycamobile_at
@@ -528,6 +537,9 @@ Lycamobile
 $
 23213IMSI=23213XXXXXXXXXX
 23213
+
+h3_at
+23214
 
 23401
 23401
@@ -784,11 +796,11 @@ telenor_dk
 
 tdc_dk
 23810
-&
-23820IMSI=2382010X
+
+telia_dk
 238202382010
-&
-23820IMSI=2382030X
+
+telia_dk
 238202382030
 $
 23820SPN=CALL ME
@@ -796,21 +808,19 @@ $
 &
 23820SPN=DLG TELE
 23820DLG TELE
-
-23830
+
+telia_dk
 23830
 
 23877
 23877
-,
-24001IMSI=240017XXXXXXXXX
-24001240017
+
+
+halebop_se
+24001halebop
 
 telia_se
 24001
-
-240017
-240017
 
 h3_se
 24002
@@ -891,6 +901,10 @@ telenor_no
 
 24204
 24204
+
+
+onecall_no
+24205OneCall
 
 24205
 24205
@@ -1063,6 +1077,13 @@ telekom_de
 
 eplus_de
 26203
+
+congstar_de
+26206"44
+
+
+telekom_de
+26206
  
 o2prepaid_de
 262072620749
@@ -3418,8 +3439,8 @@ retemex_mx
 
 41904
 41904
-
-42001
+
+stc_sa
 42001
 
 42003
@@ -4968,4 +4989,4 @@ starhub_sg
 74810
 
 bics_be
-90158€Œ†◊U
+90158â˜ˆê]
