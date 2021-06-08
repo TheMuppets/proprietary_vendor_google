@@ -4,7 +4,7 @@
   Confidential and Proprietary - Qualcomm Technologies, Inc.
 */
 
--- VERSION: 16
+-- VERSION: 17
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE qcril_emergency_source_mcc_table(MCC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER));
@@ -92,6 +92,14 @@ INSERT INTO qcril_emergency_source_mcc_table VALUES('208','116111','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('228','117','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('228','118','','');
 INSERT INTO qcril_emergency_source_mcc_table VALUES('228','144','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('404','100','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('404','101','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('404','102','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('404','108','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('405','100','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('405','101','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('405','102','','');
+INSERT INTO qcril_emergency_source_mcc_table VALUES('405','108','','');
 CREATE TABLE qcril_emergency_source_voice_table(MCC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER));
 INSERT INTO qcril_emergency_source_voice_table VALUES('460','110','','full');
 INSERT INTO qcril_emergency_source_voice_table VALUES('460','119','','full');
@@ -423,7 +431,7 @@ INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('311','228','*272911',''
 INSERT INTO qcril_emergency_source_mcc_mnc_table VALUES('311','229','*272911','','');
 CREATE TABLE qcril_emergency_source_voice_mcc_mnc_table(MCC TEXT, MNC TEXT, NUMBER TEXT, IMS_ADDRESS TEXT, SERVICE TEXT, PRIMARY KEY(MCC,NUMBER,MNC));
 CREATE TABLE qcril_properties_table (property TEXT,value TEXT, PRIMARY KEY(property));
-INSERT INTO qcril_properties_table VALUES('qcrildb_version','16');
+INSERT INTO qcril_properties_table VALUES('qcrildb_version','17');
 CREATE TABLE qcril_operator_specific_config(MCC TEXT, MNC TEXT, WPS_OVER_CS INTEGER, PRIMARY KEY(MCC, MNC));
 INSERT INTO qcril_operator_specific_config VALUES('310','410',1);
 DELETE FROM qcril_operator_specific_config where MCC = '310' AND MNC = '410';
