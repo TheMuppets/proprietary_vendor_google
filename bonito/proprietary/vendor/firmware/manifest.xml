@@ -3,18 +3,19 @@
 <manifest>
   <remote fetch="https://googleplex-polygon-android.googlesource.com/" name="poly" review="https://googleplex-polygon-android.googlesource.com/" />
 
-  <default remote="poly" revision="bonito-rvc-qpr2" />
+  <default remote="poly" revision="bonito-rvc-qpr3" />
 
 
   <project groups="non-hlos" name="platform/vendor/google/common/non-hlos/ssc/goog/vsc/algos-internal" path="nested/vsc/algos-internal" revision="a0d61bddb1beac5bca1e2afdaedb2ea90604bc03" />
 
 
 
-  <project groups="non-hlos,partner" name="platform/vendor/qcom/sdm670/non-hlos/adsp_proc" path="adsp_proc" revision="dae80178904305aa9eb08b5259148673560f715f" />
+  <project groups="non-hlos,partner" name="platform/vendor/qcom/sdm670/non-hlos/adsp_proc" path="adsp_proc" revision="0157a32382c8a127e9ffe9b9633d307e19ee59f4" />
 
 
 
   <project groups="non-hlos,partner" name="platform/vendor/google_devices/common/non-hlos/ssc/goog" path="nested/ssc/goog" revision="dd15f5bbd3aee266058929f4c4474ec6a00843fb" />
+
 
 
 
