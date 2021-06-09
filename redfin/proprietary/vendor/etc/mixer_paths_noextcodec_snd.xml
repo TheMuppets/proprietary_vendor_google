@@ -2046,10 +2046,6 @@
         <ctl name="Voice Sidetone Enable" value="1" />
     </path>
 
-    <path name="speaker-mic">
-        <path name="speaker-dmic-endfire" />
-    </path>
-
     <path name="speaker-mic-liquid">
         <path name="dmic5" />
     </path>
@@ -2202,10 +2198,6 @@
 
     <path name="voice-speaker-2-vbat">
         <path name="speaker-vbat-mono-2" />
-    </path>
-
-    <path name="voice-speaker-mic">
-        <path name="speaker-mic" />
     </path>
 
     <path name="voice-headphones">
@@ -2418,6 +2410,14 @@
 
     <path name="handset-stereo-dmic-ef-liquid">
         <path name="handset-dmic-endfire" />
+    </path>
+
+    <path name="speaker-mic">
+        <path name="speaker-dmic-endfire" />
+    </path>
+
+    <path name="voice-speaker-mic">
+        <path name="speaker-mic" />
     </path>
 
     <path name="speaker-stereo-dmic-ef-liquid">
