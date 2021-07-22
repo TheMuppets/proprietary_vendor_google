@@ -5,3 +5,39 @@
 soong_namespace {
 }
 
+android_app_import {
+	name: "ChromecastService",
+	owner: "google",
+	apk: "proprietary/product/priv-app/ChromecastService/ChromecastService.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "RemotecontrolLogging",
+	owner: "google",
+	apk: "proprietary/product/priv-app/RemotecontrolLogging/RemotecontrolLogging.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+
+android_app_import {
+	name: "TVAxelX",
+	owner: "google",
+	apk: "proprietary/product/priv-app/TVAxelX/TVAxelX.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+}
+

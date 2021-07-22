@@ -6,6 +6,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/google/sabrina
 
 PRODUCT_COPY_FILES += \
+    vendor/google/sabrina/proprietary/product/etc/permissions/privapp-permissions-sabrina.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-sabrina.xml \
+    vendor/google/sabrina/proprietary/product/lib/hw/bootctrl.amlogic.so:$(TARGET_COPY_OUT_PRODUCT)/lib/hw/bootctrl.amlogic.so \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/2c1a33c0-44cc-11e5-bc3b0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/2c1a33c0-44cc-11e5-bc3b0002a5d5c51b.ta \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/8efb1e1c-37e5-4326-a5d68c33726c7d57.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/8efb1e1c-37e5-4326-a5d68c33726c7d57.ta \
@@ -15,3 +17,8 @@ PRODUCT_COPY_FILES += \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/d83c3c4a-9e8d-4e4e-ad309d40e137f689.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/d83c3c4a-9e8d-4e4e-ad309d40e137f689.ta \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/e043cde0-61d0-11e5-9c260002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/e043cde0-61d0-11e5-9c260002a5d5c51b.ta \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/ff2a4bea-ef6d-11e6-89ccd4ae52a7b3b3.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/ff2a4bea-ef6d-11e6-89ccd4ae52a7b3b3.ta
+
+PRODUCT_PACKAGES += \
+    ChromecastService \
+    RemotecontrolLogging \
+    TVAxelX
