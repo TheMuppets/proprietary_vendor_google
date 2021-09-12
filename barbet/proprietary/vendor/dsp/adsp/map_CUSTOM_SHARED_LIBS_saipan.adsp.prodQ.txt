@@ -1,0 +1,2 @@
+../../build/ms/dynamic_modules/saipan.adsp.prod/capi_v2_voice_imc_rx.so.1
+../../build/ms/dynamic_modules/saipan.adsp.prod/capi_v2_voice_imc_tx.so.1

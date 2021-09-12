@@ -1,0 +1,74 @@
+#******************************************************************************
+#    Copyright (c) 2019 Qualcomm Technologies, Inc.
+#    All Rights Reserved.
+#    Confidential and Proprietary - Qualcomm Technologies, Inc.
+#*******************************************************************************
+
+mmap: arg2 in ~PROT_EXEC || arg2 in ~PROT_WRITE
+munmap: 1
+mprotect: arg2 in ~PROT_EXEC || arg2 in ~PROT_WRITE
+#prctl: arg0 == PR_GET_NAME || arg0 == PR_SET_PTRACER || arg0 == PR_SET_VMA || arg0 == PR_GET_NO_NEW_PRIVS || arg0 == PR_SET_SECCOMP || arg0 == PR_SET_DUMPABLE || arg0 == PR_GET_DUMPABLE
+prctl: 1
+openat: 1
+read: 1
+close: 1
+futex: 1
+newfstatat: 1
+clock_gettime: 1
+fstat: 1
+pread64: 1
+readlinkat: 1
+mremap: 1
+fstatfs: 1
+getuid: 1
+writev: 1
+faccessat: 1
+fcntl: 1
+rt_sigprocmask: 1
+rt_sigaction: 1
+clone: 1
+socket: arg0 == AF_UNIX || arg0 == AF_QIPCRTR
+connect: 1
+getdents64: 1
+#rt_tgsigqueueinfo: 1
+#ioctl: arg1 == _IOC(_IOC_NONE || arg1 == _IOC(_IOC_READ || arg1 == VSOC_MAYBE_SEND_INTERRUPT_TO_HOST
+ioctl: 1
+lseek: 1
+write: 1
+getrandom: 1
+gettimeofday: 1
+exit_group: 1
+exit: 1
+getpid: 1
+#gettid: 1
+sigaltstack: 1
+fdatasync: 1
+rt_sigreturn: 1
+restart_syscall: 1
+sendto: 1
+sched_getscheduler: 1
+mkdirat: 1
+execve: 1
+madvise: 1
+set_tid_address: 1
+recvfrom: 1
+pwrite64: 1
+nanosleep: 1
+
+pipe2: 1
+umask: 1
+getsockname: 1
+ppoll: 1
+setsockopt: 1
+timerfd_create: 1
+
+#xtwifi-inet-agent
+unlinkat: 1
+
+#xtra-daemon
+bind: 1
+epoll_create1: 1
+epoll_ctl: 1
+epoll_pwait: 1
+timerfd_settime: 1
+

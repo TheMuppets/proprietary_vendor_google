@@ -1,0 +1,2 @@
+on zygote-start
+    mkdir /data/vendor/wifi/cnss_daemon 0770 wifi wifi

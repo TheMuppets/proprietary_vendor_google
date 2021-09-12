@@ -1,0 +1,4 @@
+mcfg_hw/generic/Pixel/common/Saipan/STANDALONE/LA/pixel_DSDS/mcfg_hw.mbn
+mcfg_hw/generic/Pixel/common/Saipan/STANDALONE/LA/pixel_DSDS_CDMALess/mcfg_hw.mbn
+mcfg_hw/generic/Pixel/common/Saipan/STANDALONE/LA/pixel_SS/mcfg_hw.mbn
+mcfg_hw/generic/Pixel/common/Saipan/STANDALONE/LA/pixel_SS_CDMALess/mcfg_hw.mbn
