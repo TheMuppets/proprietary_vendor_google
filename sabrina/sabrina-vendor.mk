@@ -16,7 +16,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/af1ae3a4-888b-4e11-b4ab1c2b972d1c11.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/af1ae3a4-888b-4e11-b4ab1c2b972d1c11.ta \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/d83c3c4a-9e8d-4e4e-ad309d40e137f689.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/d83c3c4a-9e8d-4e4e-ad309d40e137f689.ta \
     vendor/google/sabrina/proprietary/vendor/lib/teetz/e043cde0-61d0-11e5-9c260002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/e043cde0-61d0-11e5-9c260002a5d5c51b.ta \
-    vendor/google/sabrina/proprietary/vendor/lib/teetz/ff2a4bea-ef6d-11e6-89ccd4ae52a7b3b3.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/ff2a4bea-ef6d-11e6-89ccd4ae52a7b3b3.ta
+    vendor/google/sabrina/proprietary/vendor/lib/teetz/ff2a4bea-ef6d-11e6-89ccd4ae52a7b3b3.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/ff2a4bea-ef6d-11e6-89ccd4ae52a7b3b3.ta \
+    vendor/google/sabrina/proprietary/vendor/usr/idc/Vendor_18d1_Product_9450.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Vendor_18d1_Product_9450.idc \
+    vendor/google/sabrina/proprietary/vendor/usr/keylayout/Vendor_0001_Product_0001.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0001_Product_0001.kl \
+    vendor/google/sabrina/proprietary/vendor/usr/keylayout/Vendor_18d1_Product_9450.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_18d1_Product_9450.kl
 
 PRODUCT_PACKAGES += \
     ChromecastService \
