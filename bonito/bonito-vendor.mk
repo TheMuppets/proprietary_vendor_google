@@ -86,6 +86,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/bonito/proprietary/product/etc/CarrierSettings/fizz_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/fizz_ca.pb \
     vendor/google/bonito/proprietary/product/etc/CarrierSettings/free_fr.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/free_fr.pb \
     vendor/google/bonito/proprietary/product/etc/CarrierSettings/freedommobile_ca.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/freedommobile_ca.pb \
+    vendor/google/bonito/proprietary/product/etc/CarrierSettings/gamma_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/gamma_gb.pb \
     vendor/google/bonito/proprietary/product/etc/CarrierSettings/h3_at.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_at.pb \
     vendor/google/bonito/proprietary/product/etc/CarrierSettings/h3_gb.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_gb.pb \
     vendor/google/bonito/proprietary/product/etc/CarrierSettings/h3_se.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/h3_se.pb \
