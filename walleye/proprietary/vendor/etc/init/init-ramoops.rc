@@ -1,0 +1,29 @@
+on property:sys.user.0.ce_available=true
+    mkdir /data/vendor_ce/0/ramoops
+    restorecon_recursive /data/vendor_ce/0/ramoops
+    start vendor.ramoops_sh
+
+on property:vendor.ramoops.decrypted=true
+    mount pstore pstore /sys/fs/pstore
+    chown system log /sys/fs/pstore
+    chown system log /sys/fs/pstore/console-ramoops
+    chmod 0440 /sys/fs/pstore/console-ramoops
+    chown system log /sys/fs/pstore/console-ramoops-0
+    chmod 0440 /sys/fs/pstore/console-ramoops-0
+    chown system log /sys/fs/pstore/pmsg-ramoops-0
+    chmod 0440 /sys/fs/pstore/pmsg-ramoops-0
+
+on boot
+    # Encrypted ramoops
+    umount /sys/fs/pstore
+    chmod 770 /dev/access-ramoops
+    chown system system /dev/access-ramoops
+    chmod 770 /dev/access-metadata
+    chown system system /dev/access-metadata
+
+service vendor.ramoops_sh /vendor/bin/init.ramoops.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
