@@ -1,0 +1,25 @@
+{
+  "config": {
+    "hw_platform": ["OEM", "MTP", "IDP"],
+    "soc_id": ["339", "361", "356", "365"]
+  },
+  "camera_vsync_0_platform": { "owner": "sns_camera_vsync",
+    ".config": { "owner": "sns_camera_vsync",
+      "irq_num": { "type": "int", "ver": "0", "data":
+        "24"
+      },
+      "irq_trigger_type": { "type": "int", "ver": "0", "data":
+        "0"
+      },
+      "irq_drive_strength":{ "type": "int", "ver": "0", "data":
+        "0"
+      },
+      "irq_pull_type":{ "type": "int", "ver": "0", "data":
+        "2"
+      },
+      "irq_is_chip_pin":{ "type": "int", "ver": "0", "data":
+        "1"
+      }
+    }
+  }
+}

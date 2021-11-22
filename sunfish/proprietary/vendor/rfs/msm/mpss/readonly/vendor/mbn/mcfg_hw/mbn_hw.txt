@@ -1,0 +1,2 @@
+mcfg_hw/generic/common/SM7150/LA/7+7_mode/SR_DSDS/mcfg_hw.mbn
+mcfg_hw/generic/common/SM7150/LA/SS/mcfg_hw.mbn
