@@ -1,0 +1,3 @@
+mcfg_hw/generic/Pixel/common/SM8150/LA/7+7_mode/pixel_SR_DSDS/mcfg_hw.mbn
+mcfg_hw/generic/Pixel/common/SM8150/LA/pixel_SS/mcfg_hw.mbn
+mcfg_hw/generic/Pixel/common/SM8150/LA/pixel_SS_APQ_only/mcfg_hw.mbn

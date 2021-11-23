@@ -1,0 +1,30 @@
+service vendor.face-hal-1-0 /vendor/bin/hw/android.hardware.biometrics.face@1.0-service.google
+    # Using "class hal" may cause a race condition on some devices because this
+    # HAL needs to write to files created in /data. As a workaround, we postpone
+    # startup of the HAL until later in the boot sequence, once /data has
+    # mounted.
+    class late_start
+    user system
+    group system
+    writepid /dev/cpuset/foreground/tasks
+    capabilities SYS_NICE
+    rlimit rtprio 10 10
+
+on post-fs
+    # Grant system access to airbrush related device nodes
+    # C2F2 nodes
+    chown system system /sys/devices/platform/soc/soc\:qcom,faceauth_fws/subsys9/firmware_name
+    chown system system /sys/devices/platform/soc/soc\:qcom,faceauth_fws_b/subsys10/firmware_name
+    # U3 nodes
+    chown system system /sys/devices/platform/soc/soc\:qcom,faceauth_fws/subsys10/firmware_name
+    chown system system /sys/devices/platform/soc/soc\:qcom,faceauth_fws_b/subsys11/firmware_name
+
+# TODO(b/132113972): Only enable airbrush kernel debug fetch on eng build.
+# Change ro.debuggable=0 to ro.build.type=user and ro.build.type=userdebug
+# for production
+on post-fs && property:ro.debuggable=0
+    write /sys/kernel/debug/faceauth/debug_enabled 0
+
+on post-fs-data
+    mkdir /data/vendor/face 0770 system system
+    mkdir /data/vendor/camera_calibration 0770 system system

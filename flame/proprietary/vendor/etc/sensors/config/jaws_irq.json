@@ -1,0 +1,16 @@
+{
+  "config": {
+    "hw_platform": ["OEM", "SLVTE_SURF"],
+    "soc_id": ["321", "339"],
+    "platform_version": ["0x50000"]
+  },
+  "sns_irq": {
+    "owner": "sns_interrupt",
+   "inact_1": {
+     "ver": "0", "type": "int", "data": "142"
+   },
+   "inact_2": {
+     "ver": "0", "type": "int", "data": "68"
+   }
+  }
+}

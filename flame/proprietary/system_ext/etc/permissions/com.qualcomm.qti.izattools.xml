@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!---/******************************************************************************
+* @file       com.qualcomm.qti.izattools.xml
+* @brief
+*  Copyright (c) 2016 Qualcomm Technologies, Inc.
+*  All Rights Reserved.
+*  Confidential and Proprietary - Qualcomm Technologies, Inc.
+*  *****************************************************************************-->
+
+<permissions>
+    <permission name="com.qualcomm.permission.qti.izattools" >
+        <group gid="oem_2901" />
+    </permission>
+</permissions>

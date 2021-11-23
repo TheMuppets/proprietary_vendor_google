@@ -1,0 +1,184 @@
+chassis {
+  sensors {
+    gain: 1
+    sensitivity: 1.4183
+  }
+  sensors {
+    source: 1
+    gain: 1
+    sensitivity: 0.8747
+  }
+  sensors {
+    source: 2
+    gain: 1
+    sensitivity: 0.9236
+  }
+  sensors {
+    source: 3
+    gain: 1
+    sensitivity: 1.0220
+  }
+  sensors {
+    source: 4
+    gain: 1
+    sensitivity: 0.9249
+  }
+  sensors {
+    source: 5
+    gain: 1
+    sensitivity: 1.0044
+  }
+  default_filters {
+    median {
+      window_size: 5
+    }
+  }
+  default_filters {
+    fir {
+      coefficients: 0.062857747
+      coefficients: 0.2544972
+      coefficients: 0.36529011
+      coefficients: 0.2544972
+      coefficients: 0.062857747
+    }
+  }
+  default_filters {
+    highpass {
+      cutoff: 0.1
+      rate: 50
+    }
+  }
+}
+sampling_interval: 20000000
+detector_setup {
+  root {
+  }
+  detectors {
+    id {
+    }
+    model_based_detector {
+      decision_threshold_min: 0.70
+      decision_threshold_max: 0.40
+      weights: -1.5205452 
+      weights: -0.1768348 
+      weights: -0.7144545 
+      weights: -0.7277137 
+      weights: 0.2023693 
+      weights: -0.0573122 
+      weights: -1.4391180 
+      weights: 0.3578656 
+      weights: -0.3612272 
+      weights: 0.5509941 
+      weights: 1.4219791 
+      weights: 0.6935235 
+      weights: -1.3444678 
+      weights: 3.3872510 
+      weights: -0.3387881 
+      weights: -2.9324237 
+      weights: -0.2265669 
+      weights: 0.5447762 
+      weights: -0.6457703 
+      weights: -0.3108741 
+      weights: 0.4237356 
+      weights: 0.4913076 
+      weights: 0.2993777 
+      weights: -0.0766533 
+      weights: -0.4794166 
+      weights: -0.0030775 
+      weights: -1.4391180 
+      weights: 0.2810015 
+      weights: -0.0435838 
+      weights: -0.5735661 
+      weights: 0.0032761 
+      weights: 0.0916274 
+      weights: 0.5412640 
+      weights: -0.3951668 
+      weights: 3.2975496 
+      normalizing_means: 0.6937838 
+      normalizing_means: 0.2052527 
+      normalizing_means: 0.1276381 
+      normalizing_means: 0.1517216 
+      normalizing_means: 0.9276735 
+      normalizing_means: 0.4867450 
+      normalizing_means: 0.4574965 
+      normalizing_means: 0.2416254 
+      normalizing_means: 0.2281761 
+      normalizing_means: 22935.0072474 
+      normalizing_means: 0.8116289 
+      normalizing_means: 0.7469432 
+      normalizing_means: 0.9330936 
+      normalizing_means: 0.2061126 
+      normalizing_means: 50.7845676 
+      normalizing_means: 0.3144695 
+      normalizing_means: 1.8777855 
+      normalizing_means: 2.1932499 
+      normalizing_means: 0.7895512 
+      normalizing_means: 10.0903449 
+      normalizing_means: 28.8383333 
+      normalizing_means: 0.0907315 
+      normalizing_means: 0.1034714 
+      normalizing_means: 0.0639639 
+      normalizing_means: 0.0763276 
+      normalizing_means: 0.2761647 
+      normalizing_means: 0.4574965 
+      normalizing_means: 0.4848872 
+      normalizing_means: 0.4745837 
+      normalizing_means: 0.2620799 
+      normalizing_means: 0.0534137 
+      normalizing_means: 0.0287967 
+      normalizing_means: 0.0340855 
+      normalizing_means: 0.1542682 
+      normalizing_means: 0.4313921 
+      normalizing_stds: 0.2277122 
+      normalizing_stds: 0.2529705 
+      normalizing_stds: 0.2029452 
+      normalizing_stds: 0.2117629 
+      normalizing_stds: 0.1118500 
+      normalizing_stds: 0.2060798 
+      normalizing_stds: 0.1985147 
+      normalizing_stds: 0.1505296 
+      normalizing_stds: 0.1482341 
+      normalizing_stds: 19765.6377520 
+      normalizing_stds: 0.1390600 
+      normalizing_stds: 0.1049749 
+      normalizing_stds: 0.1450008 
+      normalizing_stds: 0.2097731 
+      normalizing_stds: 25.0067026 
+      normalizing_stds: 0.1949133 
+      normalizing_stds: 0.5303810 
+      normalizing_stds: 0.7259560 
+      normalizing_stds: 0.7119309 
+      normalizing_stds: 8.1977241 
+      normalizing_stds: 31.4088550 
+      normalizing_stds: 0.0937771 
+      normalizing_stds: 0.1433273 
+      normalizing_stds: 0.1125788 
+      normalizing_stds: 0.1179154 
+      normalizing_stds: 0.1493095 
+      normalizing_stds: 0.1985147 
+      normalizing_stds: 0.2032837 
+      normalizing_stds: 0.2007673 
+      normalizing_stds: 0.1928599 
+      normalizing_stds: 0.1166011 
+      normalizing_stds: 0.0891669 
+      normalizing_stds: 0.0922926 
+      normalizing_stds: 0.1400299 
+      normalizing_stds: 0.1979623 
+      intercept: -0.32456782
+      window_length: 48
+      window_step: 1
+      num_features: 35
+      sample_latency: 6
+      model_based_peak_threshold_min: 15000
+      model_based_peak_threshold_max: 5000
+    }
+  }
+  min_sensitivity: 0.46
+  max_sensitivity: 0.46
+  min_upper_threshold: 20000
+  max_upper_threshold: 8000
+  min_lower_threshold: -925
+  max_lower_threshold: -525
+  min_time_threshold: 1000
+  max_time_threshold: 1000
+}

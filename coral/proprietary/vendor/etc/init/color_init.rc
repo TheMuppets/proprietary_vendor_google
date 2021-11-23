@@ -1,0 +1,6 @@
+service color_init /vendor/bin/color_init
+    class main
+    user system
+    group graphics
+    disabled
+    oneshot

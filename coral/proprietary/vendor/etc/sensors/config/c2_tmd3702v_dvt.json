@@ -1,0 +1,287 @@
+{
+  "config":{
+    "hw_platform": ["MTP", "Dragon", "Surf", "QRD", "HDK", "OEM", "SLVTE_SURF"],
+    "soc_id": ["339"],
+    "platform_version": ["0x50000:0xFFFF0000"],
+    "-platform_version": ["0x0000:0xFFF0", "0x0010:0xFFFC"]
+  },
+  "tmd3702v_platform":{
+    "owner": "tmd3702v",
+    ".config":{
+      "owner": "tmd3702v",
+      "bus_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "bus_instance":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "slave_config":{ "type": "int", "ver": "0",
+        "data": "73"
+      },
+      "min_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "max_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "reg_addr_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "dri_irq_num":{ "type": "int", "ver": "0",
+        "data": "26"
+      },
+      "irq_pull_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_is_chip_pin":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "irq_drive_strength":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_trigger_type":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "num_rail":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "rail_on_state":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "vdd_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vdd"
+      },
+      "vddio_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vddio"
+      },
+      "rigid_body_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      }
+    },
+    ".als":{
+      "owner": "tmd3702v",
+      ".fac_cal":{
+        "owner": "tmd3702v",
+        "version":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "scale":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "corr_slope":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "corr_offset":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "bm_scale":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        }
+      },
+      ".params":{
+        "owner": "tmd3702v",
+        "corr_min":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "corr_max":{ "type": "flt", "ver": "0",
+          "data": "6.0"
+        },
+        "batch_scale":{ "type": "flt", "ver": "0",
+          "data": "2.0557"
+        },
+        "batch_rb_mix":{ "type": "flt", "ver": "0",
+          "data": "0.9455"
+        },
+        "batch_corr_slope":{ "type": "flt", "ver": "0",
+          "data": "0.1093"
+        },
+        "batch_corr_offset":{ "type": "flt", "ver": "0",
+          "data": "-0.6818"
+        }
+      }
+    },
+    ".color":{
+      "owner": "tmd3702v",
+      ".fac_cal":{
+        "owner": "tmd3702v",
+        "version":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "low_coef0":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "low_coef1":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "low_coef2":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "high_coef0":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "high_coef1":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "b_corr":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "r_corr":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "ratio_coef0":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "ratio_coef1":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "xtalk":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "irc_ratio":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "bmrm_coef0":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "bmrm_coef1":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "boc_low_coef0":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        },
+        "boc_low_coef1":{ "type": "flt", "ver": "0",
+          "data": "1.0"
+        },
+        "boc_low_coef2":{ "type": "flt", "ver": "0",
+          "data": "0.0"
+        }
+      },
+      ".params":{
+        "owner": "tmd3702v",
+        "ir_ratio_boundary":{ "type": "flt", "ver": "0",
+          "data": "0.5"
+        },
+        "min_cct":{ "type": "flt", "ver": "0",
+          "data": "2500.0"
+        },
+        "max_cct":{ "type": "flt", "ver": "0",
+          "data": "8000.0"
+        },
+        "batch_low_fit0":{ "type": "flt", "ver": "0",
+          "data": "0.04782849"
+        },
+        "batch_low_fit1":{ "type": "flt", "ver": "0",
+          "data": "0.75403598"
+        },
+        "batch_high_fit0":{ "type": "flt", "ver": "0",
+          "data": "0.05349254"
+        },
+        "batch_high_fit1":{ "type": "flt", "ver": "0",
+          "data": "0.81894861"
+        },
+        "batch_high_fit2":{ "type": "flt", "ver": "0",
+          "data": "1.03719505"
+        },
+        "batch_low_brm0":{ "type": "flt", "ver": "0",
+          "data": "0.15967481"
+        },
+        "batch_low_brm1":{ "type": "flt", "ver": "0",
+          "data": "-0.33788896"
+        },
+        "batch_low_brm2":{ "type": "flt", "ver": "0",
+          "data": "2.86739382"
+        },
+        "batch_high_brm0":{ "type": "flt", "ver": "0",
+          "data": "0.06104"
+        },
+        "batch_high_brm1":{ "type": "flt", "ver": "0",
+          "data": "0.51123"
+        },
+        "batch_high_brm2":{ "type": "flt", "ver": "0",
+          "data": "1.8116"
+        },
+        "batch_low_boc0":{ "type": "flt", "ver": "0",
+          "data": "2562.0"
+        },
+        "batch_low_boc1":{ "type": "flt", "ver": "0",
+          "data": "-18.0"
+        },
+        "batch_low_boc2":{ "type": "flt", "ver": "0",
+          "data": "0.01234"
+        },
+        "panel_cct0":{ "type": "flt", "ver": "0",
+          "data": "2536.0"
+        },
+        "panel_cct1":{ "type": "flt", "ver": "0",
+          "data": "6331.0"
+        }
+      }
+    },
+    ".prox":{
+      "owner": "tmd3702v",
+      ".params":{
+        "owner": "tmd3702v",
+        "near_threshold":{ "type": "int", "ver": "0",
+          "data": "750"
+        },
+        "far_threshold":{ "type": "int", "ver": "0",
+          "data": "600"
+        },
+        "ptime":{ "type": "int", "ver": "0",
+          "data": "2820"
+        },
+        "pplen":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "ppulse":{ "type": "int", "ver": "0",
+          "data": "63"
+        },
+        "pgain":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "pldrive":{ "type": "int", "ver": "0",
+          "data": "19"
+        }
+      }
+    },
+    ".placement":{
+      "owner": "tmd3702v",
+      "0":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "1":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "2":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "3":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "4":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "5":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "6":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "7":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "8":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "9":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "10":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "11":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      }
+    }
+  }
+}

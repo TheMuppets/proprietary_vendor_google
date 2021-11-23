@@ -1,0 +1,8 @@
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libfastcvopt.so
+libOpenCL-pixel.so
+lib_aion_buffer.so
+libqdMetaData.so
+libairbrush-pixel.so 64

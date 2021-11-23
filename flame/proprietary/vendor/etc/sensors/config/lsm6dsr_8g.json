@@ -1,0 +1,20 @@
+{
+  "config":
+  {
+    "hw_platform": [ "SLVTE_SURF" ],
+    "soc_id": [ "339" ]
+  },
+  "lsm6dsr_0":{
+    "owner": "lsm6dsr",
+    ".accel":{
+      "owner": "lsm6dsr",
+      ".config":{
+        "owner": "lsm6dsr",
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "2"
+        }
+      }
+    }
+  }
+}
+

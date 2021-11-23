@@ -1,0 +1,4 @@
+service airbrush /vendor/bin/hw/vendor.google.airbrush@1.0-service
+    class hal
+    user vendor_airbrush
+    group nobody
