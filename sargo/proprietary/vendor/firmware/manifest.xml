@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<manifest>
+  <remote name="poly" fetch="https://googleplex-polygon-android.googlesource.com/" review="https://googleplex-polygon-android.googlesource.com/" />
+
+  <default revision="bonito-sc-qpr1" remote="poly" />
+
+
+  <project path="nested/ssc/goog" name="platform/vendor/google_devices/common/non-hlos/ssc/goog" groups="non-hlos,partner" revision="4ac6ff69685bd18e263354983f2ab5d2a6692d48" />
+
+  <project path="nested/vsc/algos-internal" name="platform/vendor/google/common/non-hlos/ssc/goog/vsc/algos-internal" groups="non-hlos" revision="36b8cd3929f37d215df8d92d540b2179155d5333" />
+
+  <project path="adsp_proc" name="platform/vendor/qcom/sdm670/non-hlos/adsp_proc" groups="non-hlos,partner" revision="1aac7182c9c8bc131fc1e665bbe0b7bafd53a082" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</manifest>

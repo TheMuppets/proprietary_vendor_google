@@ -1,0 +1,8 @@
+on property:vendor.all.modules.ready=1
+   enable vendor.citadeld
+
+service vendor.citadeld /vendor/bin/hw/citadeld
+    class early_hal
+    user hsm
+    group hsm
+    disabled

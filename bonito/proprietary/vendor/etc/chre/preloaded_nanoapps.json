@@ -1,0 +1,11 @@
+{ "source_dir": "/vendor/dsp/adsp",
+  "nanoapps": [
+    "activity",
+    "cc",
+    "drop",
+    "elmyra",
+    "geofence",
+    "gesture",
+    "imu_cal",
+    "smartbatching"
+]}

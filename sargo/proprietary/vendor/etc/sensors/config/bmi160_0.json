@@ -1,0 +1,337 @@
+{
+  "config":
+  {
+    "hw_platform": ["MTP", "Dragon", "Surf", "OEM"],
+    "soc_id": ["291", "246", "305", "321", "336"]
+  },
+  "bmi160_0":{
+    "owner": "sns_bmi160",
+    ".accel":{
+      "owner": "sns_bmi160",
+      ".config":{
+        "owner": "sns_bmi160",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "3"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".gyro":{
+      "owner": "sns_bmi160",
+      ".config":{
+        "owner": "sns_bmi160",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "3"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".md":{
+      "owner": "sns_bmi160",
+      ".config":{
+        "owner": "sns_bmi160",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".temp":{
+      "owner": "sns_bmi160",
+      ".config":{
+        "owner": "sns_bmi160",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".anymotion":{
+      "owner": "sns_bmi160",
+      ".config":{
+        "owner": "sns_bmi160",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".nomotion":{
+      "owner": "sns_bmi160",
+      ".config":{
+        "owner": "sns_bmi160",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".motion_threshold":{
+      "owner": "sns_bmi160",
+      "0":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "1":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "2":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "3":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "4":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "5":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "6":{ "type": "int", "ver": "0",
+        "data": "3"
+      },
+      "7":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "8":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "9":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "10":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "11":{ "type": "int", "ver": "0",
+        "data": "1"
+      }
+    },
+    ".accel_filter":{
+      "owner": "sns_bmi160",
+      ".osr":{
+        "owner": "sns_bmi160",
+        "BMI160_IMU_ODR_OFF":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_0_78HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_1_56HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_3_12HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_6_25HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_12_5HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_25HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_50HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_100HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_200HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_400HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "BMI160_IMU_ODR_800HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "BMI160_IMU_ODR_1600HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        }
+      },
+      ".downsample":{
+        "owner": "sns_bmi160",
+        "BMI160_IMU_ODR_OFF":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_0_78HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_1_56HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_3_12HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_6_25HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_12_5HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_25HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_50HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_100HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_200HZ":{ "type": "int", "ver": "0",
+          "data": "3"
+        },
+        "BMI160_IMU_ODR_400HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_800HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "BMI160_IMU_ODR_1600HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".gyro_filter":{
+      "owner": "sns_bmi160",
+      ".osr":{
+        "owner": "sns_bmi160",
+        "BMI160_IMU_ODR_OFF":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_0_78HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_1_56HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_3_12HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_6_25HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_12_5HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_25HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_50HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_100HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_200HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_400HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "BMI160_IMU_ODR_800HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "BMI160_IMU_ODR_1600HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "BMI160_IMU_ODR_3200HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        }
+      },
+      ".downsample":{
+        "owner": "sns_bmi160",
+        "BMI160_IMU_ODR_OFF":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_0_78HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_1_56HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_3_12HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_6_25HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_12_5HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_25HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_50HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_100HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "BMI160_IMU_ODR_200HZ":{ "type": "int", "ver": "0",
+          "data": "4"
+        },
+        "BMI160_IMU_ODR_400HZ":{ "type": "int", "ver": "0",
+          "data": "3"
+        },
+        "BMI160_IMU_ODR_800HZ":{ "type": "int", "ver": "0",
+          "data": "2"
+        },
+        "BMI160_IMU_ODR_1600HZ":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "BMI160_IMU_ODR_3200HZ":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "config":
+  {
+    "hw_platform": ["OEM"],
+    "soc_id": ["321", "336"]
+  },
+  "max11259_0":{
+    "owner": "max11259",
+    ".elmyra_raw":{
+      "owner": "max11259",
+      ".config":{
+        "owner": "max11259",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    }
+  }
+}
