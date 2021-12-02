@@ -1,0 +1,191 @@
+{
+  "config":{
+    "hw_platform": ["OEM"],
+    "soc_id": ["321"],
+    "platform_version": ["0x20002", "0x20003", "0x20004", "0x2000A", "0x2000B"]
+  },
+  "lis2mdl_0_platform":{
+    "owner": "lis2mdl",
+    ".config":{
+      "owner": "lis2mdl",
+      "bus_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "bus_instance":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "slave_config":{ "type": "int", "ver": "0",
+        "data": "30"
+      },
+      "min_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "max_bus_speed_khz":{ "type": "int", "ver": "0",
+        "data": "400"
+      },
+      "reg_addr_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "dri_irq_num":{ "type": "int", "ver": "0",
+        "data": "113"
+      },
+      "irq_pull_type":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "irq_is_chip_pin":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "irq_drive_strength":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "irq_trigger_type":{ "type": "int", "ver": "0",
+        "data": "0"
+      },
+      "num_rail":{ "type": "int", "ver": "0",
+        "data": "2"
+      },
+      "rail_on_state":{ "type": "int", "ver": "0",
+        "data": "1"
+      },
+      "vdd_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vdd"
+      },
+      "vddio_rail":{ "type": "str", "ver": "0",
+        "data": "/pmic/client/sensor_vddio"
+      },
+      "rigid_body_type":{ "type": "int", "ver": "0",
+      "data": "0"
+      }
+    },
+    ".orient":{
+      "owner": "lis2mdl",
+      "x":{ "type": "str", "ver": "0",
+        "data": "-y"
+      },
+      "y":{ "type": "str", "ver": "0",
+        "data": "+z"
+      },
+      "z":{ "type": "str", "ver": "0",
+        "data": "+x"
+      }
+    },
+    ".sensitivity":{
+      "owner": "lis2mdl",
+      "x":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "y":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "z":{ "type": "flt", "ver": "0",
+        "data": "-14.37"
+      }
+    },
+    ".mag":{
+      "owner": "lis2mdl",
+      ".fac_cal":{
+        "owner": "lis2mdl",
+        ".corr_mat":{
+          "owner": "lis2mdl",
+          "0_0":{ "type": "flt", "ver": "0",
+            "data": "0.690182"
+          },
+          "0_1":{ "type": "flt", "ver": "0",
+            "data": "-0.115746"
+          },
+          "0_2":{ "type": "flt", "ver": "0",
+            "data": "-0.046531"
+          },
+          "1_0":{ "type": "flt", "ver": "0",
+            "data": "-0.048962"
+          },
+          "1_1":{ "type": "flt", "ver": "0",
+            "data": "1.258171 "
+          },
+          "1_2":{ "type": "flt", "ver": "0",
+            "data": "-0.047916"
+          },
+          "2_0":{ "type": "flt", "ver": "0",
+            "data": "-0.063511"
+          },
+          "2_1":{ "type": "flt", "ver": "0",
+            "data": "-0.017552"
+          },
+          "2_2":{ "type": "flt", "ver": "0",
+            "data": "1.061540"
+          }
+        },
+        ".bias":{
+          "owner": "lis2mdl",
+          "x":{ "type": "flt", "ver": "0",
+            "data": "0.0"
+          },
+          "y":{ "type": "flt", "ver": "0",
+            "data": "0.0"
+          },
+          "z":{ "type": "flt", "ver": "0",
+            "data": "0.0"
+          }
+        }
+      }
+    },
+    ".temp":{
+      "owner": "lis2mdl",
+      ".fac_cal":
+      {
+        "owner": "lis2mdl",
+        ".scale":{
+          "owner": "lis2mdl",
+          "x":{ "type": "flt", "ver": "0",
+            "data": "1.0"
+          }
+        },
+        ".bias":{
+          "owner": "lis2mdl",
+          "x":{ "type": "flt", "ver": "0",
+            "data": "0.0"
+          }
+        }
+      }
+    },
+    ".placement":{
+      "owner": "lis2mdl",
+      "0":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "1":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "2":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "3":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "4":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "5":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "6":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "7":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "8":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "9":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "10":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      },
+      "11":{ "type": "flt", "ver": "0",
+        "data": "0.0"
+      }
+    }
+  }
+}

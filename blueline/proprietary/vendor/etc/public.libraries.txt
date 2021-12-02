@@ -1,0 +1,7 @@
+libadsprpc.so
+libcdsprpc.so
+libsdsprpc.so
+libeaselmanager_client.so
+lib_aion_buffer.so
+libqdMetaData.so
+libOpenCL-pixel.so
