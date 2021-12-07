@@ -1,0 +1,5 @@
+service twoshay /vendor/bin/twoshay -s
+    class hal
+    user root
+    group input
+    disabled

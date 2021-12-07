@@ -1,0 +1,24 @@
+{
+  "config": {
+    "hw_platform": ["OEM", "MTP"],
+    "soc_id": ["400"]
+  },
+  "sns_irq": {
+    "owner": "sns_interrupt",
+    "irq_1": {
+      "ver": "0", "type": "int", "data": "111"
+    },
+    "irq_2": {
+      "ver": "0", "type": "int", "data": "9"
+    },
+    "irq_3": {
+      "ver": "0", "type": "int", "data": "22"
+    },
+    "irq_4": {
+      "ver": "0", "type": "int", "data": "24"
+    },
+    "irq_5": {
+      "ver": "0", "type": "int", "data": "56"
+    }
+  }
+}

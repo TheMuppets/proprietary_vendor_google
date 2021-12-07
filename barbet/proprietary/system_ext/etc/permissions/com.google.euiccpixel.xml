@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright 2021 Google Inc. All Rights Reserved-->
+<permissions>
+  <privapp-permissions package="com.google.euiccpixel">
+        <permission name="android.permission.ACCESS_NETWORK_STATE" />
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.NFC_SET_CONTROLLER_ALWAYS_ON"/>
+        <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.SECURE_ELEMENT_PRIVILEGED_OPERATION"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="com.google.euiccpixel.permission.SECURE_ELEMENT" />
+    </privapp-permissions>
+</permissions>

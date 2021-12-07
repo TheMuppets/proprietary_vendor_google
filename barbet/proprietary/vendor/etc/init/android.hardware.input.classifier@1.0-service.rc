@@ -1,0 +1,9 @@
+service vendor.input.classifier-1-0 /vendor/bin/hw/android.hardware.input.classifier@1.0-service
+    # Must be specified if "disabled" is set. This HAL will only start if requested via getService
+    interface android.hardware.input.classifier@1.0::IInputClassifier default
+    class hal
+    user nobody
+    # will not be restarted if it exits until it is requested to be restarted
+    oneshot
+    # will only be started when requested
+    disabled

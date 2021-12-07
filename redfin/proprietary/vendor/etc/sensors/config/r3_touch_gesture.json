@@ -1,0 +1,28 @@
+{
+  "config":
+  {
+    "hw_platform": ["OEM", "MTP"],
+    "soc_id": ["400"]
+  },
+  "touch_gesture_0_platform": { "owner": "sns_touch_gesture",
+    ".config": { "owner": "sns_touch_gesture",
+      "bus_type"                     : { "type": "int", "ver": "0", "data": "1"},
+      "controller_id"                : { "type": "int", "ver": "0", "data": "3"    },
+      "bus_speed"                    : { "type": "int", "ver": "0", "data": "10000"},
+      "bus_instance"                 : { "type": "int", "ver": "0", "data": "3"    },
+      "slave_address"                : { "type": "int", "ver": "0", "data": "0"    },
+      "irq_num"                      : { "type": "int", "ver": "0", "data": "9"    },
+      "irq_trigger_type"             : { "type": "int", "ver": "0", "data": "1"    },
+      "irq_drive_strength"           : { "type": "int", "ver": "0", "data": "0"    },
+      "irq_pull_type"                : { "type": "int", "ver": "0", "data": "0"    },
+      "irq_is_chip_pin"              : { "type": "int", "ver": "0", "data": "1"    },
+      "irq_skip_pin_config"          : { "type": "int", "ver": "0", "data": "1"    },
+      "single_press_recess_size"     : { "type": "int", "ver": "0", "data": "136"  },
+      "single_press_min_frame_count" : { "type": "int", "ver": "0", "data": "2"    },
+      "single_press_max_frame_count" : { "type": "int", "ver": "0", "data": "26"   },
+      "single_press_motion_tolerance": { "type": "int", "ver": "0", "data": "150"  },
+      "single_press_max_touch_size_x": { "type": "int", "ver": "0", "data": "540"  },
+      "single_press_max_touch_size_y": { "type": "int", "ver": "0", "data": "550"  }
+    }
+  }
+}

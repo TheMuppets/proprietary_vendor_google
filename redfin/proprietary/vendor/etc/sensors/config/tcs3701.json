@@ -1,0 +1,45 @@
+{
+  "config":{
+    "hw_platform": ["MTP", "OEM"],
+    "soc_id": ["400"]
+  },
+  "tcs3701_0":{
+    "owner": "tcs3701",
+    ".als":{
+      "owner": "tcs3701",
+      ".config":{
+        "owner": "tcs3701",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    },
+    ".prox":{
+      "owner": "tcs3701",
+      ".config":{
+        "owner": "tcs3701",
+        "is_dri":{ "type": "int", "ver": "0",
+          "data": "1"
+        },
+        "hw_id":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "res_idx":{ "type": "int", "ver": "0",
+          "data": "0"
+        },
+        "sync_stream":{ "type": "int", "ver": "0",
+          "data": "0"
+        }
+      }
+    }
+  }
+}
