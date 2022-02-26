@@ -322,6 +322,7 @@ PRODUCT_PACKAGES += \
     ConnMO \
     DCMO \
     DMService \
+    DevicePersonalizationPrebuiltPixel3 \
     DiagMon \
     EuiccGoogle \
     HardwareInfo \
