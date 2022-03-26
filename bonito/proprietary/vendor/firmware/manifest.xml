@@ -3,10 +3,10 @@
 <manifest>
   <remote name="poly" fetch="https://googleplex-polygon-android.googlesource.com/" review="https://googleplex-polygon-android.googlesource.com/" />
 
-  <default revision="bonito-sc-qpr1" remote="poly" />
+  <default revision="bonito-sc-v2" remote="poly" />
 
 
-  <project path="nested/ssc/goog" name="platform/vendor/google_devices/common/non-hlos/ssc/goog" groups="non-hlos,partner" revision="4ac6ff69685bd18e263354983f2ab5d2a6692d48" />
+  <project path="nested/ssc/goog" name="platform/vendor/google_devices/common/non-hlos/ssc/goog" groups="non-hlos,partner" revision="a05ec03213048ac2a1c218a5c753a7f621cc2002" />
 
   <project path="nested/vsc/algos-internal" name="platform/vendor/google/common/non-hlos/ssc/goog/vsc/algos-internal" groups="non-hlos" revision="36b8cd3929f37d215df8d92d540b2179155d5333" />
 
