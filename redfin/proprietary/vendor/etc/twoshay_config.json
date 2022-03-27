@@ -1,0 +1,30 @@
+{
+	"pipelines": [
+		{
+			"name": "default",
+			"device": "/dev/touch_offload",
+			"algorithms": [
+				{
+					"class": "SegmentationAlgorithm",
+					"name": "segmentation",
+				},
+				{
+					"class": "GripSuppressionAlgorithm",
+					"name": "grip_suppression",
+					"blocked_by": ["segmentation"],
+				},
+				{
+					"class": "TouchflowAlgorithm",
+					"name": "touchflow",
+					"blocked_by": ["grip_suppression"],
+				},
+				{
+					"class": "TouchSuezAlgorithm",
+					"name": "touchsuez",
+					"blocked_by": ["touchflow"],
+				}
+			],
+		}
+	]
+}
+

@@ -3,5 +3,6 @@
     <privapp-permissions package="com.android.sdm.plugins.diagmon">
         <permission name="android.permission.ACCESS_COARSE_LOCATION"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.READ_PRECISE_PHONE_STATE"/>
     </privapp-permissions>
 </permissions>

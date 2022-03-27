@@ -65,6 +65,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.STOP_APP_SWITCHES"/>
         <permission name="com.google.pixel.exo.PUSH_STREAMING_CONTENT"/>
         <permission name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
+        <permission name="android.permission.REGISTER_STATS_PULL_ATOM"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.gsf">

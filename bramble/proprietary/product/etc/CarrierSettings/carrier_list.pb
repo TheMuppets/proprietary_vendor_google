@@ -30,9 +30,6 @@ test001_zz
 *
 truphone_zz
 20404"547275554B3030656E
-*
-truphone_zz
-20404"54727555533030656E
 
 
 sasktel_ca
@@ -69,9 +66,6 @@ HOT MOBILE
 *
 truphone_zz
 20408"547275554B3030656E
-*
-truphone_zz
-20408"54727555533030656E
 )
 20408IMSI=204080950
 20408	204080950
@@ -89,8 +83,13 @@ Lycamobile
 
 telfort_nl
 20412
-"
-20416SPN=BEN NL
+
+
+tmomvno_nl
+20416"5F
+
+
+tmomvno_nl
 20416BEN NL
 
 
@@ -104,9 +103,9 @@ telfort_nl
 
 tmobile_nl
 20420
-
-truphone_zz
-20433
+*
+truphone_zz
+20433"547275554B3030656E
 
 20465GID1=50
 20465"50
@@ -194,9 +193,6 @@ rakuten_jp
 *
 truphone_zz
 20809"547275554B3030656E
-*
-truphone_zz
-20809"54727555533030656E
 
 aliv_bs
 20809	208090021
@@ -236,6 +232,9 @@ rakuten_jp
 
 sfr_fr
 20810
+*
+truphone_zz
+20812"547275554B3030656E
 
 free_fr
 20815
@@ -367,9 +366,9 @@ $
 lycamobile_es
 21425
 Lycamobile
-
-truphone_zz
-21427
+*
+truphone_zz
+21427"547275554B3030656E
 
 inet_es
 21434
@@ -660,9 +659,9 @@ $
 
 h3_gb
 23420
-
-truphone_zz
-23425
+*
+truphone_zz
+23425"547275554B3030656E
 *
 23426SPN=LYCAMOBILE
 23426
@@ -924,8 +923,8 @@ TELENOR SE
 
 goodspeed_zz
 24042"C5
-
-google_5g_lab_tw
+
+google5glab_tw
 24099
 .
 24201IMSI=24201700XXXXXXX
@@ -1099,9 +1098,9 @@ $
 lycamobile_pl
 26009
 Lycamobile
-
-truphone_zz
-26033
+*
+truphone_zz
+26033"547275554B3030656E
 
 26044
 26044
@@ -1162,15 +1161,18 @@ telekom_de
 
 mvno_de
 26220
-
-truphone_zz
-26242
+*
+truphone_zz
+26242"547275554B3030656E
 $
 lycamobile_de
 26243
 Lycamobile
 
-google_5g_lab_us
+google5gsalab_us
+262830
+
+google5glab_us
 262840
 
 26801
@@ -1242,6 +1244,10 @@ Lycamobile
 
 28010
 28010
+
+
+beeline_am
+28301
 
 28310
 28310
@@ -1782,9 +1788,9 @@ att5gsa_us
 
 att_us
 310280
-
-truphone_zz
-31030
++
+truphone_zz
+310300"547275554B3030656E
 
 metropcs_us
 310300"6D38
@@ -1829,6 +1835,22 @@ tmobile_us
 (
 consumercellularatt_us
 310410"2AC9
+
+
+dishatt_us
+310410"3430
+
+
+dishatt_us
+310410"3432
+
+
+dishatt_us
+310410"3434
+
+
+dishatt_us
+310410"3436
 
 attmvnos_us
 310410"4102
@@ -1944,12 +1966,9 @@ tmobile_us
 
 tmobile_us
 310660
-*
-truphone_zz
-31069"547275554B3030656E
-*
-truphone_zz
-31069"54727555533030656E
++
+truphone_zz
+310690"547275554B3030656E
 .
 310750SPN=APPALACHIAN
 310750APPALACHIAN
@@ -1996,6 +2015,9 @@ tmobile_us
 0
 310930SPN=COPPERVALLEY
 310930COPPERVALLEY
+!
+redpocketatt_us
+310950"4201
 
 
 att5gsa_us
@@ -2050,6 +2072,25 @@ $
 (
 311140SPN=SPROCKET
 311140SPROCKET
+
+
+dishatt_us
+311180"3430
+
+
+dishatt_us
+311180"3432
+
+
+dishatt_us
+311180"3434
+
+
+dishatt_us
+311180"3436
+!
+redpocketatt_us
+311180"4201
 
 
 att5gsa_us
@@ -2389,16 +2430,19 @@ $
 
 firstnet_us
 313140
-
-spectrum_data_us
+
+spectrumdata_us
 313450
 
 
 liberty_pr
 313790
-
-spectrum_cbrs_us
+
+spectrumcbrs_us
 314020
+
+xfinitymso_us
+314200
 
 	google_us
 315010
@@ -2412,8 +2456,8 @@ OPENMOBILE
 
 tracfone_pr
 330110"DEFF
-
-330110
+
+claro_pr
 330110
 
 334020
@@ -2537,8 +2581,9 @@ retemex_mx
 
 34001
 34001
-
-34020
+
+
+digicel_fr
 34020
 
 342600
@@ -3891,6 +3936,9 @@ lguplus_kr
 
 45208
 45208
+*
+truphone_zz
+45400"547275554B3030656E
 
 csl_hk
 45400
@@ -3910,9 +3958,9 @@ lguplus_kr
 
 smartone_hk
 45406
-
-truphone_zz
-45408
+*
+truphone_zz
+45408"547275554B3030656E
 
 45410
 45410
@@ -4039,6 +4087,9 @@ lguplus_kr
 
 tstar_tw
 46689
+'
+circleslife_tw
+46692ÁÑ°Ê°ÜË°åÂãï
 
 cht_tw
 46692
@@ -4129,9 +4180,9 @@ $
 lycamobile_au
 50519
 Lycamobile
-
-truphone_zz
-50538
+*
+truphone_zz
+50538"547275554B3030656E
 
 
 telstra_au
@@ -5206,4 +5257,4 @@ Lycamobile
 74810
 
 bics_be
-90158òÉÂöw" ª¬ã
+90158ûó–˜z"÷ûÜè
