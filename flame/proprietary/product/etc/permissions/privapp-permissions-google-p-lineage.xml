@@ -310,14 +310,17 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.ACCESS_INSTANT_APPS"/>
         <permission name="android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS"/>
         <permission name="android.permission.CONTROL_DISPLAY_SATURATION"/>
+        <permission name="android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.MODIFY_QUIET_MODE"/>
         <permission name="android.permission.OBSERVE_APP_USAGE"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.READ_DREAM_STATE"/>
         <permission name="android.permission.READ_WALLPAPER_INTERNAL"/>
+        <permission name="android.permission.REAL_GET_TASKS"/>
         <permission name="android.permission.SET_WALLPAPER_COMPONENT"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="android.permission.START_TASKS_FROM_RECENTS"/>
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
         <permission name="android.permission.SUSPEND_APPS"/>
         <permission name="android.permission.WRITE_DREAM_STATE"/>
@@ -466,6 +469,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.STOP_APP_SWITCHES"/>
         <permission name="com.google.android.permission.SET_WATCH_FACE_PRIVILEGED"/>
         <permission name="android.permission.WRITE_APN_SETTINGS"/>
+        <permission name="android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON"/>
     </privapp-permissions>
     <privapp-permissions package="com.google.android.settings.intelligence">
         <permission name="android.permission.MANAGE_FINGERPRINT"/>
