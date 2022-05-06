@@ -513,7 +513,7 @@ android_app_import {
 	name: "grilservice",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/grilservice/grilservice.apk",
-	certificate: "platform",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
