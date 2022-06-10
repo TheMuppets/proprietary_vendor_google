@@ -263,6 +263,12 @@ Lycamobile
 
 coriolis_fr
 20827
+
+orange5gdemo_fr
+20832
+
+orange5gdemo_fr
+20885
 
 bouygues_fr
 20888
@@ -2204,6 +2210,9 @@ xfinity_us
 
 visible_us
 311480"BAE1000000000000
+)
+visiblev_us
+311480"BAE2000000000000
 
 
 verizon_us
@@ -5257,4 +5266,4 @@ Lycamobile
 74810
 
 bics_be
-90158—Ğ÷z"Ö†
+90158 «»Ô~"ğ×å
