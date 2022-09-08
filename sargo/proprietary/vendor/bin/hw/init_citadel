@@ -32,7 +32,8 @@ FIRMWARE=/vendor/firmware/citadel/ec.bin
 KNOWN_OLD_SHA=(
     # NOTE: Update citadel_embedding_versions.h when updating this section.
 
-    #a9084b7      # 2021-12-07 (C2-TM-002a)
+    #262df920c    # 2022-04-29 (C2-TM-002b)
+    a9084b7      # 2021-12-07 (C2-TM-002a)
     d87764a      # 2021-11-30 (C2-TM-002)
     7f8b34f      # 2021-10-20 (C2-TM-001
     cd34ce4      # 2021-09-17 (MP-SC-07)
