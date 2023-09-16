@@ -197,7 +197,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/vendor/bin/test_diag:$(TARGET_COPY_OUT_VENDOR)/bin/test_diag \
     vendor/google/marlin/proprietary/vendor/bin/test_module_pproc:$(TARGET_COPY_OUT_VENDOR)/bin/test_module_pproc \
     vendor/google/marlin/proprietary/vendor/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
-    vendor/google/marlin/proprietary/vendor/bin/time_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/time_daemon \
     vendor/google/marlin/proprietary/vendor/bin/wdsdaemon:$(TARGET_COPY_OUT_VENDOR)/bin/wdsdaemon \
     vendor/google/marlin/proprietary/vendor/bin/xtra-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/xtra-daemon \
     vendor/google/marlin/proprietary/vendor/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Bluetooth_cal.acdb \
@@ -415,7 +414,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/vendor/lib/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSecureUILib.so \
     vendor/google/marlin/proprietary/vendor/lib/libSonyIMX378PdafLibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib/libSonyIMX378PdafLibrary.so \
     vendor/google/marlin/proprietary/vendor/lib/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib/libStDrvInt.so \
-    vendor/google/marlin/proprietary/vendor/lib/libTimeService.so:$(TARGET_COPY_OUT_VENDOR)/lib/libTimeService.so \
     vendor/google/marlin/proprietary/vendor/lib/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdb-fts.so \
     vendor/google/marlin/proprietary/vendor/lib/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbloader.so \
     vendor/google/marlin/proprietary/vendor/lib/libacdbmapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libacdbmapper.so \
@@ -686,7 +684,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/marlin/proprietary/vendor/lib64/libSecureSampleAuthJNI.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureSampleAuthJNI.so \
     vendor/google/marlin/proprietary/vendor/lib64/libSecureUILib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libSecureUILib.so \
     vendor/google/marlin/proprietary/vendor/lib64/libStDrvInt.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libStDrvInt.so \
-    vendor/google/marlin/proprietary/vendor/lib64/libTimeService.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libTimeService.so \
     vendor/google/marlin/proprietary/vendor/lib64/lib_fpc_tac_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_fpc_tac_shared.so \
     vendor/google/marlin/proprietary/vendor/lib64/libacdb-fts.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdb-fts.so \
     vendor/google/marlin/proprietary/vendor/lib64/libacdbloader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libacdbloader.so \
@@ -813,7 +810,6 @@ PRODUCT_PACKAGES += \
     QtiTelephonyService \
     RCSBootstraputil \
     SecureExtAuthService \
-    TimeService \
     atfwd \
     colorservice \
     datastatusnotification \
